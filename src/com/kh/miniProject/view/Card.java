@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -39,30 +40,51 @@ public class Card extends JPanel{
 	    
 		cardIn=new JPanel();
 		cardIn.setLayout(null);
-		cardIn.setLocation(400, 80);
+		cardIn.setLocation(390, 130);
 		cardIn.setSize(400,500);
 		cardIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
 
-		JButton info = new JButton("Info");
+		Image img = new ImageIcon("images/store.png").getImage().getScaledInstance(60, 60, 0);
+		Image img2 = new ImageIcon("images/inventory.png").getImage().getScaledInstance(80, 80, 0);
+		Image img3 = new ImageIcon("images/heart.png").getImage().getScaledInstance(60, 60, 0);
+		Image img4 = new ImageIcon("images/coin.png").getImage().getScaledInstance(60, 60, 0);
+		Image img5 = new ImageIcon("images/map.png").getImage().getScaledInstance(80, 80, 0);
+		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
+		
+		
+		JButton info = new JButton((new ImageIcon(img2)));
 		info.setLocation(50,50);
-		info.setSize(30,30);
-		JButton shop = new JButton("shop");
-		shop.setLocation(50,90);
-		shop.setSize(30,30);
-		JButton aff = new JButton("aff");
-		aff.setLocation(50,130);
-		aff.setSize(30,30);
-		JButton coin = new JButton("coin");
+		info.setSize(70,70);
+		JButton shop = new JButton(new ImageIcon(img));
+		shop.setLocation(50,130);
+		shop.setSize(70,70);
+		JButton aff = new JButton(new ImageIcon(img3));
+		aff.setLocation(50,210);
+		aff.setSize(70,70);
+		JButton coin = new JButton(new ImageIcon(img4));
 		coin.setLocation(600,50);
-		coin.setSize(30,30);
-		JButton map = new JButton("map");
+		coin.setSize(70,70);
+		JButton map = new JButton(new ImageIcon(img5));
 		map.setLocation(850,50);
-		map.setSize(30,30);
+		map.setSize(70,70);
+		
+		info.setContentAreaFilled(false);
+		info.setFocusPainted(false);
+		shop.setContentAreaFilled(false);
+		shop.setFocusPainted(false);
+		aff.setContentAreaFilled(false);
+		aff.setFocusPainted(false);
+		coin.setContentAreaFilled(false);
+		coin.setFocusPainted(false);
+		map.setContentAreaFilled(false);
+		map.setFocusPainted(false);
 
 
-		JButton exit=new JButton("x"); 
+		JButton exit=new JButton(new ImageIcon(img6)); 
 		exit.setLocation(350,10);
 		exit.setSize(30,30);
+		exit.setContentAreaFilled(false);
+		exit.setFocusPainted(false);
 		//카드 번호
 		JLabel cardName=new JLabel("카드 번호 :");
 		cardName.setLocation(50, 60);
