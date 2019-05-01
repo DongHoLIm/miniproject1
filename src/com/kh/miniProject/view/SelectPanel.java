@@ -106,5 +106,4 @@ public class SelectPanel extends JPanel {
 		this.add(spb2);
 		//this.add(icon1);
 	}
-
 }

@@ -2,6 +2,7 @@ package com.kh.miniProject.model.vo;
 
 import javax.swing.JFrame;
 
+import com.kh.miniProject.view.MiniMap;
 import com.kh.miniProject.view.PlayerInfo;
 
 public class Exper {
@@ -11,7 +12,9 @@ public class Exper {
 		int exp;
 		if(pn==1) {
 			exp = (int)(Math.random()*20)+50;
+			//exp = 60;
 		}else {
+			//exp = 60;
 			exp = (int)(Math.random()*20)+50;			
 		}
 		
@@ -20,11 +23,14 @@ public class Exper {
 		
 		int upexper = PlayerInfo.exper+exp;
 		
+
 		if(upexper>200) {
 			
-			System.out.println("·¾¾÷ ÀĞÇôÁö´Â ¼ø¼­°¡ ¾îµğÂë?");
+			System.out.println("ë ™ì—… ì½í˜€ì§€ëŠ” ìˆœì„œê°€ ì–´ë””ì¯¤?");
+
 			int le = PlayerInfo.lev+1;
 			PlayerInfo.lev = le;
+			MiniMap.girlStop = 1;
 			RoundOpen ro = new RoundOpen();
 			ro.levelUp(le);
 			PlayerInfo.exper = 0;
@@ -35,3 +41,4 @@ public class Exper {
 	}
 
 }
+

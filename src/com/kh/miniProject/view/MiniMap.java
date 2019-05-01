@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,6 +42,9 @@ public class MiniMap extends JPanel {
 	private int girlresultnumber;
 	private int[] temparr;
 	private int[] grilarr;
+	public static int girlStop = 1;
+	private static String[] mmgi;
+	private String[] reGirl;
 	public MiniMap(JFrame start) {
 		
 		if(PlayerInfo.lev == 1) {
@@ -392,6 +396,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName1 = new JLabel("영화관");
 		placeName1.setLocation(455, 260);
 		placeName1.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName1.setFont(font1);
 		JButton place1 = new JButton(new ImageIcon("images/Button(1).png"));
 
 		place1.setLocation(450, 300);
@@ -411,6 +417,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName2 = new JLabel("카페");
 		placeName2.setLocation(130, 160);
 		placeName2.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName2.setFont(font1);
 
 		JButton place2 = new JButton(new ImageIcon("images/Button(1).png"));
 		place2.setLocation(120, 200);
@@ -430,6 +438,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName3 = new JLabel("공원");
 		placeName3.setLocation(260, 110);
 		placeName3.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName3.setFont(font1);
 		JButton place3 = new JButton(new ImageIcon("images/Button(1).png"));
 		place3.setLocation(250, 150);
 		place3.setSize(50, 50);
@@ -447,6 +457,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName4 = new JLabel("바닷가");
 		placeName4.setLocation(275, 460);
 		placeName4.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName4.setFont(font1);
 		JButton place4 = new JButton(new ImageIcon("images/Button(1).png"));
 		place4.setLocation(270, 500);
 		place4.setSize(50, 50);
@@ -464,6 +476,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName5 = new JLabel("식당");
 		placeName5.setLocation(660, 160);
 		placeName5.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName5.setFont(font1);
 		JButton place5 = new JButton(new ImageIcon("images/Button(1).png"));
 		place5.setLocation(650, 200);
 		place5.setSize(50, 50);
@@ -481,6 +495,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName6 = new JLabel("번화가");
 		placeName6.setLocation(455, 500);
 		placeName6.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName6.setFont(font1);
 		JButton place6 = new JButton(new ImageIcon("images/Button(1).png"));
 		place6.setLocation(450, 540);
 		place6.setSize(50, 50);
@@ -497,6 +513,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName7 = new JLabel("노래방");
 		placeName7.setLocation(55, 240);
 		placeName7.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName7.setFont(font1);
 		JButton place7 = new JButton(new ImageIcon("images/Button(1).png"));
 		place7.setLocation(50, 280);
 		place7.setSize(50, 50);
@@ -513,6 +531,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName8 = new JLabel("술집");
 		placeName8.setLocation(560, 10);
 		placeName8.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName8.setFont(font1);
 		JButton place8 = new JButton(new ImageIcon("images/Button(1).png"));
 		place8.setLocation(550, 50);
 		place8.setSize(50, 50);
@@ -530,6 +550,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName9 = new JLabel("꽃집");
 		placeName9.setLocation(610, 430);
 		placeName9.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName9.setFont(font1);
 		JButton place9 = new JButton(new ImageIcon("images/Button(1).png"));
 		place9.setLocation(600, 470);
 		place9.setSize(50, 50);
@@ -549,6 +571,8 @@ public class MiniMap extends JPanel {
 		JLabel placeName10 = new JLabel("놀이공원");
 		placeName10.setLocation(190, 280);
 		placeName10.setSize(150, 50);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		placeName10.setFont(font1);
 		JButton place10 = new JButton(new ImageIcon("images/Button(1).png"));
 		place10.setLocation(190, 320);
 		place10.setSize(50, 50);
@@ -627,6 +651,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Movie());
 					JLabel label = new JLabel("영화관");
 					label.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label.setFont(font);
 					place.add(label);
 					place.repaint();
 					y += 30;
@@ -634,6 +660,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Cafe());
 					JLabel label2 = new JLabel("카페");
 					label2.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label2.setFont(font);
 					place.add(label2);
 					place.repaint();
 					y += 50;
@@ -641,6 +669,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Park());
 					JLabel label3 = new JLabel("공원");
 					label3.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label3.setFont(font);
 					place.add(label3);
 					place.repaint();
 					y += 50;
@@ -648,6 +678,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Beach());
 					JLabel label4 = new JLabel("바다");
 					label4.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label4.setFont(font);
 					place.add(label4);
 					place.repaint();
 					y += 50;
@@ -655,6 +687,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Restaurant());
 					JLabel label5 = new JLabel("식당");
 					label5.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label5.setFont(font);
 					place.add(label5);
 					place.repaint();
 					y += 50;
@@ -662,6 +696,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(HotPlace());
 					JLabel label6 = new JLabel("번화가");
 					label6.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label6.setFont(font);
 					place.add(label6);
 					place.repaint();
 					y += 50;
@@ -671,12 +707,16 @@ public class MiniMap extends JPanel {
 					hmap.putAll(SiningRoom());
 					JLabel label7 = new JLabel("노래방");
 					label7.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label7.setFont(font);
 					place.add(label7);
 					place.repaint();
 					y += 50;
 				} else if (temp[b] == 8) {
 					hmap.putAll(Pub());
 					JLabel label8 = new JLabel("술집");
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label8.setFont(font);
 					label8.setBounds(10, y, 50, 50);
 					place.add(label8);
 					place.repaint();
@@ -685,12 +725,16 @@ public class MiniMap extends JPanel {
 					hmap.putAll(FlowerShop());
 					JLabel label9 = new JLabel("꽃집");
 					label9.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label9.setFont(font);
 					place.add(label9);
 					place.repaint();
 					y += 50;
 				} else if (temp[b] == 10) {
 					hmap.putAll(ThemePark());
 					JLabel label10 = new JLabel("놀이공원");
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label10.setFont(font);
 					label10.setBounds(10, y, 50, 50);
 					place.add(label10);
 					place.repaint();
@@ -702,6 +746,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Movie());
 					JLabel label = new JLabel("영화관");
 					label.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label.setFont(font);
 					place.add(label);
 					place.repaint();
 					y += 30;
@@ -709,6 +755,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Cafe());
 					JLabel label2 = new JLabel("카페");
 					label2.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label2.setFont(font);
 					place.add(label2);
 					place.repaint();
 					y += 50;
@@ -716,6 +764,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Park());
 					JLabel label3 = new JLabel("공원");
 					label3.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label3.setFont(font);
 					place.add(label3);
 					place.repaint();
 					y += 50;
@@ -723,6 +773,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Beach());
 					JLabel label4 = new JLabel("바다");
 					label4.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label4.setFont(font);
 					place.add(label4);
 					place.repaint();
 					y += 50;
@@ -730,6 +782,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Restaurant());
 					JLabel label5 = new JLabel("식당");
 					label5.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label5.setFont(font);
 					place.add(label5);
 					place.repaint();
 					y += 50;
@@ -737,6 +791,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(HotPlace());
 					JLabel label6 = new JLabel("번화가");
 					label6.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label6.setFont(font);
 					place.add(label6);
 					place.repaint();
 					y += 50;
@@ -746,6 +802,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(SiningRoom());
 					JLabel label7 = new JLabel("노래방");
 					label7.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label7.setFont(font);
 					place.add(label7);
 					place.repaint();
 					y += 50;
@@ -753,6 +811,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Pub());
 					JLabel label8 = new JLabel("술집");
 					label8.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label8.setFont(font);
 					place.add(label8);
 					place.repaint();
 					y += 50;
@@ -760,6 +820,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(FlowerShop());
 					JLabel label9 = new JLabel("꽃집");
 					label9.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label9.setFont(font);
 					place.add(label9);
 					place.repaint();
 					y += 50;
@@ -767,6 +829,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(ThemePark());
 					JLabel label10 = new JLabel("놀이공원");
 					label10.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label10.setFont(font);
 					place.add(label10);
 					place.repaint();
 					y += 50;
@@ -776,6 +840,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Movie());
 					JLabel label = new JLabel("영화관");
 					label.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label.setFont(font);
 					place.add(label);
 					place.repaint();
 					y += 30;
@@ -783,6 +849,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Cafe());
 					JLabel label2 = new JLabel("카페");
 					label2.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label2.setFont(font);
 					place.add(label2);
 					place.repaint();
 					y += 50;
@@ -790,6 +858,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Park());
 					JLabel label3 = new JLabel("공원");
 					label3.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label3.setFont(font);
 					place.add(label3);
 					place.repaint();
 					y += 50;
@@ -797,6 +867,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Beach());
 					JLabel label4 = new JLabel("바다");
 					label4.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label4.setFont(font);
 					place.add(label4);
 					place.repaint();
 					y += 50;
@@ -804,6 +876,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Restaurant());
 					JLabel label5 = new JLabel("식당");
 					label5.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label5.setFont(font);
 					place.add(label5);
 					place.repaint();
 					y += 50;
@@ -811,6 +885,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(HotPlace());
 					JLabel label6 = new JLabel("번화가");
 					label6.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label6.setFont(font);
 					place.add(label6);
 					place.repaint();
 					y += 50;
@@ -820,6 +896,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(SiningRoom());
 					JLabel label7 = new JLabel("노래방");
 					label7.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label7.setFont(font);
 					place.add(label7);
 					place.repaint();
 					y += 50;
@@ -827,6 +905,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(Pub());
 					JLabel label8 = new JLabel("술집");
 					label8.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label8.setFont(font);
 					place.add(label8);
 					place.repaint();
 					y += 50;
@@ -834,6 +914,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(FlowerShop());
 					JLabel label9 = new JLabel("꽃집");
 					label9.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label9.setFont(font);
 					place.add(label9);
 					place.repaint();
 					y += 50;
@@ -841,6 +923,8 @@ public class MiniMap extends JPanel {
 					hmap.putAll(ThemePark());
 					JLabel label10 = new JLabel("놀이공원");
 					label10.setBounds(10, y, 50, 50);
+					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+					label10.setFont(font);
 					place.add(label10);
 					place.repaint();
 					y += 50;
@@ -870,26 +954,49 @@ public class MiniMap extends JPanel {
 		
 		int levResult = PlayerInfo.lev;
 		System.out.println("레벨값 : " + levResult);
-		String[] mmgi = fc.goGirlImages(levResult);
-		System.out.println("배열길이 : " + mmgi.length);
-		System.out.println("무슨값 ? : " + mmgi[0]);
-		Image[] gImage = new Image[mmgi.length];
-		System.out.println("이미지 배열길이 : " + gImage.length);
-		JLabel[] gLabel = new JLabel[mmgi.length];
-		System.out.println("라벨 배열길이 : " + gLabel.length);
-		int sgoi = 10;
-		for(int g = 0 ; g < gImage.length ; g++) {
-			gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
-			System.out.println("무슨값이 들어갔을까? " + gImage[g]);
-			JLabel la = new JLabel();
-			la.setIcon(new ImageIcon(gImage[g]));
-			System.out.println("들어갔나? " + la);
-			la.setBounds(70 , sgoi , 50 , 50);
-			place.add(la);
-			sgoi +=50;		
+		if(girlStop == 1) {
+			mmgi = fc.goGirlImages(levResult);
+			System.out.println("배열길이 : " + mmgi.length);
+			System.out.println("무슨값 ? : " + mmgi[0]);
+			Image[] gImage = new Image[mmgi.length];
+			System.out.println("이미지 배열길이 : " + gImage.length);
+			JLabel[] gLabel = new JLabel[mmgi.length];
+			System.out.println("라벨 배열길이 : " + gLabel.length);
+			int sgoi = 10;
+			for(int g = 0 ; g < gImage.length ; g++) {
+				gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
+				System.out.println("무슨값이 들어갔을까? " + gImage[g]);
+				JLabel la = new JLabel();
+				la.setIcon(new ImageIcon(gImage[g]));
+				System.out.println("들어갔나? " + la);
+				la.setBounds(70 , sgoi , 50 , 50);
+				place.add(la);
+				sgoi +=50;	
+				girlStop++;
+			}
+		}else if(girlStop > 1) {
+			System.out.println("배열길이 : " + mmgi.length);
+			System.out.println("무슨값 ? : " + mmgi[0]);
+			Image[] gImage = new Image[mmgi.length];
+			System.out.println("이미지 배열길이 : " + gImage.length);
+			JLabel[] gLabel = new JLabel[mmgi.length];
+			System.out.println("라벨 배열길이 : " + gLabel.length);
+			int sgoi = 10;
+			for(int g = 0 ; g < gImage.length ; g++) {
+				gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
+				System.out.println("무슨값이 들어갔을까? " + gImage[g]);
+				JLabel la = new JLabel();
+				la.setIcon(new ImageIcon(gImage[g]));
+				System.out.println("들어갔나? " + la);
+				la.setBounds(70 , sgoi , 50 , 50);
+				place.add(la);
+				sgoi +=50;		
+			}
 		}
-		
+
 	}
+
+}
 	
 //	public void startStory() {
 //		System.out.println("왜 널값? " + intiarr.length);
@@ -958,4 +1065,4 @@ public class MiniMap extends JPanel {
 //		}
 //	}
 
-}
+

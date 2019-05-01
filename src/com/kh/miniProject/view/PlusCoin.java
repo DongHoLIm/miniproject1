@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -74,9 +75,11 @@ public class PlusCoin extends JPanel{
 		map.setContentAreaFilled(false);
 		map.setFocusPainted(false);
 
-		JLabel pluscoin= new JLabel("�씠 �긽�뭹�쓣 援щℓ �븯�떆寃좎뒾�땲源�???");
-		pluscoin.setLocation(50,45);
+		JLabel pluscoin= new JLabel("구매하시겠습니까???");
+		pluscoin.setLocation(75,45);
 		pluscoin.setSize(300,50);
+		Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+		pluscoin.setFont(font);
 
 		JButton exit=new JButton(new ImageIcon(img6)); 
 		exit.setLocation(250,10);
@@ -86,12 +89,16 @@ public class PlusCoin extends JPanel{
 
 
 		JButton btn5=new JButton("Yes"); 
-		btn5.setLocation(75,125);
-		btn5.setSize(50,30);
+		btn5.setLocation(50,125);
+		btn5.setSize(70,30);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		btn5.setFont(font1);
 
 		JButton btn6=new JButton("no"); 
-		btn6.setLocation(200,125);
-		btn6.setSize(50,30);
+		btn6.setLocation(150,125);
+		btn6.setSize(70,30);
+		Font font2=new Font("한컴 백제 M", Font.PLAIN, 15);
+		btn6.setFont(font2);
 
 		exit.addActionListener(new Change());
 		btn5.addActionListener(new Change2());
