@@ -25,8 +25,10 @@ public class Credit  extends JPanel {
 //			JLabel EndingBack = new JLabel(
 //					new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			EndingBack.setBounds(0, 0, 960, 720);
-		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
-	    icon1.setBounds(0, 0, 960, 720);
+		JLabel icon1 = new JLabel(new ImageIcon("images/gomin.png"));
+	    icon1.setSize(960 , 720);
+		icon1.setBounds(0, 0, 960, 720);
+	    
 	    this.add(icon1);
 		System.out.println("크레딧 이동");
 
