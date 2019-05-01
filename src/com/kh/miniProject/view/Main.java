@@ -38,6 +38,7 @@ public class Main extends JPanel{
 		this.setLocation(0,0);
 		this.setSize(960,720);
 		this.setLayout(null);
+
 		
 
 		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;

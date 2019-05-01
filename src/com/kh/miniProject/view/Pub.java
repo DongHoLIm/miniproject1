@@ -69,7 +69,7 @@ public class Pub extends JPanel implements KeyListener{
 		    this.add(icon1);
 		}
 		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
-		girl.setBounds(50, 50, 150, 150);
+		girl.setBounds(110, 5, 700, 550);
 		icon1.add(girl);
 		PubInit();
 

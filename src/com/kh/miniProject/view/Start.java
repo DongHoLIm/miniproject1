@@ -34,7 +34,7 @@ public class Start extends JFrame {
     	
     
     	
-        //¹è°æ Panel »ý¼ºÈÄ ÄÁÅÙÃ÷ÆäÀÎÀ¸·Î ÁöÁ¤      
+        //ï¿½ï¿½ï¿½ Panel ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½      
     	startmain = new JPanel() {
             public void paintComponent(Graphics g) {
             	g.drawImage(img,0,0,960,730,this);
@@ -153,8 +153,4 @@ public class Start extends JFrame {
         this.setVisible(true);
         this.setResizable(false);
     }
- 
-    
-
-	
 }

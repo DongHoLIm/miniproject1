@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.model.dao.PTextOutput;
 import com.kh.miniProject.model.vo.Day;
 
 public class Credit  extends JPanel {
@@ -55,6 +56,7 @@ public class Credit  extends JPanel {
 			Main.day2 = 0;
 			Main.dayBreak = 0;
 			Main.totalDay = 1;
+			PTextOutput.prologueNum = 0;
 			ChangePanel.ChangeStart(start, credit, new Start());
 		}
 

@@ -27,19 +27,19 @@ public class Ending extends JPanel {
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //			JLabel EndingBack = new JLabel(
-//					new ImageIcon(new ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+//					new ImageIcon(new ImageIcon("images/ì˜í™”ê´€.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			EndingBack.setBounds(0, 0, 960, 720);
 		this.setBackground(Color.BLACK);
-		System.out.println("¿£µù È­¸é");
+		System.out.println("ì—”ë”© í™”ë©´");
 
 		EndingInit();
 
 	}
 
 	public void EndingInit() {
-		System.out.println("Ending ³»ºÎ ÀÎÅÍ");
+		System.out.println("Ending ë‚´ë¶€ ì¸í„°");
 		ending.setVisible(true);
-		JLabel endingName = new JLabel("¸¶Áö¸· ±×³à");
+		JLabel endingName = new JLabel("ë§ˆì§€ë§‰ ê·¸ë…€");
 		endingName.setLocation(440, 260);
 		endingName.setSize(150, 50);
 		JButton ending = new JButton(new ImageIcon("images/Button(1).png"));
@@ -70,7 +70,9 @@ public class Ending extends JPanel {
 			Main.dayBreak =0;
 			Main.totalDay =1;  
 			Main.day2 = 0;
-			PTextOutput.prologueNum = 0 ;
+
+			PTextOutput.prologueNum = 10 ;
+
 			ChangePanel.ChangePanel(start, ending, new Prologue(start));
 		}
 

@@ -24,6 +24,7 @@ public class SelectPanel extends JPanel {
 	private int answerInt1;
 	private int answerInt2;
 
+
 	public SelectPanel(JFrame start,File loveStory) {
       this.start = start;
       this.loveStory = loveStory;

@@ -97,7 +97,7 @@ public class RandomPlace {
 			}for(int b = 0 ; b < random2.length ; b++) {
 				System.out.println(random2[b]);
 			}
-			
+			PlayerInfo.setLevBreak(PlayerInfo.getLevBreak() + 1);
 		}else if(PlayerInfo.getLev() == 3 && PlayerInfo.getLevBreak() == 2) {
 			randomNum = 3;
 			random2 = new int [randomNum];
@@ -140,8 +140,8 @@ public class RandomPlace {
 			}for(int b = 0 ; b < random2.length ; b++) {
 				System.out.println(random2[b]);
 			}
-			
-		}else if(PlayerInfo.getLev() == 4 && PlayerInfo.getLevBreak() == 3) {
+			PlayerInfo.setLevBreak(PlayerInfo.getLevBreak() + 1);
+		}else if(PlayerInfo.getLev() == 4 && PlayerInfo.getLevBreak() == 4) {
 			randomNum = 4;
 			random2 = new int [randomNum];
 			System.out.println("lev4"); 
@@ -160,7 +160,7 @@ public class RandomPlace {
 				System.out.println(random2[b]);
 			}
 			PlayerInfo.setLevBreak(PlayerInfo.getLevBreak() + 1);
-		}else if(PlayerInfo.getLev() == 4 &&PlayerInfo.getLevBreak() == 4 ) {
+		}else if(PlayerInfo.getLev() == 4 &&PlayerInfo.getLevBreak() == 5) {
 			randomNum = 4;
 			random2 = new int [randomNum];
 			System.out.println("lev3 - 2"); 
@@ -180,9 +180,9 @@ public class RandomPlace {
 			}for(int b = 0 ; b < random2.length ; b++) {
 				System.out.println(random2[b]);
 			}
-			
+			PlayerInfo.setLevBreak(PlayerInfo.getLevBreak() + 1);
 		}
-		else if(PlayerInfo.getLev() > 4 && PlayerInfo.getLevBreak() == 4) {
+		else if(PlayerInfo.getLev() > 4 && PlayerInfo.getLevBreak() == 5) {
 			randomNum = 5;
 			random2 = new int [randomNum];
 			System.out.println("lev2"); 
@@ -202,7 +202,6 @@ public class RandomPlace {
 			}for(int b = 0 ; b < random2.length ; b++) {
 				System.out.println(random2[b]);
 			}
-			PlayerInfo.setLevBreak(PlayerInfo.getLevBreak() + 1);
 		}else if(PlayerInfo.getLevBreak() == 5 ) {
 			randomNum = 5;
 			random2 = new int [randomNum];
