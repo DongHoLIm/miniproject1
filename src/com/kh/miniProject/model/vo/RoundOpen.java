@@ -3,12 +3,14 @@ package com.kh.miniProject.model.vo;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.kh.miniProject.view.Main;
+
 public class RoundOpen {
 	public static ArrayList<Girl> glist = new ArrayList<Girl>();
 
 
 	public void levelUp(int lev) {
-
+		if(Main.day==0) {
 		switch(lev) {
 		case 1 : roundUp1();break;
 		case 2 : roundUp2();break;
@@ -24,7 +26,7 @@ public class RoundOpen {
 
 		System.out.println(glist);
 		System.out.println("리스트저장확인");
-
+		}
 	}
 
 
