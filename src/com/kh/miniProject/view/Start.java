@@ -127,7 +127,7 @@ public class Start extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.StartChangePanle(start, startmain, new Main(start));
+				ChangePanel.StartChangePanle(start, startmain, new Prologue(start));
 				
 			}
         	

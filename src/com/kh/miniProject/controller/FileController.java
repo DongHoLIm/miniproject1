@@ -5,6 +5,7 @@ import java.io.File;
 
 import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.dao.ImageOutput;
+import com.kh.miniProject.model.dao.PTextOutput;
 import com.kh.miniProject.model.dao.TextOutput;
 import com.kh.miniProject.model.vo.GirlImageOut;
 
@@ -29,6 +30,11 @@ public class FileController {
 	public File textOutgoTput(String place) {
 		
 		return new TextOutput().textOutput(place);
+	}
+	
+	public File PtextOutgoTput(String place) {
+		
+		return new PTextOutput().PtextOutput(place);
 	}
 
 
