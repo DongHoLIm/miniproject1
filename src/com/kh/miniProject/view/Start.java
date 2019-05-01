@@ -7,8 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.io.File;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,7 +25,7 @@ public class Start extends JFrame {
     private JFrame start;
     private JPanel startmain;
     private Image  img;
-    
+    private Clip clip;
     
  
     public Start() {
@@ -34,7 +37,7 @@ public class Start extends JFrame {
     	
     
     	
-        //배경 Panel 생성후 컨텐츠페인으로 지정      
+             
     	startmain = new JPanel() {
             public void paintComponent(Graphics g) {
             	g.drawImage(img,0,0,960,730,this);
@@ -46,7 +49,22 @@ public class Start extends JFrame {
         
      
         startmain.setLayout(null);
+        File file = new File("sound/startBGM.wav");
        
+        
+        try {
+            
+            AudioInputStream stream = AudioSystem.getAudioInputStream(file);
+            clip = AudioSystem.getClip();
+            clip.open(stream);
+            clip.start();
+            
+            
+            
+        } catch(Exception e) {
+            
+            e.printStackTrace();
+        }
        
        JButton button = new JButton(new ImageIcon("images/START.png"));
         button.setLocation(420,430);
@@ -129,7 +147,8 @@ public class Start extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ChangePanel.StartChangePanle(start, startmain, new Prologue(start));
+				clip.stop();
+				ChangePanel.StartChangePanle(start, startmain, new Main(start));
 				
 			}
         	
@@ -143,9 +162,10 @@ public class Start extends JFrame {
 			}
         	
         });
+
         RoundOpen ro = new RoundOpen();
 		    ro.roundUp1();
-      
+        
         this.add(startmain);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
