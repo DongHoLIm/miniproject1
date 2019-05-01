@@ -7,13 +7,13 @@ public class Girl {
 	private String charactor;  //성격
 	private String signature;  //특징
 	private String image;  //이미지파일 경로
-	private int lovePer;  //여자의 애정도
-	
+	private int glovePer;  //여자의 애정도
+	private int mylovePer; //나의 애정도
 	
 	
 	public Girl() {}
 
-	public Girl(String name, int age, char gender, String charactor, String signature,String image,int lovePer) {
+	public Girl(String name, int age, char gender, String charactor, String signature,String image,int glovePer, int mylovePer) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -21,7 +21,8 @@ public class Girl {
 		this.charactor = charactor;
 		this.signature = signature;
 		this.image = image;
-		this.lovePer = lovePer;
+		this.glovePer = glovePer;
+		this.mylovePer = mylovePer;
 	}
 	
 
@@ -73,15 +74,29 @@ public class Girl {
 		this.image = image;
 	}
 	
-	public int getLovePer() {
-		return lovePer;
+	public int getGlovePer() {
+		return glovePer;
 	}
 
-	public void setLovePer(int lovePer) {
-		this.lovePer = lovePer;
+	public void setGlovePer(int glovePer) {
+		this.glovePer = glovePer;
+	}
+
+	public int getMylovePer() {
+		return mylovePer;
+	}
+
+	public void setMylovePer(int mylovePer) {
+		this.mylovePer = mylovePer;
 	}
 	
-
+	
+	
+	@Override
+	public String toString() {
+		return "name : " + name + " age:" + age+ " gender:" + gender
+				+ " charactor:" + charactor+ " signature:" + signature+ " image:" + image + "\n";
+	}
 	
 
 }
