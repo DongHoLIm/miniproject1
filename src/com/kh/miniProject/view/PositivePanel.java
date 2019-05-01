@@ -10,17 +10,17 @@ import com.kh.miniProject.model.vo.MylovePer;
 
 public class PositivePanel extends JPanel{
 	
-	public PositivePanel(JFrame start, int girlnum) {
+	public PositivePanel(JFrame start) {
 	      System.out.println("±àÁ¤±àÁ¤");
 	      
 	      Exper ex = new Exper();
 	      ex.plusExper(1);
 	      
 	      MylovePer mlp = new MylovePer();
-	      mlp.plusMylove(girlnum, 1);
+	     // mlp.plusMylove(girlnum, 1);
 	      
 	      GirllovePer glp = new GirllovePer();
-	      glp.plusGirllove(girlnum);
+	      //glp.plusGirllove(girlnum);
 	      
 	      
 	      

@@ -39,9 +39,32 @@ public class MiniMap extends JPanel {
 	//StartStory ss = new StartStory();
 	GrilNumber gn = new GrilNumber();
 	private int girlresultnumber;
-	
-
+	private int[] temparr;
+	private int[] grilarr;
 	public MiniMap(JFrame start) {
+		
+		if(PlayerInfo.lev == 1) {
+			temparr = new int[1];
+		}else if(PlayerInfo.lev ==2) {
+			temparr = new int[2];
+		}else if(PlayerInfo.lev ==3) {
+			temparr =new int[3];
+		}else if(PlayerInfo.lev ==4) {
+			temparr =new int[4];
+		}else if(PlayerInfo.lev>=5) {
+			temparr =new int[5];
+		}
+		if(PlayerInfo.lev == 1) {
+			grilarr = new int[1];
+		}else if(PlayerInfo.lev ==2) {
+			grilarr = new int[2];
+		}else if(PlayerInfo.lev ==3) {
+			grilarr =new int[3];
+		}else if(PlayerInfo.lev ==4) {
+			grilarr =new int[4];
+		}else if(PlayerInfo.lev>=5) {
+			grilarr =new int[5];
+		}
 		// RandomPlaceManager rpm = new RandomPlaceManager(null);
 		this.start = start;
 		hmap = new HashMap();
@@ -97,9 +120,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 1) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i] =GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 1) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -113,9 +148,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 3) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 3) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -128,9 +175,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 2) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 2) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -143,9 +202,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 4) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 4) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -158,9 +229,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 5) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 5) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -173,9 +256,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 6) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 6) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -188,9 +283,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 7) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 7) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -203,9 +310,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 8) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 8) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -218,9 +337,21 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 9) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 9) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -233,9 +364,22 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			for(int i = 0; i < temp.length; i++) {
-				if(temp[i] == 10) {
-					girlresultnumber = GirlImageOut.iarr[i];
+			for(int i = 0;i <temp.length;i++) {
+				if(temp[i]!=0) {
+					temparr[i]=temp[i];
+				}
+			}
+			for(int i =0;i <grilarr.length;i++) {
+				if(grilarr[i]!=0) {
+					grilarr[i]=GirlImageOut.iarr[i];
+				}
+			}
+	       
+			for(int i = 0; i < temparr.length; i++) {
+				if(temparr[i] == 10) {
+					girlresultnumber = grilarr[i];
+				}else if(temp[i] == 0) {
+					break;
 				}
 			}
 			gn.grilNumberResult(girlresultnumber);
@@ -476,6 +620,7 @@ public class MiniMap extends JPanel {
 	      
 		int y = 0;
 		for (int b = 0; b < temp.length; b++) {
+			System.out.println("길이길이 : " + temp.length);
 			System.out.println("호출됨 2");
 			if (Main.dayBreak == 2 && Main.totalDay != 11) {
 				if (temp[b] == 1) {
