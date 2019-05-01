@@ -34,7 +34,7 @@ public class Start extends JFrame {
     	
     
     	
-        //¹è°æ Panel »ı¼ºÈÄ ÄÁÅÙÃ÷ÆäÀÎÀ¸·Î ÁöÁ¤      
+        //ë°°ê²½ Panel ìƒì„±í›„ ì»¨í…ì¸ í˜ì¸ìœ¼ë¡œ ì§€ì •      
     	startmain = new JPanel() {
             public void paintComponent(Graphics g) {
             	g.drawImage(img,0,0,960,730,this);
@@ -144,7 +144,8 @@ public class Start extends JFrame {
         	
         });
         RoundOpen ro = new RoundOpen();
-		ro.roundUp1();
+		    ro.roundUp1();
+      
         this.add(startmain);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
