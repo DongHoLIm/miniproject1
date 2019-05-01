@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import com.kh.miniProject.controller.FileController;
+import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.Day;
 import com.kh.miniProject.model.vo.EnterKeyAction;
 
@@ -28,8 +29,9 @@ public class SingingRoom extends JPanel implements KeyListener{
 	private File loveStory;
 	private EnterKeyAction ek = new EnterKeyAction();
 	private ArrayList listStory;
+	private JLabel icon1;
 
-	public SingingRoom(JFrame start) {
+	public SingingRoom(JFrame start,int girlnumber) {
 		this.start = start;
 		singingRoom = this;
 		this.setBounds(0, 0, 960, 720);
@@ -52,18 +54,22 @@ public class SingingRoom extends JPanel implements KeyListener{
 		String place = "singingroom";
 		loveStory = sc.textOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
-		if(Main.day == 0) {JLabel icon1 = new JLabel(new ImageIcon("images/sing1.png"));
+		if(Main.day == 0) {
+			icon1 = new JLabel(new ImageIcon("images/sing1.png"));
 	    icon1.setBounds(0, 0, 960, 720);
 	    this.add(icon1);
 		}else if(Main.day == 1) {
-			JLabel icon1 = new JLabel(new ImageIcon("images/sing2.png"));
+			icon1 = new JLabel(new ImageIcon("images/sing2.png"));
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
 		}else if(Main.day == 2) {
-			JLabel icon1 = new JLabel(new ImageIcon("images/sing3.png"));
+			icon1 = new JLabel(new ImageIcon("images/sing3.png"));
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
 		}
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[girlnumber]));
+		girl.setBounds(50, 50, 150, 150);
+		icon1.add(girl);
 		SingingRoomInit();
 
 	}

@@ -12,16 +12,16 @@ public class GirlImages extends JPanel{
 	public String[] girlImages(int lev) {
 		
 		
-		girlImage[0] = ("images/girl1.png");
-		girlImage[1] = ("images/girl2.png");
-		girlImage[2] = ("images/girl3.png");
-		girlImage[3] = ("images/girl4.png");
-		girlImage[4] = ("images/girl5.png");
-		girlImage[5] = ("images/girl6.png");
-		girlImage[6] = ("images/girl7.png");
-		girlImage[7] = ("images/girl8.png");
-		girlImage[8] = ("images/girl9.png");
-		girlImage[9] = ("images/girl10.png");
+		girlImage[0] = ("images/0nomal.png");
+		girlImage[1] = ("images/1nomal.png");
+		girlImage[2] = ("images/2nomal.png");
+		girlImage[3] = ("images/3nomal.png");
+		girlImage[4] = ("images/4nomal.png");
+		girlImage[5] = ("images/5nomal.png");
+		girlImage[6] = ("images/6nomal.png");
+		girlImage[7] = ("images/7nomal.png");
+		girlImage[8] = ("images/8nomal.png");
+		girlImage[9] = ("images/9nomal.png");
 		
 		String[] result = new String[lev];
 		

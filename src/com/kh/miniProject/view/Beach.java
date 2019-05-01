@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import com.kh.miniProject.controller.FileController;
+import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.Day;
 import com.kh.miniProject.model.vo.EnterKeyAction;
 
@@ -30,8 +31,9 @@ public class Beach extends JPanel implements KeyListener{
 	private File loveStory;
 	private EnterKeyAction ek = new EnterKeyAction();
 	private ArrayList listStory;
+	private JLabel icon1;
 
-	public Beach(JFrame start) {
+	public Beach(JFrame start,int girlnumber) {
 		this.start = start;
 		beach = this;
 		this.setBounds(0, 0, 960, 720);
@@ -55,18 +57,22 @@ public class Beach extends JPanel implements KeyListener{
 		loveStory = sc.textOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
 		
-		if(Main.day == 0) {JLabel icon1 = new JLabel(new ImageIcon("images/beach.png"));
+		if(Main.day == 0) {
+			icon1 = new JLabel(new ImageIcon("images/beach.png"));
 	    icon1.setBounds(0, 0, 960, 720);
 	    this.add(icon1);
 		}else if(Main.day == 1) {
-			JLabel icon1 = new JLabel(new ImageIcon("images/beach_twilight.png"));
+			icon1 = new JLabel(new ImageIcon("images/beach_twilight.png"));
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
 		}else if(Main.day == 2) {
-			JLabel icon1 = new JLabel(new ImageIcon("images/beach_night.png"));
+			icon1 = new JLabel(new ImageIcon("images/beach_night.png"));
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
 		}
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[girlnumber]));
+		girl.setBounds(50, 50, 150, 150);
+		icon1.add(girl);
 		
 		BeachInit();
 		
