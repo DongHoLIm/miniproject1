@@ -17,6 +17,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 import com.kh.miniProject.model.vo.PointMinus;
+import com.kh.miniProject.model.vo.RoundOpen;
 
 public class Main extends JPanel{
 	private JFrame start;
@@ -38,6 +39,9 @@ public class Main extends JPanel{
 		this.setSize(960,720);
 		this.setLayout(null);
 
+		RoundOpen ro = new RoundOpen();
+		ro.roundUp1();
+		
 
 		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;
 		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));

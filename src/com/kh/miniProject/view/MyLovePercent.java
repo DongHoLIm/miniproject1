@@ -50,7 +50,7 @@ public class MyLovePercent extends JPanel{
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
 
-		
+		loveIn.add(exit);
 		
 
 		//System.out.println(ro.getGlist().size());

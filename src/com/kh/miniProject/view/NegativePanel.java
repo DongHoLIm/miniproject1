@@ -6,12 +6,15 @@ import javax.swing.JPanel;
 
 import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.GirllovePer;
+import com.kh.miniProject.model.vo.GrilNumber;
 import com.kh.miniProject.model.vo.MylovePer;
 
 public class NegativePanel extends JPanel{
 	
-	public NegativePanel(JFrame start, int girlnum) {
+	public NegativePanel(JFrame start) {
 	      System.out.println("şÎÁ¤şÎÁ¤");
+	      
+	      int girlnum = GrilNumber.grilnumber;
 	      
 	      Exper ex = new Exper();
 	      ex.plusExper(2);

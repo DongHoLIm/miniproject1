@@ -10,9 +10,9 @@ public class Exper {
 	public void plusExper(int pn) {
 		int exp;
 		if(pn==1) {
-			exp = (int)(Math.random()*20)+31;
+			exp = (int)(Math.random()*20)+50;
 		}else {
-			exp = (int)(Math.random()*20)+21;			
+			exp = (int)(Math.random()*20)+50;			
 		}
 		
 //		PlayerInfo pif = new PlayerInfo(start);
