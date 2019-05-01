@@ -21,6 +21,8 @@ public class Exper {
 		int upexper = PlayerInfo.exper+exp;
 		
 		if(upexper>200) {
+			
+			System.out.println("렙업 읽혀지는 순서가 어디쯤?");
 			int le = PlayerInfo.lev+1;
 			PlayerInfo.lev = le;
 			RoundOpen ro = new RoundOpen();

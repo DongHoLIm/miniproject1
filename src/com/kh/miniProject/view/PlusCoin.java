@@ -36,7 +36,6 @@ public class PlusCoin extends JPanel{
 		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
 	    icon1.setBounds(0, 0, 960, 720);
 	    
-		JButton info = new JButton("Info");
 
 		
 		Image img = new ImageIcon("images/store.png").getImage().getScaledInstance(60, 60, 0);
@@ -75,7 +74,7 @@ public class PlusCoin extends JPanel{
 		map.setContentAreaFilled(false);
 		map.setFocusPainted(false);
 
-		JLabel pluscoin= new JLabel("이 상품을 구매 하시겠슴니까???");
+		JLabel pluscoin= new JLabel("�씠 �긽�뭹�쓣 援щℓ �븯�떆寃좎뒾�땲源�???");
 		pluscoin.setLocation(50,45);
 		pluscoin.setSize(300,50);
 
