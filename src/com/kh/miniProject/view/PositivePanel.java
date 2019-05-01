@@ -18,10 +18,10 @@ public class PositivePanel extends JPanel{
 	      ex.plusExper(1);
 	      
 	      MylovePer mlp = new MylovePer();
-	      mlp.plusMylove(girlnum, 1);
+	     // mlp.plusMylove(girlnum, 1);
 	      
 	      GirllovePer glp = new GirllovePer();
-	      glp.plusGirllove(girlnum);
+	      //glp.plusGirllove(girlnum);
 	      
 	      
 	      
