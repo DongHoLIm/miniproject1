@@ -3,6 +3,7 @@ package com.kh.miniProject.view;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+
 import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.GirllovePer;
 import com.kh.miniProject.model.vo.MylovePer;
@@ -10,7 +11,7 @@ import com.kh.miniProject.model.vo.MylovePer;
 public class PositivePanel extends JPanel{
 	
 	public PositivePanel(JFrame start, int girlnum) {
-	      System.out.println("±‡¡§±‡¡§");
+	      System.out.println("¬±√†√Å¬§¬±√†√Å¬§");
 	      
 	      Exper ex = new Exper();
 	      ex.plusExper(1);
@@ -24,5 +25,4 @@ public class PositivePanel extends JPanel{
 	      
 	      
 	   }
-
 }

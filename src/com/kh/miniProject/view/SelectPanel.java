@@ -9,17 +9,20 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class SelectPanel extends JPanel{
-   private JPanel select = new JPanel();
-   private JFrame start;
-   private File loveStory;
-   private int answerInt1;
-   private int answerInt2;
-   public SelectPanel(JFrame start,File loveStory) {
+public class SelectPanel extends JPanel {
+	private JPanel select = new JPanel();
+	private JFrame start;
+	private File loveStory;
+	private int answerInt1;
+	private int answerInt2;
+
+	public SelectPanel(JFrame start,File loveStory) {
       this.start = start;
       this.loveStory = loveStory;
       this.select = this;
@@ -27,7 +30,8 @@ public class SelectPanel extends JPanel{
       this.setBackground(Color.black);
       this.setLayout(null);
       
-   
+      JLabel icon1 = new JLabel(new ImageIcon("images/gomin.png"));
+	  icon1.setBounds(0, 0, 960, 720);
       
       String[] str = new String[20];
       
@@ -91,6 +95,7 @@ public class SelectPanel extends JPanel{
 
       this.add(spb1);
       this.add(spb2);
+      this.add(icon1);
    }
 
 }

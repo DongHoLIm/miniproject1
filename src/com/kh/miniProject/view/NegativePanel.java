@@ -3,6 +3,7 @@ package com.kh.miniProject.view;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+
 import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.GirllovePer;
 import com.kh.miniProject.model.vo.MylovePer;
@@ -10,7 +11,7 @@ import com.kh.miniProject.model.vo.MylovePer;
 public class NegativePanel extends JPanel{
 	
 	public NegativePanel(JFrame start, int girlnum) {
-	      System.out.println("∫Œ¡§∫Œ¡§");
+	      System.out.println("≈ü√é√Å¬§≈ü√é√Å¬§");
 	      
 	      Exper ex = new Exper();
 	      ex.plusExper(2);
@@ -22,5 +23,6 @@ public class NegativePanel extends JPanel{
 	      glp.ninusGirllove(girlnum);
 	      
 	   }
+
 
 }
