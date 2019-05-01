@@ -39,8 +39,7 @@ public class Main extends JPanel{
 		this.setSize(960,720);
 		this.setLayout(null);
 
-		RoundOpen ro = new RoundOpen();
-		ro.roundUp1();
+		
 		
 
 		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;

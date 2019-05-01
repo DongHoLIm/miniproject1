@@ -73,7 +73,7 @@ public class Cafe extends JPanel implements KeyListener{
 		}
 		System.out.println("ÀÌ¹ÌÁö? " + GrilNumber.grilnumber);
 		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
-		girl.setBounds(50, 50, 150, 150);
+		girl.setBounds(110, 5, 700, 550);
 		icon1.add(girl);
 		
 		cafeInit();
