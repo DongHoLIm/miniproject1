@@ -18,7 +18,8 @@ public class PlayerInfo extends JPanel{
 	private JFrame start;
 	private JPanel pinfo;
 	private JPanel playerInfoIn;
-	public static int lev = 7;
+	public static int lev = 3;
+	public static int exper=0;
 
 	private static int levBreak = 5;
 	public static int getLevBreak() {
@@ -171,6 +172,18 @@ public class PlayerInfo extends JPanel{
 	public void setLevelIn(JLabel levelIn) {
 		this.levelIn = levelIn;
 	}
+	
+	public int getExper() {
+		return exper;
+	}
+
+	public void setExper(int exper) {
+		this.exper = exper;
+	}
+
+
+
+
 
 	class Change implements ActionListener{
 

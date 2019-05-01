@@ -3,20 +3,26 @@ package com.kh.miniProject.view;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.kh.miniProject.model.vo.Day;
+
+import com.kh.miniProject.model.vo.Exper;
+import com.kh.miniProject.model.vo.GirllovePer;
+import com.kh.miniProject.model.vo.MylovePer;
 
 public class PositivePanel extends JPanel{
 	
-	private JPanel PositivePanel;
-
-	public PositivePanel(JFrame start) {
-		PositivePanel = this;
-		System.out.println("±‡¡§±‡¡§");
-		Main.day2++;
-		Main.day++;
-		Main.dayBreak++;
-		new Day().day();
-		ChangePanel.ChangePanel(start, PositivePanel, new Main(start));
-	}
-
+	public PositivePanel(JFrame start, int girlnum) {
+	      System.out.println("¬±√†√Å¬§¬±√†√Å¬§");
+	      
+	      Exper ex = new Exper();
+	      ex.plusExper(1);
+	      
+	      MylovePer mlp = new MylovePer();
+	      mlp.plusMylove(girlnum, 1);
+	      
+	      GirllovePer glp = new GirllovePer();
+	      glp.plusGirllove(girlnum);
+	      
+	      
+	      
+	   }
 }
