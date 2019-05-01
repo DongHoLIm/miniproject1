@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,6 +12,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+
+import com.kh.miniProject.model.vo.Girl;
+import com.kh.miniProject.model.vo.RoundOpen;
 
 
 public class MyLovePercent extends JPanel{
@@ -27,6 +32,7 @@ public class MyLovePercent extends JPanel{
 		loveIn.setSize(400,500);
 		loveIn.setLayout(null);
 		loveIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
+		
 		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
 	    icon1.setBounds(0, 0, 960, 720);
 		this.setLocation(0,0);
@@ -44,57 +50,100 @@ public class MyLovePercent extends JPanel{
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
 
-		Image girl1 = new ImageIcon("images/girl1.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label1 = new JLabel(new ImageIcon(girl1));
-		label1.setLocation(10,60);
-		label1.setSize(50,50);
+		
+		
 
-		Image girl2 = new ImageIcon("images/girl2.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label2 = new JLabel(new ImageIcon(girl2));
-		label2.setLocation(10,120);
-		label2.setSize(50, 50);
+		//System.out.println(ro.getGlist().size());
+		int lev =RoundOpen.getGlist().size();
+		
+		JLabel label1 = new JLabel("경현이는 지금 " + lev + "명과 썸타는중~~");
+		label1.setSize(300, 50);
+		label1.setLocation(10, 30);
 
-		Image girl3 = new ImageIcon("images/girl3.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label3 = new JLabel(new ImageIcon(girl3));
-		label3.setLocation(10,180);
-		label3.setSize(50, 50);
+		loveIn.add(label0);
+		loveIn.add(label1);
+		
+		
+		JPanel scrollback = new JPanel();
+		scrollback.setLayout(null);
+		scrollback.setBounds(0, 80, 368, 330);
+		//scrollback.setBorder(BorderFactory.createLineBorder(Color.green, 1));
 
-		Image girl4 = new ImageIcon("images/girl4.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label4 = new JLabel(new ImageIcon(girl4));
-		label4.setLocation(10,240);
-		label4.setSize(50, 50);
+		JPanel scrollpanel = new JPanel();
+		scrollpanel.setLayout(null);
+		scrollpanel.setPreferredSize(new Dimension(340,60*RoundOpen.getGlist().size()));
+		//scrollpanel.setBorder(BorderFactory.createLineBorder(Color.magenta,1));
+		
+		JPanel[] backpan = new JPanel[lev];  
+		Image[] img = new Image[lev];        
+		JLabel[] imglabel = new JLabel[lev];  
+		JPanel[] mlpview = new JPanel[lev]; 
+		JLabel[] redlabel = new JLabel[lev];
+		
+		Girl g;
+		String str;
+		int a = 1;
+		int b = 0;
+		
+		int mlper=0;
+		Image red = new ImageIcon("images/red.jpg").getImage().getScaledInstance(300, 30, 0);
+		
+		for(int i=0 ; i<lev ; i++) {
+			
+			backpan[i] = new JPanel();
+			backpan[i].setLayout(null);
+			backpan[i].setBounds(a,b, 340,50);
+			backpan[i].setBorder(BorderFactory.createLineBorder(Color.black, 1));
+			
+			
+			//이미지 라벨
+			g = RoundOpen.getGlist().get(i); //Girl 타입 g에 i번째 girl 가져오기
+			str = g.getImage();  //str에 i번째 여자 이미지 디렉토리 담기
+			img[i] = new ImageIcon(str).getImage().getScaledInstance(50, 50, 0);  //img[i]에 로드한 이미지 저장
+			imglabel[i] = new JLabel(new ImageIcon(img[i])); //i번째 라벨에 i번째 이미지 저장
+			imglabel[i].setBounds(10,3, 50, 50);
+//			imglabel[i].setLocation(, );
+//			imglabel[i].setSize(50,50);
+			
+			//애정도 패널
+			//mlper = g.getMylovePer();
+			mlper=50;
+			mlpview[i] = new JPanel();
+			mlpview[i].setLayout(null);
+			mlpview[i].setBounds(70,22, 260, 12);
+			mlpview[i].setBorder(BorderFactory.createLineBorder(Color.red,1));
+			
+			redlabel[i] = new JLabel(new ImageIcon(red));
+			redlabel[i].setBounds(0,0, (int)(mlper*2.6),12);
+			
+			mlpview[i].add(redlabel[i]);
+			
+			
+			backpan[i].add(imglabel[i]);
+			backpan[i].add(mlpview[i]);
+			
+			scrollpanel.add(backpan[i]);
+			
+			b+=60;
 
-		Image girl5 = new ImageIcon("images/girl5.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label5 = new JLabel(new ImageIcon(girl5));
-		label5.setLocation(10,300);
-		label5.setSize(50, 50);
+
+		}
 		
-		Image girl6 = new ImageIcon("images/girl6.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label6 = new JLabel(new ImageIcon(girl6));
-		label6.setLocation(150,60);
-		label6.setSize(50,50);
+		//scrollpanel.setBackground(Color.white);
+		JScrollPane glistscroll = new JScrollPane(scrollpanel);
+		glistscroll.setBounds(0, 0, 365, 330);
+		//glistscroll.setBorder(BorderFactory.createLineBorder(Color.yellow, 1));
+		//glistscroll.setPreferredSize(new Dimension(380,50));
+		//glistscroll.getVerticalScrollBar().setUnitIncrement(16);
 		
-		Image girl7 = new ImageIcon("images/girl7.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label7 = new JLabel(new ImageIcon(girl7));
-		label7.setLocation(150,120);
-		label7.setSize(50,50);
+		scrollback.add(glistscroll);
+		loveIn.add(scrollback);
 		
-		Image girl8 = new ImageIcon("images/girl8.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label8 = new JLabel(new ImageIcon(girl8));
-		label8.setLocation(150,180);
-		label8.setSize(50,50);
+		this.add(loveIn);
 		
-		Image girl9 = new ImageIcon("images/girl9.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label9 = new JLabel(new ImageIcon(girl9));
-		label9.setLocation(150,240);
-		label9.setSize(50,50);
 		
-		Image girl10 = new ImageIcon("images/girl10.png").getImage().getScaledInstance(50, 50, 0);
-		JLabel label10 = new JLabel(new ImageIcon(girl10));
-		label10.setLocation(150,300);
-		label10.setSize(50,50);
 		
-		Image img = new ImageIcon("images/store.png").getImage().getScaledInstance(60, 60, 0);
+		Image img1 = new ImageIcon("images/store.png").getImage().getScaledInstance(60, 60, 0);
 		Image img2 = new ImageIcon("images/inventory.png").getImage().getScaledInstance(80, 80, 0);
 		Image img3 = new ImageIcon("images/heart.png").getImage().getScaledInstance(60, 60, 0);
 		Image img4 = new ImageIcon("images/coin.png").getImage().getScaledInstance(60, 60, 0);
@@ -104,7 +153,7 @@ public class MyLovePercent extends JPanel{
 		JButton info = new JButton((new ImageIcon(img2)));
 		info.setLocation(50,50);
 		info.setSize(70,70);
-		JButton shop = new JButton(new ImageIcon(img));
+		JButton shop = new JButton(new ImageIcon(img1));
 		shop.setLocation(50,130);
 		shop.setSize(70,70);
 		JButton aff = new JButton(new ImageIcon(img3));
@@ -130,20 +179,6 @@ public class MyLovePercent extends JPanel{
 		
 		exit.addActionListener(new Change());
 		
-		loveIn.add(label0);
-		loveIn.add(exit);
-		loveIn.add(label1);
-		loveIn.add(label2);
-		loveIn.add(label3);
-		loveIn.add(label4);
-		loveIn.add(label5);
-		loveIn.add(label6);
-		loveIn.add(label7);
-		loveIn.add(label8);
-		loveIn.add(label9);
-		loveIn.add(label10);		
-
-		this.add(loveIn);
 		this.add(info);
 		this.add(shop);
 		this.add(aff);
