@@ -16,16 +16,7 @@ import com.kh.miniProject.view.ThemePark;
 
 public class StartStory {
 	private JFrame start;
-	Movie place1 = new Movie(start);
-	Cafe place2 = new Cafe(start);
-	Park place3 = new Park(start);
-	Beach place4 = new Beach(start);
-	Restraurant place5 = new Restraurant(start);
-	HotPlace place6 = new HotPlace(start);
-	SingingRoom place7 = new SingingRoom(start);
-	Pub place8 = new Pub(start);
-	FlowerShop place9 = new FlowerShop(start);
-	ThemePark place10 = new ThemePark(start);
+	public static int grilnumber;
 	
 	public void startStory() {
 		System.out.println("¿Ö ³Î°ª? " + MiniMap.intiarr);
@@ -41,51 +32,90 @@ public class StartStory {
 				
 				if(MiniMap.intiarr[i] == 1) {
 					if(i==j) {
-						place1.acceptGirl(GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						new Movie(start,grilnumber);
+						System.out.println("ghkrdlsghkrdsl : " + grilnumber);
+						break;
+						/*place1.acceptGirl(GirlImageOut.iarr[j]);*/
 					}
-				}else if(MiniMap.intiarr[i] == 2) {
+				}
+				if(MiniMap.intiarr[i] == 2) {
 					if(i==j) {
-						place2.acceptGirl(GirlImageOut.iarr[j]);
-					}
-					
-				}else if(MiniMap.intiarr[i] == 3) {
-					if(i==j) {
-						place3.acceptGirl(GirlImageOut.iarr[j]);
-					}
-					
-				}else if(MiniMap.intiarr[i] == 4) {
-					if(i==j) {
-						place4.acceptGirl(GirlImageOut.iarr[j]);
-					}
-					
-				}else if(MiniMap.intiarr[i] == 5) {
-					if(i==j) {
-						place5.acceptGirl(GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						new Cafe(start,grilnumber);
+						System.out.println("ghkrdlsghkrdsl : " + grilnumber);
+						break;
+						/*place2.acceptGirl(GirlImageOut.iarr[j]);*/
 					}
 					
-				}else if(MiniMap.intiarr[i] == 6) {
+				}
+				if(MiniMap.intiarr[i] == 3) {
 					if(i==j) {
-						place6.acceptGirl(GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						new Park(start,grilnumber);
+						System.out.println("ghkrdlsghkrdsl : " + grilnumber);
+						break;
 					}
 					
-				}else if(MiniMap.intiarr[i] == 7) {
+				}
+				if(MiniMap.intiarr[i] == 4) {
 					if(i==j) {
-						place7.acceptGirl(GirlImageOut.iarr[j]);
+						new Beach(start,GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						break;
+						/*place4.acceptGirl(GirlImageOut.iarr[j]);*/
 					}
 					
-				}else if(MiniMap.intiarr[i] == 8) {
+				}
+				if(MiniMap.intiarr[i] == 5) {
 					if(i==j) {
-						place8.acceptGirl(GirlImageOut.iarr[j]);
+						new Restraurant(start,GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						break;
+						/*place5.acceptGirl(GirlImageOut.iarr[j]);*/
 					}
 					
-				}else if(MiniMap.intiarr[i] == 9) {
+				}
+				if(MiniMap.intiarr[i] == 6) {
 					if(i==j) {
-						place9.acceptGirl(GirlImageOut.iarr[j]);
+						new HotPlace(start,GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						break;
 					}
 					
-				}else if(MiniMap.intiarr[i] == 10) {
+				}
+				if(MiniMap.intiarr[i] == 7) {
 					if(i==j) {
-						place10.acceptGirl(GirlImageOut.iarr[j]);
+						new SingingRoom(start,GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						break;
+					}
+					
+				}
+				if(MiniMap.intiarr[i] == 8) {
+					if(i==j) {
+						new Pub(start,GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						break;
+						/*place8.acceptGirl(GirlImageOut.iarr[j]);*/
+					}
+					
+				}
+				if(MiniMap.intiarr[i] == 9) {
+					if(i==j) {
+						new FlowerShop(start,GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						break;
+						/*place9.acceptGirl(GirlImageOut.iarr[j]);*/
+					}
+					
+				}
+				if(MiniMap.intiarr[i] == 10) {
+					if(i==j) {
+						new ThemePark(start,GirlImageOut.iarr[j]);
+						grilnumber = GirlImageOut.iarr[j];
+						break;
+						/*lace10.acceptGirl(GirlImageOut.iarr[j]);*/
 					}
 					
 				}

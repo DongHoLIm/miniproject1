@@ -94,7 +94,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Movie(start));
+			ChangePanel.ChangePanel(start, MiniMap, new Movie(start,StartStory.grilnumber));
 			
 		}
 
@@ -104,7 +104,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Park(start));
+			ChangePanel.ChangePanel(start, MiniMap, new Park(start,StartStory.grilnumber));
 		}
 
 	}
@@ -113,7 +113,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Cafe(start));
+			ChangePanel.ChangePanel(start, MiniMap, new Cafe(start,StartStory.grilnumber));
 		}
 
 	}
@@ -122,7 +122,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Beach(start));
+			ChangePanel.ChangePanel(start, MiniMap, new Beach(start,StartStory.grilnumber));
 		}
 
 	}
@@ -131,7 +131,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Restraurant(start));
+			ChangePanel.ChangePanel(start, MiniMap, new Restraurant(start,StartStory.grilnumber));
 		}
 
 	}
@@ -140,7 +140,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new HotPlace(start));
+			ChangePanel.ChangePanel(start, MiniMap, new HotPlace(start,StartStory.grilnumber));
 		}
 
 	}
@@ -149,7 +149,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new SingingRoom(start));
+			ChangePanel.ChangePanel(start, MiniMap, new SingingRoom(start,StartStory.grilnumber));
 		}
 
 	}
@@ -158,7 +158,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Pub(start));
+			ChangePanel.ChangePanel(start, MiniMap, new Pub(start,StartStory.grilnumber));
 		}
 
 	}
@@ -167,7 +167,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new FlowerShop(start));
+			ChangePanel.ChangePanel(start, MiniMap, new FlowerShop(start,StartStory.grilnumber));
 		}
 
 	}
@@ -176,7 +176,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new ThemePark(start));
+			ChangePanel.ChangePanel(start, MiniMap, new ThemePark(start,StartStory.grilnumber));
 		}
 
 	}

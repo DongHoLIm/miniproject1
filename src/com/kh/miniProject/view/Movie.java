@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -17,8 +18,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import com.kh.miniProject.controller.FileController;
+import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.Day;
 import com.kh.miniProject.model.vo.EnterKeyAction;
+import com.kh.miniProject.model.vo.GirlImageOut;
 
 public class Movie extends JPanel implements KeyListener {
 	private JFrame start;
@@ -28,8 +31,11 @@ public class Movie extends JPanel implements KeyListener {
 	private File loveStory;
 	private EnterKeyAction ek = new EnterKeyAction();
 	private ArrayList listStory;
+	private JLabel icon1;
+	/*int girlnumber;*/
+	
 
-	public Movie(JFrame start) {
+	public Movie(JFrame start,int girlnumber) {
 		this.start = start;
 		movie = this;
 		this.setBounds(0, 0, 960, 720);
@@ -41,7 +47,8 @@ public class Movie extends JPanel implements KeyListener {
 
 		// this.setBackground(Color.cyan);
 		System.out.println("패널 생성");
-
+		System.out.println("girl number "+girlnumber);
+		
 		tf = new JTextArea();
 		tf.setLayout(null);
 		tf.setBounds(150,450, 600,150);
@@ -55,19 +62,26 @@ public class Movie extends JPanel implements KeyListener {
 		loveStory = sc.textOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
 		if (Main.day == 0) {
-			JLabel icon1 = new JLabel(new ImageIcon("images/movie.png"));
+			icon1 = new JLabel(new ImageIcon("images/movie.png"));
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
 		} else if (Main.day == 1) {
-			JLabel icon1 = new JLabel(new ImageIcon("images/movie2.png"));
+			icon1 = new JLabel(new ImageIcon("images/movie2.png"));
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
 		} else if (Main.day == 2) {
-			JLabel icon1 = new JLabel(new ImageIcon("images/movie3.png"));
+			icon1 = new JLabel(new ImageIcon("images/movie3.png"));
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
 		}
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[girlnumber]));
+		girl.setBounds(50, 50, 150, 150);
+		icon1.add(girl);
+		
+		
+		
 		movieInit();
+		
 
 		// mf.addKeyListener(new KeyAdapter() {
 		//
@@ -103,8 +117,16 @@ public class Movie extends JPanel implements KeyListener {
 		// cp.replacePanel(mm);
 		// }
 		// });
-
+//		System.out.println("ㅁㅁㅁ"+girlnumber);
+//		Image gi = new ImageIcon(GirlImages.girlImage[girlnumber]).getImage();
+//		JLabel girl = new JLabel(new ImageIcon(gi));
+		
+		
+		
+		
+		//movie.add(girl);
 		movie.add(exit);
+		
 
 	}
 
@@ -151,6 +173,17 @@ public class Movie extends JPanel implements KeyListener {
 
 	public void acceptGirl(int girlnumber) {
 		System.out.println("1잘드렁가니? " + girlnumber);
+		//this.girlnumber = girlnumber;
+		
+		/*
+		Image gi = new ImageIcon(GirlImages.girlImage[girlnumber]).getImage().getScaledInstance(120, 120, 0);
+		JLabel girl = new JLabel(new ImageIcon(gi));
+		girl.setLayout(null);
+		girl.setBounds(120, 120, 50, 50);
+		*/
+		
+		
+		
 
 	}
 }
