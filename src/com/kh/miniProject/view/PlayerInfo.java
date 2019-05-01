@@ -2,6 +2,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -94,18 +95,26 @@ public class PlayerInfo extends JPanel{
 		exit.setSize(25,25);
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
-		JButton cloth = new JButton("쩔횎 �책");		
+		JButton cloth = new JButton("옷장");		
 		cloth.setLocation(310, 420);
 		cloth.setSize(70,30);
-		JLabel level = new JLabel("Level : ");
+		Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+		cloth.setFont(font);
+		JLabel level = new JLabel("Leve l :");
 		level.setLocation(180,180);
-		level.setSize(100,30);
+		level.setSize(110,30);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		level.setFont(font1);
 		JLabel charm = new JLabel("쨍횇쨌횂쨉쨉 : ");
 		charm.setLocation(100,130);
 		charm.setSize(50,20);
+		Font font2=new Font("한컴 백제 M", Font.PLAIN, 15);
+		charm.setFont(font2);
 		JLabel exper = new JLabel("째챈횉챔횆징 : ");
 		exper.setLocation(100,150);
 		exper.setSize(50,20);
+		Font font3=new Font("한컴 백제 M", Font.PLAIN, 15);
+		exper.setFont(font);
 		String strlev = String.valueOf(lev).toString();
 		levelIn = new JLabel(strlev);
 		levelIn.setBounds(210,145,100,100);

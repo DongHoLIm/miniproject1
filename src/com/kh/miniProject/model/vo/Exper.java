@@ -10,9 +10,11 @@ public class Exper {
 	public void plusExper(int pn) {
 		int exp;
 		if(pn==1) {
-			exp = (int)(Math.random()*20)+50;
+			//exp = (int)(Math.random()*20)+50;
+			exp= 70;
 		}else {
-			exp = (int)(Math.random()*20)+50;			
+			//exp = (int)(Math.random()*20)+50;	
+			exp= 70;
 		}
 		
 //		PlayerInfo pif = new PlayerInfo(start);
@@ -20,7 +22,7 @@ public class Exper {
 		
 		int upexper = PlayerInfo.exper+exp;
 		
-		if(upexper>200) {
+		if(upexper>100) {
 			
 			System.out.println("렙업 읽혀지는 순서가 어디쯤?");
 			int le = PlayerInfo.lev+1;
