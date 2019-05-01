@@ -1,5 +1,6 @@
 package com.kh.miniProject.view;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +11,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+
+import org.w3c.dom.css.CSSPrimitiveValue;
+import org.w3c.dom.css.RGBColor;
 
 import com.kh.miniProject.model.vo.PointMinus;
 
@@ -30,7 +34,7 @@ public class StoreMain extends JPanel {
 	public StoreMain(JFrame start) {
 		this.start = start;
 		this.shopmain = this;
-		
+		this.setBackground(new Color(175,35,72));
 		this.setSize(960,720);
 		this.setLayout(null);
 	
@@ -244,6 +248,7 @@ public class StoreMain extends JPanel {
 		
 		JPanel shoesItems = new JPanel();
 		shoesItems.setLayout(null);
+		
 		Image img5 = new ImageIcon("images/shoes1.png").getImage().getScaledInstance(120, 120, 0);
 		Image img6 = new ImageIcon("images/shoes2.png").getImage().getScaledInstance(120, 120, 0);
 		Image img7 = new ImageIcon("images/shoes3.png").getImage().getScaledInstance(120, 120, 0);
@@ -446,6 +451,8 @@ public class StoreMain extends JPanel {
 		
 		JPanel jewerlyItems = new JPanel();
 		jewerlyItems.setLayout(null);
+		
+		
 		Image img9 = new ImageIcon("images/acc1.png").getImage().getScaledInstance(120, 120, 0);
 		Image img10 = new ImageIcon("images/acc2.png").getImage().getScaledInstance(120, 120, 0);
 		Image img11 = new ImageIcon("images/acc3.png").getImage().getScaledInstance(120, 120, 0);
@@ -850,7 +857,16 @@ public class StoreMain extends JPanel {
 				
 			}
 		}); 
-			
+		Image storeTitel = new ImageIcon("images/storeTietle.png").getImage().getScaledInstance(500, 400, 0);
+		JLabel storeTitelt = new JLabel(new ImageIcon(storeTitel));
+		storeTitelt.setBounds(280, -70, 400, 400);
+	
+		
+		
+		
+		
+		
+		
 		JTabbedPane tp =new JTabbedPane();
 		
 		tp.setBounds(100, 234, 750, 350);
@@ -859,7 +875,7 @@ public class StoreMain extends JPanel {
 		tp.add("악세사리",jewerlyItems);
 		tp.add("아이템",item);
 		
-		
+		shopmain.add(storeTitelt);
 		this.add(tp);
 		this.add(exit);
 		
