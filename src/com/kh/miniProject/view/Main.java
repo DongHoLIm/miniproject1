@@ -94,6 +94,7 @@ public class Main extends JPanel{
 		textArea.setBorder(oneTb);
 		textArea.setCaretColor(Color.cyan);
 		textArea.setFont(getFont().deriveFont(15.0f));
+		textArea.setBackground(Color.LIGHT_GRAY);
 		
 		JLabel textlabel = new JLabel();
 		textlabel.setText(str);
