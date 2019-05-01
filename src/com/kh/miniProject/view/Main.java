@@ -40,7 +40,6 @@ public class Main extends JPanel{
 		this.setLayout(null);
 
 		
-		
 
 		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;
 		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
