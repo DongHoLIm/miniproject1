@@ -1,6 +1,9 @@
 package com.kh.miniProject.view;
 
+
 import java.awt.Font;
+import java.awt.Color;
+
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,6 +14,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+
+import org.w3c.dom.css.CSSPrimitiveValue;
+import org.w3c.dom.css.RGBColor;
 
 import com.kh.miniProject.model.vo.PointMinus;
 
@@ -31,6 +37,7 @@ public class StoreMain extends JPanel {
 	public StoreMain(JFrame start) {
 		this.start = start;
 		this.shopmain = this;
+		this.setBackground(new Color(175,35,72));
 
 		this.setSize(960,720);
 		this.setLayout(null);
@@ -49,10 +56,10 @@ public class StoreMain extends JPanel {
 		citem1.setSize(120,120);
 		citem1.setLocation(20,20);
 		clothItems.add(citem1);
-		iteminfo = new JLabel("<html>Àß»ı±ä½ÂÈÆÀÌ ¸ÚÁ³¾î<br>±×·¸°Ô ¸ÚÁø³à¼®ÀÌ...<br></html>");
+		iteminfo = new JLabel("<html>ì˜ìƒê¸´ìŠ¹í›ˆì´ ë©‹ì¡Œì–´<br>ê·¸ë ‡ê²Œ ë©‹ì§„ë…€ì„ì´...<br></html>");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
-		Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font);
 		clothItems.add(iteminfo);
 		citem1.addActionListener(new ActionListener() {
@@ -66,7 +73,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -79,7 +86,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(100);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 
@@ -89,7 +96,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -115,7 +122,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item2info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
-		Font font2=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font2=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font2);
 		clothItems.add(iteminfo);
 		citem2.addActionListener(new ActionListener() {
@@ -129,7 +136,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -141,7 +148,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(200);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 
@@ -150,7 +157,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -174,7 +181,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item3info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
-		Font font3=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font3=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font3);
 		clothItems.add(iteminfo);
 		citem3.addActionListener(new ActionListener() {
@@ -188,7 +195,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -200,7 +207,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(300);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -208,7 +215,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -232,7 +239,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item4info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
-		Font font4=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font4=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font4);
 		clothItems.add(iteminfo);
 		citem4.addActionListener(new ActionListener() {
@@ -246,7 +253,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -258,7 +265,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(400);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -266,7 +273,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -293,6 +300,7 @@ public class StoreMain extends JPanel {
 
 		JPanel shoesItems = new JPanel();
 		shoesItems.setLayout(null);
+		
 		Image img5 = new ImageIcon("images/shoes1.png").getImage().getScaledInstance(120, 120, 0);
 		Image img6 = new ImageIcon("images/shoes2.png").getImage().getScaledInstance(120, 120, 0);
 		Image img7 = new ImageIcon("images/shoes3.png").getImage().getScaledInstance(120, 120, 0);
@@ -304,7 +312,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item5info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
-		Font font5=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font5=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font5);
 		shoesItems.add(iteminfo);
 		sitem1.addActionListener(new ActionListener() {
@@ -318,7 +326,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -330,7 +338,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(500);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -338,7 +346,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -362,7 +370,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item6info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
-		Font font6=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font6=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font6);
 		shoesItems.add(iteminfo);
 		sitem2.addActionListener(new ActionListener() {
@@ -376,7 +384,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -388,7 +396,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(600);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -396,7 +404,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -420,7 +428,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item7info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
-		Font font7=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font7=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font7);
 		shoesItems.add(iteminfo);
 		sitem3.addActionListener(new ActionListener() {
@@ -434,7 +442,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -446,7 +454,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(700);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -454,7 +462,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -478,7 +486,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item8info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
-		Font font8=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font8=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font8);
 		shoesItems.add(iteminfo);
 		sitem4.addActionListener(new ActionListener() {
@@ -492,7 +500,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -504,7 +512,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(800);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -512,7 +520,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -539,6 +547,8 @@ public class StoreMain extends JPanel {
 
 		JPanel jewerlyItems = new JPanel();
 		jewerlyItems.setLayout(null);
+		
+		
 		Image img9 = new ImageIcon("images/acc1.png").getImage().getScaledInstance(120, 120, 0);
 		Image img10 = new ImageIcon("images/acc2.png").getImage().getScaledInstance(120, 120, 0);
 		Image img11 = new ImageIcon("images/acc3.png").getImage().getScaledInstance(120, 120, 0);
@@ -551,7 +561,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item9info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
-		Font font9=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font9=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font9);
 		jewerlyItems.add(iteminfo);
 		jitem1.addActionListener(new ActionListener() {
@@ -565,7 +575,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -577,7 +587,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(900);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -585,7 +595,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -609,7 +619,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item10info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
-		Font font10=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font10=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font10);
 		jewerlyItems.add(iteminfo);
 		jitem2.addActionListener(new ActionListener() {
@@ -623,7 +633,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -635,14 +645,14 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(1000);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 					}
 				});
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -666,7 +676,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item11info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
-		Font font11=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font11=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font11);
 		jewerlyItems.add(iteminfo);
 		jitem3.addActionListener(new ActionListener() {
@@ -680,7 +690,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -692,7 +702,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(1100);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -700,7 +710,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -724,7 +734,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item12info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
-		Font font12=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font12=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font12);
 		jewerlyItems.add(iteminfo);
 		jitem4.addActionListener(new ActionListener() {
@@ -738,7 +748,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -750,7 +760,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(1200);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -758,7 +768,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -794,7 +804,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item13info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
-		Font font13=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font13=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font13);
 		item.add(iteminfo);
 		item1.addActionListener(new ActionListener() {
@@ -808,7 +818,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -819,7 +829,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(1300);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -827,7 +837,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -852,7 +862,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item14info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
-		Font font14=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font14=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font14);
 		item.add(iteminfo);
 		item2.addActionListener(new ActionListener() {
@@ -866,7 +876,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -877,7 +887,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(1400);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -885,7 +895,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -909,7 +919,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item15info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
-		Font font15=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font15=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font15);
 		item.add(iteminfo);
 
@@ -924,7 +934,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -935,7 +945,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(1500);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -943,7 +953,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -967,7 +977,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item16info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
-		Font font16=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+		Font font16=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		iteminfo.setFont(font16);
 		item.add(iteminfo);
 		item4.addActionListener(new ActionListener() {
@@ -981,7 +991,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -992,7 +1002,7 @@ public class StoreMain extends JPanel {
 
 							pm.pointMinus(1600);
 						}else {
-							System.out.println("µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+							System.out.println("ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 						}
 
 					}
@@ -1000,7 +1010,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 40);
+				Font font1=new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -1033,14 +1043,20 @@ public class StoreMain extends JPanel {
 			}
 		}); 
 
+		Image storeTitel = new ImageIcon("images/storeTietle.png").getImage().getScaledInstance(500, 400, 0);
+		JLabel storeTitelt = new JLabel(new ImageIcon(storeTitel));
+		storeTitelt.setBounds(280, -70, 400, 400);
+
 		JTabbedPane tp =new JTabbedPane();
 
 		tp.setBounds(100, 234, 750, 350);
-		tp.add("¿Ê",clothItems);
-		tp.add("½Å¹ß",shoesItems);
-		tp.add("¾Ç¼¼»ç¸®",jewerlyItems);
-		tp.add("¾ÆÀÌÅÛ",item);
+		tp.add("ì˜·",clothItems);
+		tp.add("ì‹ ë°œ",shoesItems);
+		tp.add("ì•…ì„¸ì‚¬ë¦¬",jewerlyItems);
+		tp.add("ì•„ì´í…œ",item);
 
+		
+		shopmain.add(storeTitelt);
 
 		this.add(tp);
 		this.add(exit);

@@ -53,12 +53,12 @@ public class NegativePanel extends JPanel{
 	     glp.ninusGirllove(girlnum);
 	     
 	     
-	     JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage1[GrilNumber.grilnumber]));
+	     JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage3[GrilNumber.grilnumber]));
 			girl.setBounds(110, 5, 700, 550);
 			negativePanel.add(girl);
 			negativePanel.add(but);
 	      
-			//ChangePanel.ChangePanel(start, negativePanel, new Main(start));
+			
 	   }
 
 

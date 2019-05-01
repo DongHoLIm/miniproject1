@@ -34,7 +34,7 @@ public class Start extends JFrame {
     	
     
     	
-        //배경 Panel 생성후 컨텐츠페인으로 지정      
+        //��� Panel ���� ������������� ���      
     	startmain = new JPanel() {
             public void paintComponent(Graphics g) {
             	g.drawImage(img,0,0,960,730,this);
@@ -143,17 +143,14 @@ public class Start extends JFrame {
 			}
         	
         });
+        
         RoundOpen ro = new RoundOpen();
-		    ro.roundUp1();
-      
+		ro.roundUp1();
+        
         this.add(startmain);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
         this.setResizable(false);
     }
- 
-    
-
-	
 }
