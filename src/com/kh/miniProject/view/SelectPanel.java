@@ -32,8 +32,8 @@ public class SelectPanel extends JPanel {
 		this.setBackground(Color.black);
 		this.setLayout(null);
 
-		JLabel icon1 = new JLabel(new ImageIcon("images/gomin.png"));
-		icon1.setBounds(0, 0, 960, 720);
+		/*JLabel icon1 = new JLabel(new ImageIcon("images/gomin.png"));
+		icon1.setBounds(0, 0, 960, 720);*/
 
 		String[] str = new String[20];
 
@@ -82,7 +82,7 @@ public class SelectPanel extends JPanel {
 
 		JButton spb2 = new JButton(answer2);
 		spb2.setSize(500, 50);
-		spb2.setLocation(200, 350);
+		spb2.setLocation(200, 400);
 		spb2.addActionListener(new ActionListener() {
 
 			@Override
@@ -94,14 +94,17 @@ public class SelectPanel extends JPanel {
 				}
 			}
 		});
+		JLabel jl = new JLabel(new ImageIcon("images/VS.png"));
+		jl.setBounds(200, 100, 500, 500);
 		Main.day2++;
 		Main.day++;
 		Main.dayBreak++;
 		new Day().day();
 		
+		this.add(jl);
 		this.add(spb1);
 		this.add(spb2);
-		this.add(icon1);
+		//this.add(icon1);
 	}
 
 }

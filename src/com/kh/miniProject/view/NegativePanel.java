@@ -1,5 +1,6 @@
 package com.kh.miniProject.view;
 
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +19,7 @@ import com.kh.miniProject.model.vo.MylovePer;
 public class NegativePanel extends JPanel{
 	private JFrame start;
 	private JPanel negativePanel;
+	private ImageIcon img;
 	
 	public NegativePanel(JFrame start) {
 	      System.out.println("şÎÁ¤şÎÁ¤");
@@ -43,6 +45,9 @@ public class NegativePanel extends JPanel{
 			});
 	      int girlnum = GrilNumber.grilnumber;
 	      
+	      
+	      
+	      
 	      Exper ex = new Exper();
 	      ex.plusExper(2);
 	      
@@ -52,11 +57,15 @@ public class NegativePanel extends JPanel{
 	      GirllovePer glp = new GirllovePer();
 	     glp.ninusGirllove(girlnum);
 	     
-	     
+	     JLabel icon1 = new JLabel(new ImageIcon("images/NegativePanel.png"));
+		  icon1.setBounds(0, 0, 960, 720);
 	     JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage3[GrilNumber.grilnumber]));
 			girl.setBounds(110, 5, 700, 550);
 			negativePanel.add(girl);
 			negativePanel.add(but);
+			negativePanel.add(icon1);
+			
+			
 	      
 			
 	   }
