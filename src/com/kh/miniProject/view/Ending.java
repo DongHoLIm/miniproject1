@@ -66,7 +66,11 @@ public class Ending extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
+			Main.day = 0;
+			Main.dayBreak =0;
+			Main.totalDay =1;  
+			Main.day2 = 0;
+			PTextOutput.prologueNum = 0 ;
 			ChangePanel.ChangePanel(start, ending, new Prologue(start));
 		}
 

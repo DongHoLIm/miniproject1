@@ -14,6 +14,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.model.vo.RoundOpen;
+
 
 public class Start extends JFrame {
    
@@ -141,6 +143,9 @@ public class Start extends JFrame {
 			}
         	
         });
+        
+        RoundOpen ro = new RoundOpen();
+		ro.roundUp1();
         
         this.add(startmain);
         

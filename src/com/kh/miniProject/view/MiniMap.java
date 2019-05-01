@@ -41,6 +41,9 @@ public class MiniMap extends JPanel {
 	private int girlresultnumber;
 	private int[] temparr;
 	private int[] grilarr;
+	public static int girlStop = 1;
+	private static String[] mmgi;
+	private String[] reGirl;
 	public MiniMap(JFrame start) {
 		
 		if(PlayerInfo.lev == 1) {
@@ -870,26 +873,49 @@ public class MiniMap extends JPanel {
 		
 		int levResult = PlayerInfo.lev;
 		System.out.println("레벨값 : " + levResult);
-		String[] mmgi = fc.goGirlImages(levResult);
-		System.out.println("배열길이 : " + mmgi.length);
-		System.out.println("무슨값 ? : " + mmgi[0]);
-		Image[] gImage = new Image[mmgi.length];
-		System.out.println("이미지 배열길이 : " + gImage.length);
-		JLabel[] gLabel = new JLabel[mmgi.length];
-		System.out.println("라벨 배열길이 : " + gLabel.length);
-		int sgoi = 10;
-		for(int g = 0 ; g < gImage.length ; g++) {
-			gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
-			System.out.println("무슨값이 들어갔을까? " + gImage[g]);
-			JLabel la = new JLabel();
-			la.setIcon(new ImageIcon(gImage[g]));
-			System.out.println("들어갔나? " + la);
-			la.setBounds(70 , sgoi , 50 , 50);
-			place.add(la);
-			sgoi +=50;		
+		if(girlStop == 1) {
+			mmgi = fc.goGirlImages(levResult);
+			System.out.println("배열길이 : " + mmgi.length);
+			System.out.println("무슨값 ? : " + mmgi[0]);
+			Image[] gImage = new Image[mmgi.length];
+			System.out.println("이미지 배열길이 : " + gImage.length);
+			JLabel[] gLabel = new JLabel[mmgi.length];
+			System.out.println("라벨 배열길이 : " + gLabel.length);
+			int sgoi = 10;
+			for(int g = 0 ; g < gImage.length ; g++) {
+				gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
+				System.out.println("무슨값이 들어갔을까? " + gImage[g]);
+				JLabel la = new JLabel();
+				la.setIcon(new ImageIcon(gImage[g]));
+				System.out.println("들어갔나? " + la);
+				la.setBounds(70 , sgoi , 50 , 50);
+				place.add(la);
+				sgoi +=50;	
+				girlStop++;
+			}
+		}else if(girlStop > 1) {
+			System.out.println("배열길이 : " + mmgi.length);
+			System.out.println("무슨값 ? : " + mmgi[0]);
+			Image[] gImage = new Image[mmgi.length];
+			System.out.println("이미지 배열길이 : " + gImage.length);
+			JLabel[] gLabel = new JLabel[mmgi.length];
+			System.out.println("라벨 배열길이 : " + gLabel.length);
+			int sgoi = 10;
+			for(int g = 0 ; g < gImage.length ; g++) {
+				gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
+				System.out.println("무슨값이 들어갔을까? " + gImage[g]);
+				JLabel la = new JLabel();
+				la.setIcon(new ImageIcon(gImage[g]));
+				System.out.println("들어갔나? " + la);
+				la.setBounds(70 , sgoi , 50 , 50);
+				place.add(la);
+				sgoi +=50;		
+			}
 		}
-		
+
 	}
+
+}
 	
 //	public void startStory() {
 //		System.out.println("왜 널값? " + intiarr.length);
@@ -958,4 +984,4 @@ public class MiniMap extends JPanel {
 //		}
 //	}
 
-}
+

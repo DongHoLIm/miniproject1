@@ -15,6 +15,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.model.vo.Day;
+
 public class SelectPanel extends JPanel {
 	private JPanel select = new JPanel();
 	private JFrame start;
@@ -92,6 +94,11 @@ public class SelectPanel extends JPanel {
             }   
          }
       });
+      
+      Main.day2++;
+      Main.day++;
+      Main.dayBreak++;
+      new Day().day();
 
       this.add(spb1);
       this.add(spb2);
