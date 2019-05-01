@@ -22,6 +22,7 @@ import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.Day;
 import com.kh.miniProject.model.vo.EnterKeyAction;
 import com.kh.miniProject.model.vo.GirlImageOut;
+import com.kh.miniProject.model.vo.GrilNumber;
 
 public class Movie extends JPanel implements KeyListener {
 	private JFrame start;
@@ -35,7 +36,7 @@ public class Movie extends JPanel implements KeyListener {
 	/*int girlnumber;*/
 	
 
-	public Movie(JFrame start,int girlnumber) {
+	public Movie(JFrame start) {
 		this.start = start;
 		movie = this;
 		this.setBounds(0, 0, 960, 720);
@@ -47,7 +48,7 @@ public class Movie extends JPanel implements KeyListener {
 
 		// this.setBackground(Color.cyan);
 		System.out.println("패널 생성");
-		System.out.println("girl number "+girlnumber);
+		
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -74,7 +75,7 @@ public class Movie extends JPanel implements KeyListener {
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
 		}
-		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[girlnumber]));
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
 		girl.setBounds(50, 50, 150, 150);
 		icon1.add(girl);
 		

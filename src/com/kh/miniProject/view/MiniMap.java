@@ -17,8 +17,9 @@ import javax.swing.JPanel;
 import com.kh.miniProject.controller.FileController;
 import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.GirlImageOut;
+import com.kh.miniProject.model.vo.GrilNumber;
 import com.kh.miniProject.model.vo.RandomPlace;
-import com.kh.miniProject.model.vo.StartStory;
+
 
 public class MiniMap extends JPanel {
 	private JFrame start;
@@ -35,7 +36,9 @@ public class MiniMap extends JPanel {
 	FileController fc = new FileController();
 	private JPanel place = new JPanel();
 	public static int[] intiarr;
-	StartStory ss = new StartStory();
+	//StartStory ss = new StartStory();
+	GrilNumber gn = new GrilNumber();
+	private int girlresultnumber;
 	
 
 	public MiniMap(JFrame start) {
@@ -94,7 +97,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Movie(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 1) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new Movie(start));
 			
 		}
 
@@ -104,7 +113,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Park(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 3) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new Park(start));
 		}
 
 	}
@@ -113,7 +128,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Cafe(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 2) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new Cafe(start));
 		}
 
 	}
@@ -122,7 +143,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Beach(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 4) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new Beach(start));
 		}
 
 	}
@@ -131,7 +158,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Restraurant(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 5) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new Restraurant(start));
 		}
 
 	}
@@ -140,7 +173,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new HotPlace(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 6) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new HotPlace(start));
 		}
 
 	}
@@ -149,7 +188,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new SingingRoom(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 7) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new SingingRoom(start));
 		}
 
 	}
@@ -158,7 +203,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new Pub(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 8) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new Pub(start));
 		}
 
 	}
@@ -167,7 +218,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new FlowerShop(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 9) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new FlowerShop(start));
 		}
 
 	}
@@ -176,7 +233,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, MiniMap, new ThemePark(start,StartStory.grilnumber));
+			for(int i = 0; i < temp.length; i++) {
+				if(temp[i] == 10) {
+					girlresultnumber = GirlImageOut.iarr[i];
+				}
+			}
+			gn.grilNumberResult(girlresultnumber);
+			ChangePanel.ChangePanel(start, MiniMap, new ThemePark(start));
 		}
 
 	}
@@ -645,7 +708,16 @@ public class MiniMap extends JPanel {
 			System.out.println("a" + temp[i]);
 			System.out.println("b" +intiarr[i]);
 		}
-		ss.startStory();
+//		ss.startStory();
+//		for(int i = 0; i < temp.length; i++) {
+//			
+//			if(i==0) {
+//				gn.grilNumberResult(GirlImageOut.iarr[0]);
+//				break;
+//			}
+//		}
+//		gn.grilNumberResult(StartStory.grilnumber);
+		
 		return hmap;
 	}
 	

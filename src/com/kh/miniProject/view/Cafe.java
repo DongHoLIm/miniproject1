@@ -20,6 +20,7 @@ import com.kh.miniProject.controller.FileController;
 import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.Day;
 import com.kh.miniProject.model.vo.EnterKeyAction;
+import com.kh.miniProject.model.vo.GrilNumber;
 
 
 public class Cafe extends JPanel implements KeyListener{
@@ -32,7 +33,7 @@ public class Cafe extends JPanel implements KeyListener{
 	private ArrayList listStory;
 	private JLabel icon1;
 
-	public Cafe(JFrame start, int girlnumber) {
+	public Cafe(JFrame start) {
 		this.start = start;
 		cafe = this;
 		this.setBounds(0, 0, 960, 720);
@@ -70,8 +71,8 @@ public class Cafe extends JPanel implements KeyListener{
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
 		}
-		System.out.println("이미지? " + girlnumber);
-		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[girlnumber]));
+		System.out.println("이미지? " + GrilNumber.grilnumber);
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
 		girl.setBounds(50, 50, 150, 150);
 		icon1.add(girl);
 		
