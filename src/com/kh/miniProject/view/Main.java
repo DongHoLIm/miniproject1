@@ -101,23 +101,23 @@ public class Main extends JPanel{
 		textArea.setCaretColor(Color.cyan);
 		textArea.setFont(getFont().deriveFont(15.0f));
 		textArea.setBackground(Color.LIGHT_GRAY);
-		Font font=new Font("한컴 백제 M", Font.PLAIN, 20);
+		Font font =new Font("휴먼편지체", Font.BOLD, 20);
 		textArea.setFont(font);
 		
 		JLabel textlabel = new JLabel();
 		textlabel.setText(str);
 		textlabel.setLocation(350,20);
 		textlabel.setSize(50,20);
-		Font font3=new Font("한컴 백제 M", Font.PLAIN, 20);
+		Font font3 =new Font("휴먼편지체", Font.BOLD, 20);
 		textlabel.setFont(font3);
 		JLabel textlabel2 = new JLabel();
 		textlabel2.setLocation(290,20);
 		textlabel2.setSize(50,20);
 		textlabel2.setText(totalDay + "일차");
-		Font font1=new Font("한컴 백제 M", Font.PLAIN, 19);
+		Font font1 =new Font("휴먼편지체", Font.BOLD, 19);
 		textlabel2.setFont(font1);
 		JLabel textLabel2 = new JLabel();
-		Font font4=new Font("한컴 백제 M", Font.PLAIN, 20);
+		Font font4 =new Font("휴먼편지체", Font.BOLD, 20);
 		textLabel2.setFont(font4);
 		coinstr = Integer.valueOf(PointMinus.resultcoin).toString();
 		textLabel2.setLocation(680,40);
@@ -147,7 +147,7 @@ public class Main extends JPanel{
 		JLabel dayday = new JLabel(days);
 		dayday.setBounds(400, 20, 400, 20);
 		this.add(dayday);
-		Font font2=new Font("한컴 백제 M", Font.PLAIN, 20);
+		Font font2 =new Font("휴먼편지체", Font.BOLD, 20);
 		dayday.setFont(font2);
 		
 		

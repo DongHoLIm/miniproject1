@@ -44,11 +44,11 @@ public class Movie extends JPanel implements KeyListener {
 		this.setLayout(null);
 		// JLabel MovieBack = new JLabel(
 		// new ImageIcon(new
-		// ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
+		// ImageIcon("images/�쁺�솕愿�.PNG").getImage().getScaledInstance(960, 720, 0)));
 		// MovieBack.setBounds(0, 0, 960, 720);
 
 		// this.setBackground(Color.cyan);
-		System.out.println("패널 생성");
+		System.out.println("�뙣�꼸 �깮�꽦");
 		
 		
 		tf = new JTextArea();
@@ -59,7 +59,7 @@ public class Movie extends JPanel implements KeyListener {
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
 
-		Font font =new Font("한컴 백제 M", Font.PLAIN, 15);
+		Font font =new Font("휴먼편지체", Font.BOLD, 15);
 		tf.setFont(font);
 
 
@@ -106,7 +106,7 @@ public class Movie extends JPanel implements KeyListener {
 	}
 
 	public void movieInit() {
-		System.out.println("movie 내부 인터");
+		System.out.println("movie �궡遺� �씤�꽣");
 		movie.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(890, 20);
@@ -123,7 +123,7 @@ public class Movie extends JPanel implements KeyListener {
 		// cp.replacePanel(mm);
 		// }
 		// });
-//		System.out.println("ㅁㅁㅁ"+girlnumber);
+//		System.out.println("�뀅�뀅�뀅"+girlnumber);
 //		Image gi = new ImageIcon(GirlImages.girlImage[girlnumber]).getImage();
 //		JLabel girl = new JLabel(new ImageIcon(gi));
 		
@@ -178,7 +178,7 @@ public class Movie extends JPanel implements KeyListener {
 	}
 
 	public void acceptGirl(int girlnumber) {
-		System.out.println("1잘드렁가니? " + girlnumber);
+		System.out.println("1�옒�뱶�쟻媛��땲? " + girlnumber);
 		//this.girlnumber = girlnumber;
 		
 		/*

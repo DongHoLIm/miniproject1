@@ -61,7 +61,7 @@ public class StoreMain extends JPanel {
 
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
-		Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font);
 		clothItems.add(iteminfo);
 		citem1.addActionListener(new ActionListener() {
@@ -76,8 +76,7 @@ public class StoreMain extends JPanel {
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
 
-				Font font =new Font("한컴 백제 M", Font.PLAIN, 40);
-
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -100,7 +99,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -126,7 +125,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html>경현이가 즐겨 입는 후드티 <br> 2500 코인 <br> 매력도 15 상승 ");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
-		Font font2=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font2 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font2);
 		clothItems.add(iteminfo);
 		citem2.addActionListener(new ActionListener() {
@@ -140,7 +139,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -161,7 +160,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -185,7 +184,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 바지 <br> 1800 코인 <br> 매력도 15 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
-		Font font3=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font3 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font3);
 		clothItems.add(iteminfo);
 		citem3.addActionListener(new ActionListener() {
@@ -199,7 +198,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -219,7 +218,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -243,7 +242,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 바지 <br> 2000 코인 <br> 매력도 20 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
-		Font font4=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font4 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font4);
 		clothItems.add(iteminfo);
 		citem4.addActionListener(new ActionListener() {
@@ -257,7 +256,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -277,7 +276,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -316,7 +315,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 뉴 발란스 신발 <br> 코인 1000 <br> 매력도 5 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
-		Font font5=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font5 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font5);
 		shoesItems.add(iteminfo);
 		sitem1.addActionListener(new ActionListener() {
@@ -330,7 +329,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -350,7 +349,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -375,8 +374,7 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 
-		Font font6 =new Font("한컴 백제 M", Font.PLAIN, 15);
-
+		Font font6 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font6);
 		shoesItems.add(iteminfo);
 		sitem2.addActionListener(new ActionListener() {
@@ -390,7 +388,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -410,7 +408,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -434,7 +432,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 나이키 신발 <br> 1500 코인 <br> 매력도 15 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
-		Font font7=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font7 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font7);
 		shoesItems.add(iteminfo);
 		sitem3.addActionListener(new ActionListener() {
@@ -448,7 +446,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -468,7 +466,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -492,7 +490,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 나이키 신발 <br> 2500 코인 <br> 매력도 20 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
-		Font font8=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font8 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font8);
 		shoesItems.add(iteminfo);
 		sitem4.addActionListener(new ActionListener() {
@@ -506,7 +504,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -526,7 +524,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);	
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -567,7 +565,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 넥타이 <br> 500 코인 <br> 매력도 5 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
-		Font font9=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font9 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font9);
 		jewerlyItems.add(iteminfo);
 		jitem1.addActionListener(new ActionListener() {
@@ -581,7 +579,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -601,7 +599,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -625,7 +623,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 고오급 시계 <br> 3000 코인 <br> 매력도 25 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
-		Font font10=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font10 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font10);
 		jewerlyItems.add(iteminfo);
 		jitem2.addActionListener(new ActionListener() {
@@ -639,7 +637,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -658,7 +656,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -682,7 +680,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 피어싱 <br> 1000 코인 <br> 매력도 10 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
-		Font font11=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font11 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font11);
 		jewerlyItems.add(iteminfo);
 		jitem3.addActionListener(new ActionListener() {
@@ -696,7 +694,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -716,7 +714,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -740,7 +738,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 은 팔찌 <br> 1500 코인 <br> 매력도 13 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
-		Font font12=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font12 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font12);
 		jewerlyItems.add(iteminfo);
 		jitem4.addActionListener(new ActionListener() {
@@ -754,7 +752,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -774,7 +772,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -810,7 +808,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item13info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
-		Font font13=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font13 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font13);
 		item.add(iteminfo);
 		item1.addActionListener(new ActionListener() {
@@ -824,7 +822,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -843,7 +841,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -868,7 +866,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item14info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
-		Font font14=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font14 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font14);
 		item.add(iteminfo);
 		item2.addActionListener(new ActionListener() {
@@ -882,7 +880,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -901,7 +899,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -925,7 +923,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item15info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
-		Font font15=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font15 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font15);
 		item.add(iteminfo);
 
@@ -940,7 +938,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -959,7 +957,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 
@@ -983,7 +981,7 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("item16info");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
-		Font font16=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+		Font font16 =new Font("휴먼편지체", Font.BOLD, 15);
 		iteminfo.setFont(font16);
 		item.add(iteminfo);
 		item4.addActionListener(new ActionListener() {
@@ -997,7 +995,7 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font =new Font("휴먼편지체", Font.BOLD, 40);
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -1016,7 +1014,7 @@ public class StoreMain extends JPanel {
 				JButton no  = new JButton("no");
 				no.setSize(300,150);
 				no.setLocation(510,310);
-				Font font1=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+				Font font1 =new Font("휴먼편지체", Font.BOLD, 40);
 				no.setFont(font1);
 				no.addActionListener(new ActionListener() {
 

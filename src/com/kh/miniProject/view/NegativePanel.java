@@ -58,13 +58,13 @@ public class NegativePanel extends JPanel{
 			//tf.addKeyListener(this);
 			tf.setCaretColor(Color.cyan);
 			tf.setFont(getFont().deriveFont(15.0f));
+			Font font =new Font("휴먼편지체", Font.BOLD, 20);
+			tf.setFont(font);
 	    	
 	      
 			JButton but = new JButton("x");
 			but.setLocation(850, 50);
 			but.setSize(30, 30);
-			Font font =new Font("한컴 백제 M", Font.PLAIN, 10);
-			but.setFont(font);
 			but.addActionListener(new ActionListener() {
 				
 				@Override

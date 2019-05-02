@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -73,6 +74,8 @@ public class PositivePanel extends JPanel{
 			//tf.addKeyListener(this);
 			tf.setCaretColor(Color.cyan);
 			tf.setFont(getFont().deriveFont(15.0f));
+			Font font =new Font("휴먼편지체", Font.BOLD, 20);
+			tf.setFont(font);
 			Exper ex = new Exper();
 			ex.plusExper(1);
 
