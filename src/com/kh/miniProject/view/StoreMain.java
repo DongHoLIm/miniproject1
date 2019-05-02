@@ -14,13 +14,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
-
-import org.w3c.dom.css.CSSPrimitiveValue;
-import org.w3c.dom.css.RGBColor;
+import com.kh.miniProject.model.vo.CharmPer;
+import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.PointMinus;
 import com.kh.miniProject.model.vo.ReRandom;
-import com.kh.miniProject.model.vo.Exper;
-import com.kh.miniProject.model.vo.CharmPer;
 
 
 
@@ -92,12 +89,7 @@ public class StoreMain extends JPanel {
 							pm.pointMinus(3000);
 							cap.plusCharm(25);
 							
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
-
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -155,11 +147,7 @@ public class StoreMain extends JPanel {
 							pm.pointMinus(2500);
 							cap.plusCharm(15);
 							
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -214,10 +202,7 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>=1800) {
 							pm.pointMinus(1800);
 							cap.plusCharm(15);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -273,10 +258,7 @@ public class StoreMain extends JPanel {
 							pm.pointMinus(2000);
 							cap.plusCharm(20);
 							
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -347,8 +329,6 @@ public class StoreMain extends JPanel {
 							pm.pointMinus(1000);
 							cap.plusCharm(5);
 							
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
 
 					}
@@ -406,10 +386,7 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>=1200) {
 							pm.pointMinus(1200);
 							cap.plusCharm(13);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -464,10 +441,7 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>=1500) {
 							pm.pointMinus(1500);
 							cap.plusCharm(15);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -522,10 +496,7 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>=2500) {
 							pm.pointMinus(2500);
 							cap.plusCharm(20);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -598,10 +569,7 @@ public class StoreMain extends JPanel {
 							pm.pointMinus(500);
 							cap.plusCharm(5);
 							
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -656,8 +624,6 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>=3000) {
 							pm.pointMinus(3000);
 							cap.plusCharm(25);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
 					}
 				});
@@ -713,10 +679,7 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>=1000) {
 							pm.pointMinus(1000);
 							cap.plusCharm(10);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -772,10 +735,7 @@ public class StoreMain extends JPanel {
 							pm.pointMinus(1500);
 							cap.plusCharm(13);
 							
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -809,8 +769,13 @@ public class StoreMain extends JPanel {
 
 		JPanel item = new JPanel();
 		item.setLayout(null);
+		
+		Image img13 = new ImageIcon("images/change.png").getImage().getScaledInstance(120, 120, 0);
+		Image img14 = new ImageIcon("images/exp.PNG").getImage().getScaledInstance(120, 120, 0);
+		Image img15 = new ImageIcon("images/know.png").getImage().getScaledInstance(120, 120, 0);
+		Image img16 = new ImageIcon("images/anfdmaby.png").getImage().getScaledInstance(120, 120, 0);
 
-		JButton item1 = new JButton("item13");
+		JButton item1 = new JButton(new ImageIcon(img13));
 		item1.setSize(120,120);
 		item1.setLocation(20,20);
 		item.add(item1);
@@ -842,10 +807,7 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>1299) {
 
 							pm.pointMinus(1300);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -869,7 +831,7 @@ public class StoreMain extends JPanel {
 		});
 
 
-		JButton item2 = new JButton("item14");
+		JButton item2 = new JButton(new ImageIcon(img14));
 		item2.setSize(120,120);
 		item2.setLocation(20,160);
 		item.add(item2);
@@ -900,10 +862,7 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>999) {
 							new Exper().exp();
 							pm.pointMinus(1000);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -926,7 +885,7 @@ public class StoreMain extends JPanel {
 			}
 		});
 
-		JButton item3 = new JButton("item15");
+		JButton item3 = new JButton(new ImageIcon(img15));
 		item3.setSize(120,120);
 		item3.setLocation(380,20);
 		item.add(item3);
@@ -968,7 +927,6 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
-
 					}
 				});
 
@@ -978,7 +936,7 @@ public class StoreMain extends JPanel {
 			}
 		});
 
-		JButton item4 = new JButton("item16");
+		JButton item4 = new JButton(new ImageIcon(img16));
 		item4.setSize(120,120);
 		item4.setLocation(380,160);
 		item.add(item4); 
@@ -1009,10 +967,7 @@ public class StoreMain extends JPanel {
 						if (PointMinus.resultcoin>1599) {
 
 							pm.pointMinus(1600);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
-
 					}
 				});
 				JButton no  = new JButton("no");
@@ -1058,10 +1013,10 @@ public class StoreMain extends JPanel {
 		JTabbedPane tp =new JTabbedPane();
 
 		tp.setBounds(100, 234, 750, 350);
-		tp.add("�샆",clothItems);
-		tp.add("�떊諛�",shoesItems);
-		tp.add("�븙�꽭�궗由�",jewerlyItems);
-		tp.add("�븘�씠�뀥",item);
+		tp.add("옷",clothItems);
+		tp.add("신발",shoesItems);
+		tp.add("악세사리",jewerlyItems);
+		tp.add("아이템",item);
 
 		
 		shopmain.add(storeTitelt);
