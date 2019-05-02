@@ -34,7 +34,7 @@ public class AffRandom extends JPanel{
 		if(affBnt.length < 5) {
 	         for(int i = 0; i < affBnt.length; i++) {
 	        	 j = i;
-	            System.out.println("¿ÍÀÌÃà°ª" + butY);
+	            System.out.println("Â¿ÃÃ€ÃŒÃƒÃ Â°Âª" + butY);
 	            affBnt[i] = new JButton(RoundOpen.glist.get(i).getName());
 	            affBnt[i].setBounds(50, butY, 80, 80);
 	            butY += 100;
@@ -131,6 +131,7 @@ public class AffRandom extends JPanel{
 		
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
 		but = new JButton(new ImageIcon(img6));	
+
 		but.setBounds(850, 50, 50,50);
 		but.setContentAreaFilled(false);
 		but.setFocusPainted(false);
@@ -143,8 +144,8 @@ public class AffRandom extends JPanel{
 			}
 		});
 		
-		
 		this.add(but);
+
 
 }
 	class Random0 implements ActionListener{
