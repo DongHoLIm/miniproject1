@@ -43,9 +43,8 @@ public class Prologue extends JPanel implements KeyListener {
 		tf.setFont(getFont().deriveFont(15.0f));
 		Font font=new Font("한컴 백제 M", Font.PLAIN, 20);
 		tf.setFont(font);
-		
-
 		this.add(tf);
+		
 		String place = "prologue";
 		loveStory = sc.PtextOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
@@ -60,6 +59,7 @@ public class Prologue extends JPanel implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+			
 			String str = ek.goEnterAction(listStory);
 			System.out.println(str);
 			if (str != null) {

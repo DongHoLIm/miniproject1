@@ -52,7 +52,7 @@ public class Cafe extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		
+		tf.requestFocus();
 		this.add(tf);
 		String place = "cafe";
 		loveStory = sc.textOutgoTput(place);
