@@ -2,6 +2,8 @@ package com.kh.miniProject.model.vo;
 
 import java.util.Random;
 
+import com.kh.miniProject.view.MiniMap;
+
 public class GirlImageOut {
 
    public static int[] iarr;
@@ -14,6 +16,8 @@ public class GirlImageOut {
       String[] imageResult4 = new String[4];
       
       if(lev == 1) {
+    	 iarr = new int[1];
+    	 iarr[0] = 0;
          return image;
       }else if(lev == 2) {
          iarr = new int[imageResult2.length];

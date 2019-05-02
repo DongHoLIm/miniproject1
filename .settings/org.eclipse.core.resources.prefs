@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//Story/beach3=UTF-8
+encoding//src/com/kh/miniProject/model/vo/Exper.java=UTF-8
 encoding//src/com/kh/miniProject/view/Ending.java=UTF-8
 encoding//src/com/kh/miniProject/view/Main.java=UTF-8
 encoding//src/com/kh/miniProject/view/NegativePanel.java=UTF-8
@@ -7,3 +8,4 @@ encoding//src/com/kh/miniProject/view/PlayerInfo.java=UTF-8
 encoding//src/com/kh/miniProject/view/PlusCoin.java=UTF-8
 encoding//src/com/kh/miniProject/view/Start.java=UTF-8
 encoding//src/com/kh/miniProject/view/StoreMain.java=UTF-8
+

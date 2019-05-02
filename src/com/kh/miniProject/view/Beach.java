@@ -1,7 +1,6 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -29,66 +28,62 @@ public class Beach extends JPanel implements KeyListener{
 	private JFrame start;
 	private JPanel beach;
 	private JTextArea tf;
-	private FileController sc = new FileController();
-	private File loveStory;
-	private EnterKeyAction ek = new EnterKeyAction();
-	private ArrayList listStory;
 	private JLabel icon1;
+	private File loveStory;
+	private ArrayList listStory;
+	private FileController sc = new FileController();
+	private EnterKeyAction ek = new EnterKeyAction();
 
 	public Beach(JFrame start) {
 		this.start = start;
 		beach = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-		//		JLabel BeachBack = new JLabel(
-		//				new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
-		//		BeachBack.setBounds(0, 0, 960, 720);
+//		JLabel BeachBack = new JLabel(
+//				new ImageIcon(new ImageIcon("images/��ȭ��.PNG").getImage().getScaledInstance(960, 720, 0)));
+//		BeachBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.yellow);
-
-		System.out.println("패널 생성");
-
+		
+		System.out.println("�г� ��");
+		
 		tf = new JTextArea();
 		tf.setBounds(150,450, 600,150);
 		tf.setBorder(BorderFactory.createLineBorder(Color.black,1));
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-
-		Font font =new Font("한컴 백제 M", Font.PLAIN, 15);
-		tf.setFont(font);
-
-
+		
 		this.add(tf);
 		String place = "beach";
 		loveStory = sc.textOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
-
+		
 		if(Main.day == 0) {
 			icon1 = new JLabel(new ImageIcon("images/beach.png"));
-			icon1.setBounds(0, 0, 960, 720);
-			this.add(icon1);
+	    icon1.setBounds(0, 0, 960, 720);
+	    this.add(icon1);
 		}else if(Main.day == 1) {
 			icon1 = new JLabel(new ImageIcon("images/beach_twilight.png"));
-			icon1.setBounds(0, 0, 960, 720);
-			this.add(icon1);
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
 		}else if(Main.day == 2) {
 			icon1 = new JLabel(new ImageIcon("images/beach_night.png"));
-			icon1.setBounds(0, 0, 960, 720);
-			this.add(icon1);
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
 		}
 		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
 		girl.setBounds(110, 5, 700, 550);
 		icon1.add(girl);
-
+		
 		BeachInit();
-
-
+		
+		
 
 
 	}
 
 	public void BeachInit() {
-		System.out.println("Beach 내부 인터");
+		System.out.println("Beach ���� ����");
 		beach.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -126,24 +121,23 @@ public class Beach extends JPanel implements KeyListener{
 				ChangePanel.ChangePanel(start, beach, new SelectPanel(start,loveStory));
 			}
 		}
-
+		
 	}
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {
 		// TODO Auto-generated method stub
-
+		
 	}
-
+	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("4잘드렁가니? " + girlnumber);
+		System.out.println("4�ߵ巷����? " + girlnumber);
 	}
 }
-
-
+}

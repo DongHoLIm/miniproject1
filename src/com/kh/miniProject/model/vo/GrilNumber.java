@@ -5,8 +5,7 @@ public class GrilNumber {
 	public GrilNumber() {}
 	
 	public void grilNumberResult(int i) {
-		System.out.println("알아알아 " + i);
-		grilnumber=i;
+		grilnumber = i;
 		
 	}
 }

@@ -107,11 +107,11 @@ public class Main extends JPanel{
 		JLabel textlabel = new JLabel();
 		textlabel.setText(str);
 		textlabel.setLocation(350,20);
-		textlabel.setSize(0,20);
+		textlabel.setSize(50,20);
 		Font font3=new Font("한컴 백제 M", Font.PLAIN, 20);
 		textlabel.setFont(font3);
 		JLabel textlabel2 = new JLabel();
-		textlabel2.setLocation(310,20);
+		textlabel2.setLocation(290,20);
 		textlabel2.setSize(50,20);
 		textlabel2.setText(totalDay + "일차");
 		Font font1=new Font("한컴 백제 M", Font.PLAIN, 19);

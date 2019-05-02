@@ -22,11 +22,6 @@ public class FileController {
 		return new ImageOutput().imageOutput(i);
 	}
 	
-	public String goRandomTextOutput() {
-		
-		return null;
-	}
-	
 	public File textOutgoTput(String place) {
 		
 		return new TextOutput().textOutput(place);

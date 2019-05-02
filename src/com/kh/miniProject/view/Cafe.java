@@ -1,7 +1,6 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -28,11 +27,11 @@ public class Cafe extends JPanel implements KeyListener{
 	private JFrame start;
 	private JPanel cafe;
 	private JTextArea tf;
-	private FileController sc = new FileController();
-	private File loveStory;
-	private EnterKeyAction ek = new EnterKeyAction();
-	private ArrayList listStory;
 	private JLabel icon1;
+	private File loveStory;
+	private ArrayList listStory;
+	private FileController sc = new FileController();
+	private EnterKeyAction ek = new EnterKeyAction();
 
 	public Cafe(JFrame start) {
 		this.start = start;
@@ -40,11 +39,11 @@ public class Cafe extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //		JLabel cafeBack = new JLabel(
-//				new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
+//				new ImageIcon(new ImageIcon("images/��ȭ��.PNG").getImage().getScaledInstance(960, 720, 0)));
 //		cafeBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.ORANGE);
 		
-		System.out.println("패널 생성");
+		System.out.println("�г� ��");
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -53,11 +52,7 @@ public class Cafe extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-
-		Font font =new Font("한컴 백제 M", Font.PLAIN, 15);
-		tf.setFont(font);
 		
-
 		this.add(tf);
 		String place = "cafe";
 		loveStory = sc.textOutgoTput(place);
@@ -76,7 +71,7 @@ public class Cafe extends JPanel implements KeyListener{
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
 		}
-		System.out.println("이미지? " + GrilNumber.grilnumber);
+		System.out.println("�̹���? " + GrilNumber.grilnumber);
 		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
 		girl.setBounds(110, 5, 700, 550);
 		icon1.add(girl);
@@ -89,7 +84,7 @@ public class Cafe extends JPanel implements KeyListener{
 	}
 
 	public void cafeInit() {
-		System.out.println("cafe 내부 인터");
+		System.out.println("cafe ���� ����");
 		cafe.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -143,8 +138,6 @@ public class Cafe extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("2잘드렁가니? " + girlnumber);
+		System.out.println("2�ߵ巷����? " + girlnumber);
 	}
-	
-
 }
