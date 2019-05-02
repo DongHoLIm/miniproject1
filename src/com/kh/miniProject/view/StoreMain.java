@@ -1,9 +1,8 @@
 package com.kh.miniProject.view;
 
 
-import java.awt.Font;
 import java.awt.Color;
-
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,11 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
-import org.w3c.dom.css.CSSPrimitiveValue;
-import org.w3c.dom.css.RGBColor;
-
-import com.kh.miniProject.model.vo.PointMinus;
-
+import com.kh.miniProject.model.vo.CharmPer;
 import com.kh.miniProject.model.vo.PointMinus;
 
 
@@ -33,6 +28,7 @@ public class StoreMain extends JPanel {
 	AccPanel ap = new AccPanel();
 	ItemPanel ip = new ItemPanel();
 	PointMinus pm = new PointMinus();
+	CharmPer cap = new CharmPer();
 
 	public StoreMain(JFrame start) {
 		this.start = start;
@@ -86,9 +82,10 @@ public class StoreMain extends JPanel {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						cp.test(1);
 
-						if (PointMinus.resultcoin>99) {
-
-							pm.pointMinus(100);
+						if (PointMinus.resultcoin>=3000) {
+							pm.pointMinus(3000);
+							cap.plusCharm(25);
+							
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -148,9 +145,10 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						cp.test(2);
-						if (PointMinus.resultcoin>199) {
-
-							pm.pointMinus(200);
+						if (PointMinus.resultcoin>=2500) {
+							pm.pointMinus(2500);
+							cap.plusCharm(15);
+							
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -207,9 +205,9 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						cp.test(3);
-						if (PointMinus.resultcoin>299) {
-
-							pm.pointMinus(300);
+						if (PointMinus.resultcoin>=1800) {
+							pm.pointMinus(1800);
+							cap.plusCharm(15);
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -265,9 +263,10 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						cp.test(4);
-						if (PointMinus.resultcoin>399) {
-
-							pm.pointMinus(400);
+						if (PointMinus.resultcoin>=2000) {
+							pm.pointMinus(2000);
+							cap.plusCharm(20);
+							
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -338,9 +337,10 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						sp.test(5);
-						if (PointMinus.resultcoin>499) {
-
-							pm.pointMinus(500);
+						if (PointMinus.resultcoin>=1000) {
+							pm.pointMinus(1000);
+							cap.plusCharm(5);
+							
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -398,9 +398,9 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						sp.test(6);
-						if (PointMinus.resultcoin>599) {
-
-							pm.pointMinus(600);
+						if (PointMinus.resultcoin>=1200) {
+							pm.pointMinus(1200);
+							cap.plusCharm(13);
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -456,9 +456,9 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						sp.test(7);
-						if (PointMinus.resultcoin>699) {
-
-							pm.pointMinus(700);
+						if (PointMinus.resultcoin>=1500) {
+							pm.pointMinus(1500);
+							cap.plusCharm(15);
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -514,9 +514,9 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						sp.test(8);
-						if (PointMinus.resultcoin>799) {
-
-							pm.pointMinus(800);
+						if (PointMinus.resultcoin>=2500) {
+							pm.pointMinus(2500);
+							cap.plusCharm(20);
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -589,9 +589,10 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						ap.test(9);
-						if (PointMinus.resultcoin>899) {
-
-							pm.pointMinus(900);
+						if (PointMinus.resultcoin>=500) {
+							pm.pointMinus(500);
+							cap.plusCharm(5);
+							
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -647,9 +648,9 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						ap.test(10);
-						if (PointMinus.resultcoin>999) {
-
-							pm.pointMinus(1000);
+						if (PointMinus.resultcoin>=3000) {
+							pm.pointMinus(3000);
+							cap.plusCharm(25);
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -704,9 +705,9 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						ap.test(11);
-						if (PointMinus.resultcoin>1099) {
-
-							pm.pointMinus(1100);
+						if (PointMinus.resultcoin>=1000) {
+							pm.pointMinus(1000);
+							cap.plusCharm(10);
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -762,9 +763,10 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						ap.test(12);
-						if (PointMinus.resultcoin>1199) {
-
-							pm.pointMinus(1200);
+						if (PointMinus.resultcoin>=1500) {
+							pm.pointMinus(1500);
+							cap.plusCharm(13);
+							
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}

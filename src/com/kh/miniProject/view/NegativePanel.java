@@ -29,6 +29,9 @@ public class NegativePanel extends JPanel{
 	private JPanel negativePanel;
 	private Image img;
 	private JTextArea tf;
+	Exper ex = new Exper();
+    MylovePer mlp = new MylovePer();
+    GirllovePer glp = new GirllovePer();
 	
 	
 	public NegativePanel(JFrame start) {
@@ -79,14 +82,13 @@ public class NegativePanel extends JPanel{
 	      
 	      
 	      
-	      Exper ex = new Exper();
+	      
 	      ex.plusExper(2);
 	      
-	      MylovePer mlp = new MylovePer();
 	      mlp.plusMylove(girlnum, 2);
 	      
-	      GirllovePer glp = new GirllovePer();
 	     glp.ninusGirllove(girlnum);
+	     
 	     
 	    JLabel icon1 = new JLabel(new ImageIcon(img));
 		  icon1.setBounds(0, 0, 960, 720);
