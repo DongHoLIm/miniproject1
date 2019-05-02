@@ -5,7 +5,11 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -26,6 +30,7 @@ public class PositivePanel extends JPanel{
 	private JTextArea tf;
 	JFrame start = new JFrame();
 	JPanel positivePanel;
+	private Clip clip;
 	public PositivePanel(JFrame start) {
 			
 			 positivePanel = new JPanel();
@@ -42,16 +47,28 @@ public class PositivePanel extends JPanel{
 	    	
 	    	JLabel jl = new JLabel(new ImageIcon(img));
 			  jl.setBounds(0, 0, 960, 720);
+			  try {
+		             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/positivePanel.wav"));
+		             clip = AudioSystem.getClip();
+		             clip.open(stream);
+		             clip.start();
+		         } catch(Exception e) {
+		             e.printStackTrace();
+		         }
 
 			int girlnum = GrilNumber.grilnumber;
-			JButton but = new JButton("x");
-			but.setLocation(850, 50);
-			but.setSize(30, 30);
+			Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
+			JButton exit = new JButton(new ImageIcon(img6));
+			exit.setLocation(850, 50);
+			exit.setSize(30, 30);
+			exit.setContentAreaFilled(false);
+			exit.setFocusPainted(false);
 			
-			but.addActionListener(new ActionListener() {
+			exit.addActionListener(new ActionListener() {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					clip.stop();
 					ChangePanel.StartChangePanle(start, positivePanel, new Main(start));
 					
 				}
@@ -86,7 +103,7 @@ public class PositivePanel extends JPanel{
 			girl.setBounds(110, 5, 700, 550);
 			positivePanel.add(tf);
 			positivePanel.add(girl);
-			positivePanel.add(but);
+			positivePanel.add(exit);
 			positivePanel.add(jl);
 
 

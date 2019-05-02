@@ -90,7 +90,7 @@ public class RoundOpen {
 
 	public void roundUp4() {
 		Girl g4 = new Girl();
-		g4.setName("여자4");
+		g4.setName("이국주");
 		g4.setAge(30);
 		g4.setGender('여');
 		g4.setCharactor("여자4 성격");
@@ -107,7 +107,7 @@ public class RoundOpen {
 
 	public void roundUp5() {
 		Girl g5 = new Girl();
-		g5.setName("여자5");
+		g5.setName("이수현");
 		g5.setAge(30);
 		g5.setGender('여');
 		g5.setCharactor("여자5 성격");
@@ -124,7 +124,7 @@ public class RoundOpen {
 
 	public void roundUp6() {
 		Girl g6 = new Girl();
-		g6.setName("여자6");
+		g6.setName("정유미");
 		g6.setAge(30);
 		g6.setGender('여');
 		g6.setCharactor("여자6 성격");
@@ -141,7 +141,7 @@ public class RoundOpen {
 
 	public void roundUp7() {
 		Girl g7 = new Girl();
-		g7.setName("여자7");
+		g7.setName("벤");
 		g7.setAge(30);
 		g7.setGender('여');
 		g7.setCharactor("여자7 성격");
@@ -158,7 +158,7 @@ public class RoundOpen {
 
 	public void roundUp8() {
 		Girl g8 = new Girl();
-		g8.setName("여자8");
+		g8.setName("모모");
 		g8.setAge(30);
 		g8.setGender('여');
 		g8.setCharactor("여자8 성격");
@@ -175,7 +175,7 @@ public class RoundOpen {
 
 	public void roundUp9() {
 		Girl g9 = new Girl();
-		g9.setName("여자9");
+		g9.setName("고준희");
 		g9.setAge(30);
 		g9.setGender('여');
 		g9.setCharactor("여자9 성격");
@@ -192,7 +192,7 @@ public class RoundOpen {
 
 	public void roundUp10() {
 		Girl g10 = new Girl();
-		g10.setName("여자10");
+		g10.setName("아이린");
 		g10.setAge(30);
 		g10.setGender('여');
 		g10.setCharactor("여자10 성격");

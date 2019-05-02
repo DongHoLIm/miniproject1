@@ -7,13 +7,15 @@ import com.kh.miniProject.view.PlayerInfo;
 
 public class Exper {
 	private JFrame start;
-	
+	RoundOpen ro = new RoundOpen();
 	public void plusExper(int pn) {
 		int exp;
 		if(pn==1) {
 			exp = (int)(Math.random()*20)+50;
-		}else {
+		}else if(pn==2){
 			exp = (int)(Math.random()*20)+50;			
+		}else {
+			exp = 0;
 		}
 		
 //		PlayerInfo pif = new PlayerInfo(start);
@@ -30,12 +32,17 @@ public class Exper {
 			PlayerInfo.lev = le;
 			System.out.println("레벨업~~~~~!!");
 			MiniMap.girlStop = 1;
-			RoundOpen ro = new RoundOpen();
+			
 			ro.levelUp(le);
 			PlayerInfo.exper = 0;
 		}else {
 			PlayerInfo.exper = upexper;
 		}
+		
+	}
+	public void exp() {
+		PlayerInfo.exper += 300;
+		plusExper(0);
 		
 	}
 

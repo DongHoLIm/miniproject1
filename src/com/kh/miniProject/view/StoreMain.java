@@ -1,9 +1,8 @@
 package com.kh.miniProject.view;
 
 
-import java.awt.Font;
 import java.awt.Color;
-
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,11 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
-import org.w3c.dom.css.CSSPrimitiveValue;
-import org.w3c.dom.css.RGBColor;
-
-import com.kh.miniProject.model.vo.PointMinus;
-
+import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.PointMinus;
 
 
@@ -807,7 +802,7 @@ public class StoreMain extends JPanel {
 		item1.setSize(120,120);
 		item1.setLocation(20,20);
 		item.add(item1);
-		iteminfo = new JLabel("item13info");
+		iteminfo = new JLabel("<html> 미니맵 다시 생성 <br> 1000 코인");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		Font font13=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -865,7 +860,7 @@ public class StoreMain extends JPanel {
 		item2.setSize(120,120);
 		item2.setLocation(20,160);
 		item.add(item2);
-		iteminfo = new JLabel("item14info");
+		iteminfo = new JLabel("<html>경험치 300증가 <br> 4000코인 ");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 		Font font14=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -889,9 +884,9 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
-						if (PointMinus.resultcoin>1399) {
-
-							pm.pointMinus(1400);
+						if (PointMinus.resultcoin>999) {
+							new Exper().exp();
+							pm.pointMinus(1000);
 						}else {
 							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
 						}
@@ -922,7 +917,7 @@ public class StoreMain extends JPanel {
 		item3.setSize(120,120);
 		item3.setLocation(380,20);
 		item.add(item3);
-		iteminfo = new JLabel("item15info");
+		iteminfo = new JLabel("<html> 애정도 확인 <br> 2000코인 ");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		Font font15=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -979,8 +974,8 @@ public class StoreMain extends JPanel {
 		JButton item4 = new JButton("item16");
 		item4.setSize(120,120);
 		item4.setLocation(380,160);
-		item.add(item4);
-		iteminfo = new JLabel("item16info");
+		item.add(item4); 
+		iteminfo = new JLabel("<html>애정도 랜덤<br> 증가 / 감소");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		Font font16=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -1003,7 +998,7 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
+						ChangePanel.ChangePanel(start, check,new AffRandom(start));
 						if (PointMinus.resultcoin>1599) {
 
 							pm.pointMinus(1600);
