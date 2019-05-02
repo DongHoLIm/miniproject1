@@ -140,4 +140,4 @@ public class Beach extends JPanel implements KeyListener{
 		System.out.println("4�ߵ巷����? " + girlnumber);
 	}
 }
-}
+
