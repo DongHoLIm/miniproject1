@@ -49,7 +49,7 @@ public class RoundOpen {
 		}
 
 		System.out.println(glist);
-		System.out.println("ë¦¬ìŠ¤íŠ¸ì €ì¥í™•ì¸");
+		System.out.println("¸®½ºÆ®ÀúÀåÈ®ÀÎ");
 		// }
 //		Collections.sort(glist, new Comparator<Girl>() {
 //			@Override
@@ -76,15 +76,15 @@ public class RoundOpen {
 
 	public void roundUp1() {
 		Girl g1 = new Girl();
-		g1.setName("ë°•ì§€ì„ ");
+		g1.setName("¹ÚÁö¼±");
 		g1.setAge(30);
-		g1.setGender('ì—¬');
-		g1.setCharactor("ì¾Œí™œ");
-		g1.setSignature("ë¯¸ì†Œê°€ ì´ì˜ë‹¤.");
+		g1.setGender('¿©');
+		g1.setCharactor("ÄèÈ°");
+		g1.setSignature("¹Ì¼Ò°¡ ÀÌ»Ú´Ù.");
 		g1.setImage("images/0nomal.png");
 
 		glist.add(g1);
-		System.out.println("g1ìƒì„±");
+		System.out.println("g1»ı¼º");
 
 		System.out.println(glist);
 
@@ -92,17 +92,17 @@ public class RoundOpen {
 
 	public void roundUp2() {
 		Girl g2 = new Girl();
-		g2.setName("ë°•ë‚˜ë˜");
+		g2.setName("¹Ú³ª·¡");
 		g2.setAge(29);
-		g2.setGender('ì—¬');
-		g2.setCharactor("ì–´ë¨¸ë‹ˆ");
-		g2.setSignature("ìˆ ì„ ì¢‹ì•„í•œë‹¤.");
+		g2.setGender('¿©');
+		g2.setCharactor("¾î¸Ó´Ï");
+		g2.setSignature("¼úÀ» ÁÁ¾ÆÇÑ´Ù.");
 
 		g2.setImage("images/1nomal.png");
 
 
 		glist.add(g2);
-		System.out.println("g2ìƒì„±");
+		System.out.println("g2»ı¼º");
 
 		System.out.println(glist);
 
@@ -110,15 +110,15 @@ public class RoundOpen {
 
 	public void roundUp3() {
 		Girl g3 = new Girl();
-		g3.setName("ì¥ë„ì—°");
+		g3.setName("Àåµµ¿¬");
 		g3.setAge(29);
-		g3.setGender('ì—¬');
-		g3.setCharactor("ì°©í•˜ë‹¤");
-		g3.setSignature("í‚¤ê°€ í¬ë‹¤.");
+		g3.setGender('¿©');
+		g3.setCharactor("ÂøÇÏ´Ù");
+		g3.setSignature("Å°°¡ Å©´Ù.");
 		g3.setImage("images/2nomal.png");
 
 		glist.add(g3);
-		System.out.println("g3ìƒì„±");
+		System.out.println("g3»ı¼º");
 
 		System.out.println(glist);
 
@@ -126,15 +126,15 @@ public class RoundOpen {
 
 	public void roundUp4() {
 		Girl g4 = new Girl();
-		g4.setName("ì´êµ­ì£¼");
+		g4.setName("ÀÌ±¹ÁÖ");
 		g4.setAge(30);
-		g4.setGender('ì—¬');
-		g4.setCharactor("ì—¬ì4 ì„±ê²©");
-		g4.setSignature("ì—¬ì4 íŠ¹ì§•");
+		g4.setGender('¿©');
+		g4.setCharactor("¿©ÀÚ4 ¼º°İ");
+		g4.setSignature("¿©ÀÚ4 Æ¯Â¡");
 		g4.setImage("images/3nomal.png");
 
 		glist.add(g4);
-		System.out.println("g4ìƒì„±");
+		System.out.println("g4»ı¼º");
 
 		System.out.println(glist);
 
@@ -142,15 +142,15 @@ public class RoundOpen {
 
 	public void roundUp5() {
 		Girl g5 = new Girl();
-		g5.setName("ì´ìˆ˜í˜„");
+		g5.setName("ÀÌ¼öÇö");
 		g5.setAge(30);
-		g5.setGender('ì—¬');
-		g5.setCharactor("ì—¬ì5 ì„±ê²©");
-		g5.setSignature("ì—¬ì5 íŠ¹ì§•");
+		g5.setGender('¿©');
+		g5.setCharactor("¿©ÀÚ5 ¼º°İ");
+		g5.setSignature("¿©ÀÚ5 Æ¯Â¡");
 		g5.setImage("images/4nomal.png");
 
 		glist.add(g5);
-		System.out.println("g5ìƒì„±");
+		System.out.println("g5»ı¼º");
 
 		System.out.println(glist);
 
@@ -158,15 +158,15 @@ public class RoundOpen {
 
 	public void roundUp6() {
 		Girl g6 = new Girl();
-		g6.setName("ì •ìœ ë¯¸");
+		g6.setName("Á¤À¯¹Ì");
 		g6.setAge(30);
-		g6.setGender('ì—¬');
-		g6.setCharactor("ì—¬ì6 ì„±ê²©");
-		g6.setSignature("ì—¬ì6 íŠ¹ì§•");
+		g6.setGender('¿©');
+		g6.setCharactor("¿©ÀÚ6 ¼º°İ");
+		g6.setSignature("¿©ÀÚ6 Æ¯Â¡");
 		g6.setImage("images/5nomal.png");
 
 		glist.add(g6);
-		System.out.println("g6ìƒì„±");
+		System.out.println("g6»ı¼º");
 
 		System.out.println(glist);
 
@@ -174,15 +174,15 @@ public class RoundOpen {
 
 	public void roundUp7() {
 		Girl g7 = new Girl();
-		g7.setName("ë²¤");
+		g7.setName("º¥");
 		g7.setAge(30);
-		g7.setGender('ì—¬');
-		g7.setCharactor("ì—¬ì7 ì„±ê²©");
-		g7.setSignature("ì—¬ì7 íŠ¹ì§•");
+		g7.setGender('¿©');
+		g7.setCharactor("¿©ÀÚ7 ¼º°İ");
+		g7.setSignature("¿©ÀÚ7 Æ¯Â¡");
 		g7.setImage("images/6nomal.png");
 
 		glist.add(g7);
-		System.out.println("g7ìƒì„±");
+		System.out.println("g7»ı¼º");
 
 		System.out.println(glist);
 
@@ -190,15 +190,15 @@ public class RoundOpen {
 
 	public void roundUp8() {
 		Girl g8 = new Girl();
-		g8.setName("ëª¨ëª¨");
+		g8.setName("¸ğ¸ğ");
 		g8.setAge(30);
-		g8.setGender('ì—¬');
-		g8.setCharactor("ì—¬ì8 ì„±ê²©");
-		g8.setSignature("ì—¬ì8 íŠ¹ì§•");
+		g8.setGender('¿©');
+		g8.setCharactor("¿©ÀÚ8 ¼º°İ");
+		g8.setSignature("¿©ÀÚ8 Æ¯Â¡");
 		g8.setImage("images/7nomal.png");
 
 		glist.add(g8);
-		System.out.println("g8ìƒì„±");
+		System.out.println("g8»ı¼º");
 
 		System.out.println(glist);
 
@@ -206,15 +206,15 @@ public class RoundOpen {
 
 	public void roundUp9() {
 		Girl g9 = new Girl();
-		g9.setName("ê³ ì¤€í¬");
+		g9.setName("°íÁØÈñ");
 		g9.setAge(30);
-		g9.setGender('ì—¬');
-		g9.setCharactor("ì—¬ì9 ì„±ê²©");
-		g9.setSignature("ì—¬ì9 íŠ¹ì§•");
+		g9.setGender('¿©');
+		g9.setCharactor("¿©ÀÚ9 ¼º°İ");
+		g9.setSignature("¿©ÀÚ9 Æ¯Â¡");
 		g9.setImage("images/8nomal.png");
 
 		glist.add(g9);
-		System.out.println("g9ìƒì„±");
+		System.out.println("g9»ı¼º");
 
 		System.out.println(glist);
 
@@ -222,15 +222,15 @@ public class RoundOpen {
 
 	public void roundUp10() {
 		Girl g10 = new Girl();
-		g10.setName("ì•„ì´ë¦°");
+		g10.setName("¾ÆÀÌ¸°");
 		g10.setAge(30);
-		g10.setGender('ì—¬');
-		g10.setCharactor("ì—¬ì10 ì„±ê²©");
-		g10.setSignature("ì—¬ì10 íŠ¹ì§•");
+		g10.setGender('¿©');
+		g10.setCharactor("¿©ÀÚ10 ¼º°İ");
+		g10.setSignature("¿©ÀÚ10 Æ¯Â¡");
 		g10.setImage("images/9nomal.png");
 
 		glist.add(g10);
-		System.out.println("g10ìƒì„±");
+		System.out.println("g10»ı¼º");
 
 		System.out.println(glist);
 
