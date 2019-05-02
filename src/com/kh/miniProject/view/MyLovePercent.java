@@ -43,7 +43,7 @@ public class MyLovePercent extends JPanel{
 		JLabel label0 = new JLabel("나의 애정도 입니다!!");
 		label0.setSize(300,50);
 		label0.setLocation(10,10);
-		Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+		Font font =new Font("휴먼편지체", Font.BOLD, 15);
 		label0.setFont(font);
 
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
@@ -62,7 +62,7 @@ public class MyLovePercent extends JPanel{
 		JLabel label1 = new JLabel("경현이는 지금 " + lev + "명과 썸타는중~~");
 		label1.setSize(300, 50);
 		label1.setLocation(10, 30);
-		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		Font font1 =new Font("휴먼편지체", Font.BOLD, 15);
 		label1.setFont(font1);
 
 		loveIn.add(label0);

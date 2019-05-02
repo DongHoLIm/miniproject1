@@ -77,7 +77,7 @@ public class CoinShop extends JPanel{
 	    JLabel coinShop= new JLabel("\ncoinShop");
 	    coinShop.setLocation(165,50);
 	    coinShop.setSize(200,50);
-	    Font font =new Font("한컴 백제 M", Font.PLAIN, 30);
+	    Font font =new Font("휴먼편지체", Font.BOLD, 30);
 	    coinShop.setFont(font);
 
 	    JButton exit=new JButton(new ImageIcon(img6)); 
@@ -89,7 +89,7 @@ public class CoinShop extends JPanel{
 	    JButton btn1=new JButton("500"); 
 	    btn1.setLocation(50,280);
 	    btn1.setSize(75,30);
-	    Font font1 =new Font("한컴 백제 M", Font.PLAIN, 15);
+	    Font font1 =new Font("휴먼편지체", Font.BOLD, 15);
 	    btn1.setFont(font1);
 	    btn1.addActionListener(new ActionListener() {
 			
@@ -104,7 +104,7 @@ public class CoinShop extends JPanel{
 	    JButton btn2=new JButton("1000"); 
 	    btn2.setLocation(150,280);
 	    btn2.setSize(75,30);
-	    Font font2 =new Font("한컴 백제 M", Font.PLAIN, 15);
+	    Font font2 =new Font("휴먼편지체", Font.BOLD, 15);
 	    btn2.setFont(font2);
 	    btn2.addActionListener(new ActionListener() {
 			
@@ -119,7 +119,7 @@ public class CoinShop extends JPanel{
 	    JButton btn3=new JButton("1500"); 
 	    btn3.setLocation(250,280);
 	    btn3.setSize(75,30);
-	    Font font3 =new Font("한컴 백제 M", Font.PLAIN, 15);
+	    Font font3 =new Font("휴먼편지체", Font.BOLD, 15);
 	    btn3.setFont(font3);
 	    btn3.addActionListener(new ActionListener() {
 			
@@ -134,7 +134,7 @@ public class CoinShop extends JPanel{
 	    JButton btn4=new JButton("2000"); 
 	    btn4.setLocation(350,280);
 	    btn4.setSize(75,30);
-	    Font font4 =new Font("한컴 백제 M", Font.PLAIN, 15);
+	    Font font4 =new Font("휴먼편지체", Font.BOLD, 15);
 	    btn4.setFont(font4);
 	    btn4.addActionListener(new ActionListener() {
 			
