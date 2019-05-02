@@ -12,9 +12,9 @@ public class Exper {
 	public void plusExper(int pn) {
 		int exp;
 		if(pn==1) {
-			exp = (int)(Math.random()*20)+50;
+			exp = (int)(Math.random()*20)+31;
 		}else if(pn==2){
-			exp = (int)(Math.random()*20)+50;			
+			exp = (int)(Math.random()*20)+21;			
 		}else {
 			exp = 0;
 		}
