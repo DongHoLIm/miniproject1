@@ -81,20 +81,20 @@ public class AffRandom extends JPanel{
 	            }
 	      
 	         }
+	}
 		JButton but = new JButton("x");
 		but.setBounds(850, 50, 50,50);
 		but.addActionListener(new ActionListener() {
-
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ChangePanel.ChangePanel(start, aff, new StoreMain(start));
-
+				
 			}
 		});
 		
 		this.add(but);
 		
-	}
 
 }
 }
