@@ -82,7 +82,7 @@ public class RoundOpen {
 		g1.setCharactor("쾌활");
 		g1.setSignature("미소가 이쁘다.");
 		g1.setImage("images/0nomal.png");
-
+		g1.setEndingNum(0);
 		glist.add(g1);
 		System.out.println("g1생성");
 
@@ -97,9 +97,8 @@ public class RoundOpen {
 		g2.setGender('여');
 		g2.setCharactor("어머니");
 		g2.setSignature("술을 좋아한다.");
-
 		g2.setImage("images/1nomal.png");
-
+		g2.setEndingNum(1);
 
 		glist.add(g2);
 		System.out.println("g2생성");
@@ -116,7 +115,7 @@ public class RoundOpen {
 		g3.setCharactor("착하다");
 		g3.setSignature("키가 크다.");
 		g3.setImage("images/2nomal.png");
-
+		g3.setEndingNum(2);
 		glist.add(g3);
 		System.out.println("g3생성");
 
@@ -132,7 +131,7 @@ public class RoundOpen {
 		g4.setCharactor("여자4 성격");
 		g4.setSignature("여자4 특징");
 		g4.setImage("images/3nomal.png");
-
+		g4.setEndingNum(3);
 		glist.add(g4);
 		System.out.println("g4생성");
 
@@ -148,7 +147,7 @@ public class RoundOpen {
 		g5.setCharactor("여자5 성격");
 		g5.setSignature("여자5 특징");
 		g5.setImage("images/4nomal.png");
-
+		g5.setEndingNum(4);
 		glist.add(g5);
 		System.out.println("g5생성");
 
@@ -164,7 +163,7 @@ public class RoundOpen {
 		g6.setCharactor("여자6 성격");
 		g6.setSignature("여자6 특징");
 		g6.setImage("images/5nomal.png");
-
+		g6.setEndingNum(5);
 		glist.add(g6);
 		System.out.println("g6생성");
 
@@ -180,7 +179,7 @@ public class RoundOpen {
 		g7.setCharactor("여자7 성격");
 		g7.setSignature("여자7 특징");
 		g7.setImage("images/6nomal.png");
-
+		g7.setEndingNum(6);
 		glist.add(g7);
 		System.out.println("g7생성");
 
@@ -196,7 +195,7 @@ public class RoundOpen {
 		g8.setCharactor("여자8 성격");
 		g8.setSignature("여자8 특징");
 		g8.setImage("images/7nomal.png");
-
+		g8.setEndingNum(7);
 		glist.add(g8);
 		System.out.println("g8생성");
 
@@ -212,7 +211,7 @@ public class RoundOpen {
 		g9.setCharactor("여자9 성격");
 		g9.setSignature("여자9 특징");
 		g9.setImage("images/8nomal.png");
-
+		g9.setEndingNum(8);
 		glist.add(g9);
 		System.out.println("g9생성");
 
@@ -228,7 +227,7 @@ public class RoundOpen {
 		g10.setCharactor("여자10 성격");
 		g10.setSignature("여자10 특징");
 		g10.setImage("images/9nomal.png");
-
+		g10.setEndingNum(9);
 		glist.add(g10);
 		System.out.println("g10생성");
 

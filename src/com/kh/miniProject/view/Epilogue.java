@@ -34,7 +34,8 @@ public class Epilogue extends JPanel implements KeyListener {
 	private ArrayList listStory;
 	RoundOpen ro = new RoundOpen();
 	Girl gl = new Girl();
-
+	int talkEnding = 0;
+	JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
 	public Epilogue(JFrame start) {
 		this.start = start;
 		Epilogue = this;
@@ -80,22 +81,23 @@ public class Epilogue extends JPanel implements KeyListener {
 		loveStory = sc.EtextOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
 
-		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+		
 		icon1.setBounds(0, 0, 960, 720);
 
 		if (PTextOutput.epilogueNum == 1 || PTextOutput.epilogueNum == 0) {
 
-			for (int i = 0; i < RoundOpen.glist.size(); i++) {
-				System.out.println("정렬 잘 됐니?" + RoundOpen.glist);
-			}
-			JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
+			System.out.println("정렬 잘 됐니?" + RoundOpen.glist);
+
+			JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[RoundOpen.glist.get(0).getEndingNum()]));
 			girl.setBounds(110, 5, 700, 550);
 			icon1.add(girl);
 			System.out.println("럽퍼" + RoundOpen.glist.get(0).getGlovePer());
+			talkEnding += 1;
 		}
 
 		this.add(icon1);
-
+		
+		
 	}
 
 	@Override
@@ -107,10 +109,9 @@ public class Epilogue extends JPanel implements KeyListener {
 			if (str != null) {
 				tf.append(str);
 				// value++;
-			} else {
-
+			}else {
 				ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
-			}
+			} 
 		}
 	}
 

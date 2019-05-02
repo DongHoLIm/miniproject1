@@ -11,9 +11,14 @@ public class Girl {
 	private String image;  //이미지파일 경로
 	private int glovePer;  //여자의 애정도
 	private int mylovePer; //나의 애정도
-	
+	private int endingNum; //엔딩 여자 객체번호
 	
 	public Girl() {}
+	
+	public Girl(int endingNum) {
+		super();
+		this.endingNum = endingNum;
+	}
 
 	public Girl(String name, int age, char gender, String charactor, String signature,String image,int glovePer, int mylovePer) {
 		super();
@@ -92,7 +97,14 @@ public class Girl {
 		this.mylovePer = mylovePer;
 	}
 	
-	
+	public int getEndingNum() {
+		return endingNum;
+	}
+
+	public void setEndingNum(int endingNum) {
+		this.endingNum = endingNum;
+	}
+
 	
 	@Override
 	public String toString() {
