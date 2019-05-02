@@ -49,7 +49,7 @@ public class Exper {
 		
 	}
 	public void exp() {
-		PlayerInfo.exper += 300;
+		PlayerInfo.exper += 50;
 		plusExper(0);
 		
 	}
