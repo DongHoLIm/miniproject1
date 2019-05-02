@@ -38,7 +38,7 @@ public class MiniMap extends JPanel {
 	private JPanel place = new JPanel();
 	public static int[] intiarr;
 	//StartStory ss = new StartStory();
-	GrilNumber gn = new GrilNumber();
+	public static GrilNumber gn = new GrilNumber();
 	private int girlresultnumber;
 	private int[] temparr;
 	public static int[] grilarr;

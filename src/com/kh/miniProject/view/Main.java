@@ -22,6 +22,7 @@ import javax.swing.JTextArea;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
+import com.kh.miniProject.model.vo.GirlImageOut;
 import com.kh.miniProject.model.vo.PointMinus;
 
 public class Main extends JPanel{
@@ -30,7 +31,7 @@ public class Main extends JPanel{
 	public static String str = "아침";
 	public static int day = 0;
 	public static int dayBreak =0;
-    public static int totalDay =1;  
+    public static int totalDay =10;  
     public static int day2 = 0;
    // static int totalDay2 = 1;
     public static String coinstr;
@@ -288,6 +289,7 @@ public class Main extends JPanel{
 					}
 					
 				}else if(totalDay == 11) {
+					
 					ChangePanel.ChangePanel(start, main, new Ending(start));
 				}
 				else if(dayBreak == 0 && totalDay != 11 ) {

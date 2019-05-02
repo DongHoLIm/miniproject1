@@ -42,6 +42,7 @@ public class Start extends JFrame {
     	
 
 
+
     	File file = new File("sound/startBGM.wav");
 
          
@@ -58,6 +59,7 @@ public class Start extends JFrame {
          } catch(Exception e) {
              
              e.printStackTrace();
+
          }            
 
     	startmain = new JPanel() {
