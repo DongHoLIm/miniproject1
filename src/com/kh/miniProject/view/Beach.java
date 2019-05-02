@@ -41,11 +41,11 @@ public class Beach extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //		JLabel BeachBack = new JLabel(
-//				new ImageIcon(new ImageIcon("images/��ȭ��.PNG").getImage().getScaledInstance(960, 720, 0)));
+//				new ImageIcon(new ImageIcon("images/占쏙옙화占쏙옙.PNG").getImage().getScaledInstance(960, 720, 0)));
 //		BeachBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.yellow);
 		
-		System.out.println("�г� ��");
+		System.out.println("占싻놂옙 占쏙옙");
 		
 		tf = new JTextArea();
 		tf.setBounds(150,450, 600,150);
@@ -53,7 +53,7 @@ public class Beach extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font =new Font("�޸�����ü", Font.BOLD, 15);
+		Font font =new Font("휴먼편지체", Font.BOLD, 15);
 		tf.setFont(font);
 		
 		
@@ -87,7 +87,7 @@ public class Beach extends JPanel implements KeyListener{
 	}
 
 	public void BeachInit() {
-		System.out.println("Beach ���� ����");
+		System.out.println("Beach 占쏙옙占쏙옙 占쏙옙占쏙옙");
 		beach.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -141,6 +141,7 @@ public class Beach extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("4�ߵ巷����? " + girlnumber);
+		System.out.println("4占쌩드렁占쏙옙占쏙옙? " + girlnumber);
 	}
 }
+
