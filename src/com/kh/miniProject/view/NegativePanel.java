@@ -19,6 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import com.kh.miniProject.model.dao.GirlImages;
+import com.kh.miniProject.model.vo.CharmPer;
 import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.GirllovePer;
 import com.kh.miniProject.model.vo.GrilNumber;
@@ -32,7 +33,7 @@ public class NegativePanel extends JPanel{
 	Exper ex = new Exper();
     MylovePer mlp = new MylovePer();
     GirllovePer glp = new GirllovePer();
-	
+    CharmPer cp = new CharmPer();
 	
 	public NegativePanel(JFrame start) {
 	      System.out.println("şÎÁ¤şÎÁ¤");
@@ -88,6 +89,10 @@ public class NegativePanel extends JPanel{
 	      mlp.plusMylove(girlnum, 2);
 	      
 	     glp.ninusGirllove(girlnum);
+	     
+	     int cha = (int)(Math.random()*5)+1;
+	     cp.ninusCharm(cha);
+	     
 	     
 	     
 	    JLabel icon1 = new JLabel(new ImageIcon(img));
