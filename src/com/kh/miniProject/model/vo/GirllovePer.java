@@ -3,6 +3,7 @@ package com.kh.miniProject.model.vo;
 import com.kh.miniProject.view.PlayerInfo;
 
 public class GirllovePer {
+	public static String str = "";
 	
 	public void plusGirllove(int girlnum) {
 		Girl g = RoundOpen.getGlist().get(girlnum);
@@ -31,12 +32,19 @@ public class GirllovePer {
 	}
 	public void random(int girlnum) {
 		Girl g = RoundOpen.getGlist().get(girlnum);
-		int ran = (int)Math.random()*2+1;
+		int ran = (int)(Math.random()*2)+1;
+		System.out.println(ran);
 		
 		switch(ran) {
-		case 1 : g.setGlovePer(g.getGlovePer()-20); break;
+		case 1 : g.setGlovePer(g.getGlovePer()-15); break;
 		case 2 : g.setGlovePer(g.getGlovePer()+30); break;
 		
+		}
+		if(ran == 1) {
+			str = g.getName() + " 의 호감도가 -15 하락 하였습니다 아쉽네요..";
+		}else if ( ran ==2) {
+			str = g.getName() + " 의 호감도가 +30 상승 하였습니다  럭키!! ";
+			
 		}
 	}
 

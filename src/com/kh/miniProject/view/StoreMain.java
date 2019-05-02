@@ -835,7 +835,7 @@ public class StoreMain extends JPanel {
 		item2.setSize(120,120);
 		item2.setLocation(20,160);
 		item.add(item2);
-		iteminfo = new JLabel("<html>경험치 300증가 <br> 4000코인 ");
+		iteminfo = new JLabel("<html>경험치 50증가 <br> 4000코인 ");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 		Font font14 =new Font("휴먼편지체", Font.BOLD, 15);
@@ -889,7 +889,7 @@ public class StoreMain extends JPanel {
 		item3.setSize(120,120);
 		item3.setLocation(380,20);
 		item.add(item3);
-		iteminfo = new JLabel("<html> 애정도 확인 <br> 2000코인 ");
+		iteminfo = new JLabel("<html> 애정도 확인 <br> 코인 <br>(여성마다 다름) ");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		Font font15 =new Font("휴먼편지체", Font.BOLD, 15);
