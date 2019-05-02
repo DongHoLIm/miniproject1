@@ -41,8 +41,8 @@ public class Ending extends JPanel {
 		System.out.println("Ending");
 		ending.setVisible(true);
 		JLabel endingName = new JLabel("마지막 그녀");
-		endingName.setLocation(440, 260);
-		endingName.setSize(150, 50);
+		endingName.setLocation(400, 260);
+		endingName.setSize(200, 50);
 		Font font1 =new Font("한컴 백제 M", Font.PLAIN, 30);
 		endingName.setFont(font1);
 		JButton ending = new JButton(new ImageIcon("images/Button(1).png"));
@@ -74,7 +74,7 @@ public class Ending extends JPanel {
 			Main.totalDay =1;  
 			Main.day2 = 0;
 			
-			ChangePanel.ChangePanel(start, ending, new Epilogue(start));
+			ChangePanel.ChangePanel(start, ending, new SelectPanel2(start));
 		}
 
 	}

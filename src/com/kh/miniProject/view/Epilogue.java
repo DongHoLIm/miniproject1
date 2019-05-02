@@ -54,8 +54,6 @@ public class Epilogue extends JPanel implements KeyListener {
 		tf.setFont(font);
 		this.add(tf);
 
-		
-
 		Collections.sort(RoundOpen.glist, new Comparator<Girl>() {
 			@Override
 			public int compare(Girl o1, Girl o2) {
@@ -69,27 +67,32 @@ public class Epilogue extends JPanel implements KeyListener {
 			}
 		});
 		Collections.reverse(RoundOpen.glist);
-		
-		if (RoundOpen.glist.get(0).getGlovePer() > 69) {
-			System.out.println("성공");
-			PTextOutput.epilogueNum = 1;
-		} else if (RoundOpen.glist.get(0).getGlovePer() < 70) {
-			System.out.println("실패");
-			PTextOutput.epilogueNum = 0;
+		if (PTextOutput.epilogueNum != 2) {
+			if (RoundOpen.glist.get(0).getGlovePer() > 69) {
+				System.out.println("성공");
+				PTextOutput.epilogueNum = 1;
+			} else if (RoundOpen.glist.get(0).getGlovePer() < 70) {
+				System.out.println("실패");
+				PTextOutput.epilogueNum = 0;
+			}
 		}
 		String place = "Eplilogue";
 		loveStory = sc.EtextOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
+
 		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
 		icon1.setBounds(0, 0, 960, 720);
 
-		for (int i = 0; i < RoundOpen.glist.size(); i++) {
-			System.out.println("정렬 잘 됐니?" + RoundOpen.glist);
+		if (PTextOutput.epilogueNum == 1 || PTextOutput.epilogueNum == 0) {
+
+			for (int i = 0; i < RoundOpen.glist.size(); i++) {
+				System.out.println("정렬 잘 됐니?" + RoundOpen.glist);
+			}
+			JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
+			girl.setBounds(110, 5, 700, 550);
+			icon1.add(girl);
+			System.out.println("럽퍼" + RoundOpen.glist.get(0).getGlovePer());
 		}
-		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
-		girl.setBounds(110, 5, 700, 550);
-		icon1.add(girl);
-		System.out.println("럽퍼" + RoundOpen.glist.get(0).getGlovePer());
 
 		this.add(icon1);
 
