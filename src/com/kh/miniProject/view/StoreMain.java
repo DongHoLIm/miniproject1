@@ -15,9 +15,14 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 
+import org.w3c.dom.css.CSSPrimitiveValue;
+import org.w3c.dom.css.RGBColor;
+import com.kh.miniProject.model.vo.PointMinus;
+import com.kh.miniProject.model.vo.ReRandom;
 import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.CharmPer;
-import com.kh.miniProject.model.vo.PointMinus;
+
+
 
 
 public class StoreMain extends JPanel {
@@ -833,6 +838,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						new ReRandom().reRandom();
 						if (PointMinus.resultcoin>1299) {
 
 							pm.pointMinus(1300);
@@ -948,13 +954,7 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						if (PointMinus.resultcoin>1499) {
-
-							pm.pointMinus(1500);
-						}else {
-							System.out.println("�룉�씠 遺�議깊빀�땲�떎.");
-						}
+						ChangePanel.ChangePanel(start, check ,new AffOk(start) );
 
 					}
 				});

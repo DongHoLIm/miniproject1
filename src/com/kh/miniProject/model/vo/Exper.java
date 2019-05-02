@@ -8,6 +8,7 @@ import com.kh.miniProject.view.PlayerInfo;
 public class Exper {
 	private JFrame start;
 	RoundOpen ro = new RoundOpen();
+
 	public void plusExper(int pn) {
 		int exp;
 		if(pn==1) {
@@ -16,7 +17,6 @@ public class Exper {
 			exp = (int)(Math.random()*20)+50;			
 		}else {
 			exp = 0;
-
 		}
 		
 //		PlayerInfo pif = new PlayerInfo(start);
