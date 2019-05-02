@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -38,10 +39,10 @@ public class Pub extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //				JLabel PubBack = new JLabel(
-//						new ImageIcon(new ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+//						new ImageIcon(new ImageIcon("images/ì˜í™”ê´€.PNG").getImage().getScaledInstance(960, 720, 0)));
 //				PubBack.setBounds(0, 0, 960, 720);
 		this.setBackground(Color.ORANGE);
-		System.out.println("ÆĞ³Î »ı¼º");
+		System.out.println("íŒ¨ë„ ìƒì„±");
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -50,7 +51,10 @@ public class Pub extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		
+
+		Font font =new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
+		tf.setFont(font);
+
 		this.add(tf);
 		String place = "pub";
 		loveStory = sc.textOutgoTput(place);
@@ -76,7 +80,7 @@ public class Pub extends JPanel implements KeyListener{
 	}
 
 	public void PubInit() {
-		System.out.println("Pub ³»ºÎ ÀÎÅÍ");
+		System.out.println("Pub ë‚´ë¶€ ì¸í„°");
 		rub.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -130,7 +134,7 @@ public class Pub extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("8Àßµå··°¡´Ï? " + girlnumber);
+		System.out.println("8ì˜ë“œë ê°€ë‹ˆ? " + girlnumber);
 	}
 }
 

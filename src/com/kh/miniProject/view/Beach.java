@@ -40,11 +40,11 @@ public class Beach extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //		JLabel BeachBack = new JLabel(
-//				new ImageIcon(new ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+//				new ImageIcon(new ImageIcon("images/ï¿½ï¿½È­ï¿½ï¿½.PNG").getImage().getScaledInstance(960, 720, 0)));
 //		BeachBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.yellow);
 		
-		System.out.println("ÆÐ³Î »ý¼º");
+		System.out.println("ï¿½Ð³ï¿½ ï¿½ï¿½");
 		
 		tf = new JTextArea();
 		tf.setBounds(150,450, 600,150);
@@ -83,7 +83,7 @@ public class Beach extends JPanel implements KeyListener{
 	}
 
 	public void BeachInit() {
-		System.out.println("Beach ³»ºÎ ÀÎÅÍ");
+		System.out.println("Beach ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		beach.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -137,8 +137,7 @@ public class Beach extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("4Àßµå··°¡´Ï? " + girlnumber);
+		System.out.println("4ï¿½ßµå··ï¿½ï¿½ï¿½ï¿½? " + girlnumber);
 	}
 }
-
-
+}

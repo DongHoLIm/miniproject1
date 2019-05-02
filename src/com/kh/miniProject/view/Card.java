@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -89,10 +90,14 @@ public class Card extends JPanel{
 		JLabel cardName=new JLabel("카드 번호 :");
 		cardName.setLocation(50, 60);
 		cardName.setSize(80,50);
+		Font font =new Font("한컴 백제 M", Font.PLAIN, 15);
+		cardName.setFont(font);
 
 		JTextField t1=new JTextField();
 		t1.setLocation(120,70);
 		t1.setSize(50, 30);
+		Font font1 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		t1.setFont(font1);
 		t1.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -104,10 +109,14 @@ public class Card extends JPanel{
 		JLabel l1=new JLabel("-");
 		l1.setLocation(170, 80);
 		l1.setSize(10,10);
+		Font font2 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		l1.setFont(font2);
 
 		JTextField t2=new JTextField();
 		t2.setLocation(180,70);
 		t2.setSize(50, 30);
+		Font font3 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		t2.setFont(font3);
 		t2.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -120,10 +129,14 @@ public class Card extends JPanel{
 		JLabel l2=new JLabel("-");
 		l2.setLocation(230, 80);
 		l2.setSize(10,10);
+		Font font4 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		l2.setFont(font4);
 
 		JTextField t3=new JTextField();
 		t3.setLocation(240,70);
 		t3.setSize(50, 30);
+		Font font5=new Font("한컴 백제 M", Font.PLAIN, 15);
+		t3.setFont(font5);
 		t3.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -136,10 +149,14 @@ public class Card extends JPanel{
 		JLabel l3=new JLabel("-");
 		l3.setLocation(290, 80);
 		l3.setSize(10,10);
+		Font font6 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		l3.setFont(font6);
 
 		JTextField t4=new JTextField();
 		t4.setLocation(300,70);
 		t4.setSize(50, 30);
+		Font font7 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		t4.setFont(font1);
 		t4.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -151,11 +168,15 @@ public class Card extends JPanel{
 		//월/년
 		JLabel cardday=new JLabel("월 / 년(mm/yy) : ");
 		cardday.setLocation(50, 100);
-		cardday.setSize(100,50);
+		cardday.setSize(120,50);
+		Font font8 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		cardday.setFont(font8);
 
 		JTextField d1=new JTextField();
-		d1.setLocation(140,110);
+		d1.setLocation(160,110);
 		d1.setSize(50, 30);
+		Font font9 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		d1.setFont(font9);
 		d1.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -166,12 +187,16 @@ public class Card extends JPanel{
 		});
 
 		JLabel l4=new JLabel("/");
-		l4.setLocation(200, 120);
+		l4.setLocation(210, 120);
 		l4.setSize(10,10);
+		Font font10 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		l4.setFont(font10);
 
 		JTextField d2=new JTextField();
-		d2.setLocation(210,110);
+		d2.setLocation(220,110);
 		d2.setSize(50, 30);
+		Font font11 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		d1.setFont(font11);
 		d2.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -184,11 +209,15 @@ public class Card extends JPanel{
 		//cvc
 		JLabel cvc=new JLabel("CVC : ");
 		cvc.setLocation(50, 160);
-		cvc.setSize(50,10);
+		cvc.setSize(50,15);
+		Font font12 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		cvc.setFont(font12);
 
 		JTextField c1=new JTextField();
 		c1.setLocation(90,150);
 		c1.setSize(100, 30);
+		Font font13 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		c1.setFont(font13);
 		c1.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -201,14 +230,20 @@ public class Card extends JPanel{
 		JLabel cvc1=new JLabel("(CVC는 카드 뒷면에 3자리 숫자입니다.)");
 		cvc1.setLocation(50, 190);
 		cvc1.setSize(250,15);
+		Font font14 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		cvc1.setFont(font14);
 		//비밀번호
 		JLabel pass=new JLabel("비밀 번호 앞 두자리");
 		pass.setLocation(50, 210);
 		pass.setSize(200,15);
+		Font font15 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		pass.setFont(font15);
 		
 		JPasswordField pass1=new JPasswordField();
 		pass1.setLocation(50,225);
 		pass1.setSize(50, 30);
+		Font font16 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		pass1.setFont(font16);
 		pass1.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -221,16 +256,23 @@ public class Card extends JPanel{
 		JLabel pass2=new JLabel("**");
 		pass2.setLocation(110, 235);
 		pass2.setSize(200,15);
+		Font font17 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		pass2.setFont(font17);
 		
 		JButton btn1=new JButton("결제");
 		btn1.setLocation(100, 290);
 		btn1.setSize(70,30);
+		Font font18 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		btn1.setFont(font18);
+		
 		btn1.addActionListener(new goPlusCoin());
 			
 		
 		JButton btn2=new JButton("취소");
 		btn2.setLocation(220, 290);
 		btn2.setSize(70,30);
+		Font font19 =new Font("한컴 백제 M", Font.PLAIN, 15);
+		btn1.setFont(font19);
 		btn2.addActionListener(new ActionListener() {
 			
 			@Override

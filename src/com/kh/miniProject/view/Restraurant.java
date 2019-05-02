@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -38,10 +39,10 @@ public class Restraurant extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //			JLabel RestraurantBack = new JLabel(
-//					new ImageIcon(new ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+//					new ImageIcon(new ImageIcon("images/ì˜í™”ê´€.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			RestraurantBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.ORANGE);
-		System.out.println("ÆĞ³Î »ı¼º");
+		System.out.println("íŒ¨ë„ ìƒì„±");
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -50,6 +51,10 @@ public class Restraurant extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
+
+		Font font =new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
+		tf.setFont(font);
+
 		
 		this.add(tf);
 		String place = "restraurant";
@@ -77,7 +82,7 @@ public class Restraurant extends JPanel implements KeyListener{
 	}
 
 	public void RestraurantInit() {
-		System.out.println("Restraurant ³»ºÎ ÀÎÅÍ");
+		System.out.println("Restraurant ë‚´ë¶€ ì¸í„°");
 		restraurant.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -131,6 +136,6 @@ public class Restraurant extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("5Àßµå··°¡´Ï? " + girlnumber);
+		System.out.println("5ì˜ë“œë ê°€ë‹ˆ? " + girlnumber);
 	}
 }
