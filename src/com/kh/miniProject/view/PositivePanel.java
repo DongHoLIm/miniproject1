@@ -25,6 +25,7 @@ import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.GirllovePer;
 import com.kh.miniProject.model.vo.GrilNumber;
 import com.kh.miniProject.model.vo.MylovePer;
+import com.kh.miniProject.model.vo.PointMinus;
 
 public class PositivePanel extends JPanel{
 
@@ -37,6 +38,7 @@ public class PositivePanel extends JPanel{
 	MylovePer mlp = new MylovePer();
 	GirllovePer glp = new GirllovePer();
 	CharmPer cp = new CharmPer();
+	PointMinus pm = new PointMinus();
 
 
 	public PositivePanel(JFrame start) {
@@ -106,8 +108,10 @@ public class PositivePanel extends JPanel{
 
 		glp.plusGirllove(girlnum);
 
-		int cha = (int)(Math.random()*10)+1;
+		int cha = (int)(Math.random()*5)+1;
 		cp.plusCharm(cha);
+		
+		pm.pointPlus(300);
 
 		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage2[GrilNumber.grilnumber]));
 		girl.setBounds(110, 5, 700, 550);

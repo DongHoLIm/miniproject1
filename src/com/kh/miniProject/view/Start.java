@@ -40,7 +40,11 @@ public class Start extends JFrame {
     
     	
     	
+
+
+
     	File file = new File("sound/startBGM.wav");
+
          
          
          try {
@@ -55,8 +59,9 @@ public class Start extends JFrame {
          } catch(Exception e) {
              
              e.printStackTrace();
-         }
-        
+
+         }            
+
     	startmain = new JPanel() {
             public void paintComponent(Graphics g) {
             	g.drawImage(img,0,0,960,730,this);
@@ -151,7 +156,7 @@ public class Start extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-//				/clip.stop();
+				clip.stop();
 				ChangePanel.StartChangePanle(start, startmain, new Prologue(start));
 				
 			}
