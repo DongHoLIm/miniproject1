@@ -6,6 +6,8 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.util.Calendar;
 
 import javax.swing.ImageIcon;
@@ -91,6 +93,7 @@ public class Main extends JPanel{
 		textArea.setSize(500,100);
 		textArea.setText(startMent);
 		textArea.setEditable(false);
+		
 		
 		TitledBorder oneTb = new TitledBorder(new LineBorder(Color.BLUE), "경현");
 		oneTb.setTitleColor(Color.BLACK);
