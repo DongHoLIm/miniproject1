@@ -43,7 +43,7 @@ public class MyLovePercent extends JPanel{
 		JLabel label0 = new JLabel("나의 애정도 입니다!!");
 		label0.setSize(300,50);
 		label0.setLocation(10,10);
-		Font font =new Font("휴먼편지체", Font.BOLD, 15);
+		Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
 		label0.setFont(font);
 
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
@@ -62,7 +62,7 @@ public class MyLovePercent extends JPanel{
 		JLabel label1 = new JLabel("경현이는 지금 " + lev + "명과 썸타는중~~");
 		label1.setSize(300, 50);
 		label1.setLocation(10, 30);
-		Font font1 =new Font("휴먼편지체", Font.BOLD, 15);
+		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
 		label1.setFont(font1);
 
 		loveIn.add(label0);
@@ -71,13 +71,13 @@ public class MyLovePercent extends JPanel{
 		
 		JPanel scrollback = new JPanel();
 		scrollback.setLayout(null);
-		scrollback.setBounds(0, 80, 368, 330);
-		//scrollback.setBorder(BorderFactory.createLineBorder(Color.green, 1));
+		scrollback.setBounds(3, 80, 390, 415);
+		scrollback.setBorder(BorderFactory.createLineBorder(Color.green, 1));
 
 		JPanel scrollpanel = new JPanel();
 		scrollpanel.setLayout(null);
-		scrollpanel.setPreferredSize(new Dimension(340,60*RoundOpen.getGlist().size()));
-		//scrollpanel.setBorder(BorderFactory.createLineBorder(Color.magenta,1));
+		scrollpanel.setPreferredSize(new Dimension(380,60*RoundOpen.getGlist().size()));
+		scrollpanel.setBorder(BorderFactory.createLineBorder(Color.magenta,1));
 		
 		JPanel[] backpan = new JPanel[lev];  
 		Image[] img = new Image[lev];        
@@ -97,7 +97,7 @@ public class MyLovePercent extends JPanel{
 			
 			backpan[i] = new JPanel();
 			backpan[i].setLayout(null);
-			backpan[i].setBounds(a,b, 340,50);
+			backpan[i].setBounds(a,b, 380,50);
 			backpan[i].setBorder(BorderFactory.createLineBorder(Color.black, 1));
 			
 			
@@ -111,15 +111,15 @@ public class MyLovePercent extends JPanel{
 //			imglabel[i].setSize(50,50);
 			
 			//애정도 패널
-			//mlper = g.getMylovePer();
-			mlper=50;
+			mlper = g.getMylovePer();
+			//mlper=50;
 			mlpview[i] = new JPanel();
 			mlpview[i].setLayout(null);
-			mlpview[i].setBounds(70,22, 260, 12);
+			mlpview[i].setBounds(70,22, 300, 12);
 			mlpview[i].setBorder(BorderFactory.createLineBorder(Color.red,1));
 			
 			redlabel[i] = new JLabel(new ImageIcon(red));
-			redlabel[i].setBounds(0,0, (int)(mlper*2.6),12);
+			redlabel[i].setBounds(0,0,(mlper*3),12);
 			
 			mlpview[i].add(redlabel[i]);
 			
@@ -136,10 +136,12 @@ public class MyLovePercent extends JPanel{
 		
 		//scrollpanel.setBackground(Color.white);
 		JScrollPane glistscroll = new JScrollPane(scrollpanel);
-		glistscroll.setBounds(0, 0, 365, 330);
-		//glistscroll.setBorder(BorderFactory.createLineBorder(Color.yellow, 1));
+		glistscroll.setBounds(0, 0,390,415);
+		glistscroll.setBorder(BorderFactory.createLineBorder(Color.yellow, 1));
 		//glistscroll.setPreferredSize(new Dimension(380,50));
+	
 		//glistscroll.getVerticalScrollBar().setUnitIncrement(16);
+		glistscroll.requestFocus();
 		
 		scrollback.add(glistscroll);
 		loveIn.add(scrollback);
@@ -190,6 +192,8 @@ public class MyLovePercent extends JPanel{
 		this.add(coin);
 		this.add(map);
 		this.add(icon1);
+		
+		
 		
 
 	}

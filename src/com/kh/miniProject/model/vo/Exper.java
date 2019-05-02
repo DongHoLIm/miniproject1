@@ -30,14 +30,19 @@ public class Exper {
 			System.out.println("�젟�뾽 �씫��吏��뒗 �닚�꽌媛� �뼱�뵒易�?");
 			System.out.println("경험치 100 넘었다아");
 			
-			int le = PlayerInfo.lev+1;
-			PlayerInfo.lev = le;
-			System.out.println("레벨업~~~~~!!");
-			MiniMap.girlStop = 1;
-			
-			ro.levelUp(le);
-			PlayerInfo.exper = 0;
-			
+
+			if(PlayerInfo.lev ==10) {
+				System.out.println("만렙 레벨업 없어어어어");
+				
+			}else {
+				int le = PlayerInfo.lev+1;
+				PlayerInfo.lev = le;
+				System.out.println("레벨업~~~~~!!");
+				MiniMap.girlStop = 1;
+				RoundOpen ro = new RoundOpen();
+				ro.levelUp(le);
+				PlayerInfo.exper = 0;
+			}
 		}else {
 			PlayerInfo.exper = upexper;
 		}

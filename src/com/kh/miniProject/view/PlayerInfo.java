@@ -87,6 +87,13 @@ public class PlayerInfo extends JPanel{
 		map.setContentAreaFilled(false);
 		map.setFocusPainted(false);
 		
+		
+		
+		
+		
+		
+		
+		
 		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;
 		JLabel label = new JLabel();
 		label.setIcon(new ImageIcon(icon));
@@ -97,26 +104,75 @@ public class PlayerInfo extends JPanel{
 		exit.setSize(25,25);
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
+		
 		JButton cloth = new JButton("옷장");		
 		cloth.setLocation(310, 420);
 		cloth.setSize(70,30);
 		Font font =new Font("휴먼편지체", Font.BOLD, 15);
 		cloth.setFont(font);
-		JLabel level = new JLabel("Leve l :");
+		
+		
+		
+		JLabel level = new JLabel("Level:" + lev);
 		level.setLocation(180,180);
 		level.setSize(110,30);
 		Font font1 =new Font("휴먼편지체", Font.BOLD, 15);
 		level.setFont(font1);
-		JLabel charm = new JLabel("쨍횇쨌횂쨉쨉 : ");
-		charm.setLocation(100,130);
+		
+		
+		
+		
+		JPanel charmPan = new JPanel();
+		charmPan.setLayout(null);
+		charmPan.setLocation(20, 100);
+		charmPan.setSize(360, 40);
+		
+		JLabel charm = new JLabel("매력도 ");
+		charm.setLocation(3,3);
 		charm.setSize(50,20);
 		Font font2 =new Font("휴먼편지체", Font.BOLD, 15);
 		charm.setFont(font2);
-		JLabel exper = new JLabel("째챈횉챔횆징 : ");
-		exper.setLocation(100,150);
+		
+		Image red = new ImageIcon("images/red.jpg").getImage().getScaledInstance(300, 30, 0);
+		JPanel pluscha = new JPanel();
+		pluscha.setLayout(null);
+		pluscha.setBounds(50,10, 270,10);
+		pluscha.setBorder(BorderFactory.createLineBorder(Color.red,1));
+		
+		JLabel redla = new JLabel(new ImageIcon(red));
+		redla.setBounds(0,0,(int)(charmm*2.7),12);
+		
+		pluscha.add(redla);	
+		charmPan.add(charm);
+		charmPan.add(pluscha);
+		
+		
+		JPanel expPan = new JPanel();
+		expPan.setLayout(null);
+		expPan.setLocation(20, 140);
+		expPan.setSize(360, 40);
+		
+		JLabel exper = new JLabel("경험치 ");
+		exper.setLocation(3,3);
 		exper.setSize(50,20);
 		Font font3 =new Font("휴먼편지체", Font.BOLD, 15);
 		exper.setFont(font3);
+		
+		JPanel plusexp = new JPanel();
+		plusexp.setLayout(null);
+		plusexp.setBounds(50,10, 270,10);
+		plusexp.setBorder(BorderFactory.createLineBorder(Color.red,1));
+		
+		JLabel redla2 = new JLabel(new ImageIcon(red));
+		redla2.setBounds(0,0,(int)(charmm*2.7),12);
+		
+		plusexp.add(redla2);	
+		expPan.add(exper);
+		expPan.add(plusexp);
+		
+		
+		
+		
 		String strlev = String.valueOf(lev).toString();
 		levelIn = new JLabel(strlev);
 		levelIn.setBounds(210,145,100,100);
@@ -128,9 +184,10 @@ public class PlayerInfo extends JPanel{
 		playerInfoIn.add(exit);
 		playerInfoIn.add(cloth);
 		playerInfoIn.add(level);
-		playerInfoIn.add(charm);
-		playerInfoIn.add(exper); 
+		playerInfoIn.add(charmPan);
+		playerInfoIn.add(expPan); 
 		playerInfoIn.add(levelIn);
+		
 		
 		this.add(map);
 		this.add(info);

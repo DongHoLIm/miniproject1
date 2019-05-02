@@ -6,10 +6,10 @@ public class GirllovePer {
 	
 	public void plusGirllove(int girlnum) {
 		Girl g = RoundOpen.getGlist().get(girlnum);
-		System.out.println("긍정긍정 여자애정도 상승");
 		if(PlayerInfo.charmm<20) {
 			g.setGlovePer(g.getGlovePer()+7);	
 			System.out.println("내매력 20 안됨 여자 애정도 7상승");
+			System.out.println("긍정긍정 여자애정도 상승" + g.getGlovePer());
 		}else if(PlayerInfo.charmm<50) {
 			g.setGlovePer(g.getGlovePer()+10);
 			System.out.println("내매력 21~50  여자 애정도 10상승");

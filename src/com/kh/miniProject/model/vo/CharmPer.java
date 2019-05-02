@@ -7,5 +7,9 @@ public class CharmPer {
 		PlayerInfo.charmm += cha;
 		System.out.println("매력도 " + cha+" 만큼 상승~~~");
 	}
+	
+	public void ninusCharm(int cha) {
+		PlayerInfo.charmm -= cha;
+	}
 
 }
