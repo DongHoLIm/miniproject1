@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -67,6 +68,8 @@ public class SelectPanel extends JPanel {
 		JButton spb1 = new JButton(answer1);
 		spb1.setSize(500, 50);
 		spb1.setLocation(200, 250);
+		Font font =new Font("휴먼편지체", Font.BOLD, 15);
+		spb1.setFont(font);
 		spb1.addActionListener(new ActionListener() {
 
 			@Override
@@ -83,6 +86,8 @@ public class SelectPanel extends JPanel {
 		JButton spb2 = new JButton(answer2);
 		spb2.setSize(500, 50);
 		spb2.setLocation(200, 400);
+		Font font1 =new Font("휴먼편지체", Font.BOLD, 15);
+		spb2.setFont(font1);
 		spb2.addActionListener(new ActionListener() {
 
 			@Override

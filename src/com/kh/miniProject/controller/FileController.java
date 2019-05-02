@@ -10,28 +10,31 @@ import com.kh.miniProject.model.dao.TextOutput;
 import com.kh.miniProject.model.vo.GirlImageOut;
 
 public class FileController {
-	
+
 	public String[] goGirlImages(int lev) {
-		
+
 		return new GirlImageOut().girlImageOut(lev, new GirlImages().girlImages(lev));
-		
+
 	}
-	
+
 	public Image goImageOutput(int i) {
-		
+
 		return new ImageOutput().imageOutput(i);
 	}
-	
+
 	public File textOutgoTput(String place) {
-		
+
 		return new TextOutput().textOutput(place);
 	}
-	
+
 	public File PtextOutgoTput(String place) {
-		
+
 		return new PTextOutput().PtextOutput(place);
 	}
 
+	public File EtextOutgoTput(String place) {
 
+		return new PTextOutput().EtextOutput(place);
+	}
 
 }

@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -19,6 +20,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import com.kh.miniProject.model.dao.GirlImages;
+import com.kh.miniProject.model.vo.CharmPer;
 import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.GirllovePer;
 import com.kh.miniProject.model.vo.GrilNumber;
@@ -31,6 +33,12 @@ public class PositivePanel extends JPanel{
 	JFrame start = new JFrame();
 	JPanel positivePanel;
 	private Clip clip;
+
+	MylovePer mlp = new MylovePer();
+	GirllovePer glp = new GirllovePer();
+	CharmPer cp = new CharmPer();
+	
+
 	public PositivePanel(JFrame start) {
 			
 			 positivePanel = new JPanel();
@@ -40,7 +48,7 @@ public class PositivePanel extends JPanel{
 			 this.setBackground(Color.black);
 			this.setLayout(null);
 		      
-			System.out.println("±àÁ¤");
+			System.out.println("ê¸ì •");
 			
 			Toolkit t = Toolkit.getDefaultToolkit();
 	    	this.img = t.getImage("images/PositivePanel.gif").getScaledInstance(960, 720, 0);;
@@ -77,11 +85,11 @@ public class PositivePanel extends JPanel{
 			String positiveMent = null;
 			int mentRan = (int)(Math.random()*5)+1;
 			switch(mentRan) {
-			case 1 : positiveMent = "\n\n °æÇö¾¾ ¼¾½º ÁÁÀº´ë¿ä?"; break;
-			case 2 : positiveMent = "\n\n °í¸¶¿ö¿ä °¨µ¿ÀÌ¿¡¿ä"; break;
-			case 3 : positiveMent = "\n\n ÀúÀÇ °æÇö¾¾ÀÇ ´ëÇÑ È£°¨µµ°¡ ¿Ã¶ó°£°Í°°Àº´ë¿ä?"; break;
-			case 4 : positiveMent = "\n\n °í¸¶¿ö¿ä ¤¾¤¾~"; break;
-			case 5 : positiveMent = "\n\n °æÇö¾¾´Â ¿©¼ºÀÇ ¸¶À½À» Àß ¾Æ½Ã´Â°Í°°¾Æ¿ä."; break;
+			case 1 : positiveMent = "\n\n ê²½í˜„ì”¨ ì„¼ìŠ¤ ì¢‹ì€ëŒ€ìš”?"; break;
+			case 2 : positiveMent = "\n\n ê³ ë§ˆì›Œìš” ê°ë™ì´ì—ìš”"; break;
+			case 3 : positiveMent = "\n\n ì €ì˜ ê²½í˜„ì”¨ì˜ ëŒ€í•œ í˜¸ê°ë„ê°€ ì˜¬ë¼ê°„ê²ƒê°™ì€ëŒ€ìš”?"; break;
+			case 4 : positiveMent = "\n\n ê³ ë§ˆì›Œìš” ã…ã…~"; break;
+			case 5 : positiveMent = "\n\n ê²½í˜„ì”¨ëŠ” ì—¬ì„±ì˜ ë§ˆìŒì„ ì˜ ì•„ì‹œëŠ”ê²ƒê°™ì•„ìš”."; break;
 				
 			}
 			tf = new JTextArea(positiveMent);
@@ -90,14 +98,18 @@ public class PositivePanel extends JPanel{
 			//tf.addKeyListener(this);
 			tf.setCaretColor(Color.cyan);
 			tf.setFont(getFont().deriveFont(15.0f));
+			Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 20);
+			tf.setFont(font);
 			Exper ex = new Exper();
 			ex.plusExper(1);
 
-			MylovePer mlp = new MylovePer();
+			
 			mlp.plusMylove(girlnum, 1);
 
-			GirllovePer glp = new GirllovePer();
 			glp.plusGirllove(girlnum);
+			
+			int cha = (int)(Math.random()*10)+1;
+			cp.plusCharm(cha);
 
 			JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage2[GrilNumber.grilnumber]));
 			girl.setBounds(110, 5, 700, 550);
