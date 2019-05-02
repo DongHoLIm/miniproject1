@@ -1,6 +1,9 @@
 package com.kh.miniProject.view;
 
+
+import java.awt.Font;
 import java.awt.Color;
+
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -60,7 +63,8 @@ public class NegativePanel extends JPanel{
 			JButton but = new JButton("x");
 			but.setLocation(850, 50);
 			but.setSize(30, 30);
-			
+			Font font =new Font("한컴 백제 M", Font.PLAIN, 10);
+			but.setFont(font);
 			but.addActionListener(new ActionListener() {
 				
 				@Override

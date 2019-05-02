@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -84,12 +85,20 @@ public class ClothRoom extends JPanel{
 		    
 		    JButton cloth = new JButton("옷");
 		    cloth.setBounds(10, 70, 60, 30);
+		    Font font =new Font("한컴 백제 M", Font.PLAIN, 10);
+			cloth.setFont(font);
 		    JButton shoes = new JButton("신발");
 		    shoes.setBounds(70, 70, 60, 30);
+		    Font font1 =new Font("한컴 백제 M", Font.PLAIN, 10);
+			shoes.setFont(font1);
 		    JButton acc = new JButton("악세서리");
 		    acc.setBounds(130, 70, 60, 30);
+		    Font font2 =new Font("한컴 백제 M", Font.PLAIN, 10);
+			acc.setFont(font2);
 		    JButton item = new JButton("아이템");
 		    item.setBounds(190, 70, 60, 30);
+		    Font font3 =new Font("한컴 백제 M", Font.PLAIN, 10);
+			item.setFont(font3);
 		    
 		    cloth.addActionListener(new ActionListener() {
 				

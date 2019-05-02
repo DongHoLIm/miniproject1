@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,11 +44,11 @@ public class Movie extends JPanel implements KeyListener {
 		this.setLayout(null);
 		// JLabel MovieBack = new JLabel(
 		// new ImageIcon(new
-		// ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+		// ImageIcon("images/ì˜í™”ê´€.PNG").getImage().getScaledInstance(960, 720, 0)));
 		// MovieBack.setBounds(0, 0, 960, 720);
 
 		// this.setBackground(Color.cyan);
-		System.out.println("ÆĞ³Î »ı¼º");
+		System.out.println("íŒ¨ë„ ìƒì„±");
 		
 		
 		tf = new JTextArea();
@@ -57,7 +58,10 @@ public class Movie extends JPanel implements KeyListener {
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		tf.requestFocus();
+
+		Font font =new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
+		tf.setFont(font);
+
 
 		this.add(tf);
 		String place = "movie";
@@ -102,7 +106,7 @@ public class Movie extends JPanel implements KeyListener {
 	}
 
 	public void movieInit() {
-		System.out.println("movie ³»ºÎ ÀÎÅÍ");
+		System.out.println("movie ë‚´ë¶€ ì¸í„°");
 		movie.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(890, 20);
@@ -119,7 +123,7 @@ public class Movie extends JPanel implements KeyListener {
 		// cp.replacePanel(mm);
 		// }
 		// });
-//		System.out.println("¤±¤±¤±"+girlnumber);
+//		System.out.println("ã…ã…ã…"+girlnumber);
 //		Image gi = new ImageIcon(GirlImages.girlImage[girlnumber]).getImage();
 //		JLabel girl = new JLabel(new ImageIcon(gi));
 		
@@ -174,7 +178,7 @@ public class Movie extends JPanel implements KeyListener {
 	}
 
 	public void acceptGirl(int girlnumber) {
-		System.out.println("1Àßµå··°¡´Ï? " + girlnumber);
+		System.out.println("1ì˜ë“œë ê°€ë‹ˆ? " + girlnumber);
 		//this.girlnumber = girlnumber;
 		
 		/*

@@ -56,7 +56,9 @@ public class StoreMain extends JPanel {
 		citem1.setSize(120,120);
 		citem1.setLocation(20,20);
 		clothItems.add(citem1);
+
 		iteminfo = new JLabel("<html>경현이가 자주 안입는옷  특정 여성 을 꼬실때 입는다 <br> 3000 코인 <br> 매력도 25 상승");
+
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -73,7 +75,9 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
-				Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 40);
+
+				Font font =new Font("한컴 백제 M", Font.PLAIN, 40);
+
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -370,7 +374,9 @@ public class StoreMain extends JPanel {
 		iteminfo = new JLabel("<html> 뉴 발란스 신발 <br> 1200 코인 <br> 매력도 13 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
-		Font font6=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
+
+		Font font6 =new Font("한컴 백제 M", Font.PLAIN, 15);
+
 		iteminfo.setFont(font6);
 		shoesItems.add(iteminfo);
 		sitem2.addActionListener(new ActionListener() {
