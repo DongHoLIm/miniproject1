@@ -27,11 +27,11 @@ public class Cafe extends JPanel implements KeyListener{
 	private JFrame start;
 	private JPanel cafe;
 	private JTextArea tf;
-	private FileController sc = new FileController();
-	private File loveStory;
-	private EnterKeyAction ek = new EnterKeyAction();
-	private ArrayList listStory;
 	private JLabel icon1;
+	private File loveStory;
+	private ArrayList listStory;
+	private FileController sc = new FileController();
+	private EnterKeyAction ek = new EnterKeyAction();
 
 	public Cafe(JFrame start) {
 		this.start = start;

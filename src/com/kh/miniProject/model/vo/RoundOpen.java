@@ -10,7 +10,7 @@ public class RoundOpen {
 
 
 	public void levelUp(int lev) {
-		if(Main.day==0) {
+		//if(Main.day==0) {
 		switch(lev) {
 		case 1 : roundUp1();break;
 		case 2 : roundUp2();break;
@@ -26,7 +26,7 @@ public class RoundOpen {
 
 		System.out.println(glist);
 		System.out.println("리스트저장확인");
-		}
+		//}
 	}
 
 
