@@ -21,6 +21,8 @@ public class PlayerInfo extends JPanel{
 	private JPanel playerInfoIn;
 	public static int lev = 1;
 	public static int exper=0;
+	public static int charmm=0;
+	
 
 	public static int levBreak = 0;
 	public static int getLevBreak() {
