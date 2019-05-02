@@ -29,5 +29,15 @@ public class GirllovePer {
 		g.setGlovePer(g.getGlovePer()-10);
 		System.out.println("부정부정 여자애정도 10 하락");
 	}
+	public void random(int girlnum) {
+		Girl g = RoundOpen.getGlist().get(girlnum);
+		int ran = (int)Math.random()*2+1;
+		
+		switch(ran) {
+		case 1 : g.setGlovePer(g.getGlovePer()-20); break;
+		case 2 : g.setGlovePer(g.getGlovePer()+30); break;
+		
+		}
+	}
 
 }

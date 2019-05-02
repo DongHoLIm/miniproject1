@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Graphics;
+
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -23,7 +24,7 @@ import com.kh.miniProject.model.vo.RoundOpen;
 public class Start extends JFrame {
    
     private JFrame start;
-    private JPanel startmain;
+    public static JPanel startmain;
     private Image  img;
     private Clip clip;
     
@@ -39,7 +40,7 @@ public class Start extends JFrame {
     
     	
     	
-    	 File file = new File("sound/startBGM.wav");
+    	/* File file = new File("sound/startBGM.wav");
          
          
          try {
@@ -54,7 +55,7 @@ public class Start extends JFrame {
          } catch(Exception e) {
              
              e.printStackTrace();
-         }
+         }*/
         //占쏙옙占� Panel 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占� 占쏙옙占�      
     	startmain = new JPanel() {
             public void paintComponent(Graphics g) {
@@ -150,7 +151,7 @@ public class Start extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				clip.stop();
+//				/clip.stop();
 				ChangePanel.StartChangePanle(start, startmain, new Prologue(start));
 				
 			}

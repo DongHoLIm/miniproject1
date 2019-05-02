@@ -65,9 +65,6 @@ public class Prologue extends JPanel implements KeyListener {
 			if (str != null) {
 				tf.append(str);
 				// value++;
-			}else if(Main.totalDay > 10) {
-				System.out.println("BB");
-				ChangePanel.ChangePanel(start, prologue, new Credit(start));
 			} else {
 				System.out.println("AA");
 				ChangePanel.ChangePanel(start, prologue, new Main(start));

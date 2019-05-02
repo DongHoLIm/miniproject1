@@ -57,7 +57,7 @@ public class Credit  extends JPanel {
 			Main.dayBreak = 0;
 			Main.totalDay = 1;
 			PTextOutput.prologueNum = 0;
-			ChangePanel.ChangeStart(start, credit, new Start());
+			ChangePanel.ChangePanel(start, credit, Start.startmain);
 		}
 
 	}

@@ -7,15 +7,16 @@ import com.kh.miniProject.view.PlayerInfo;
 
 public class Exper {
 	private JFrame start;
-	
+	RoundOpen ro = new RoundOpen();
+
 	public void plusExper(int pn) {
 		int exp;
 		if(pn==1) {
-			exp = (int)(Math.random()*20)+51;
-			System.out.println("긍정긍정 경험치51~70 랜덤 상승 ");
+			exp = (int)(Math.random()*20)+50;
+		}else if(pn==2){
+			exp = (int)(Math.random()*20)+50;			
 		}else {
-			exp = (int)(Math.random()*20)+41;
-			System.out.println("부정부정 경험치41~60 랜덤 상승 ");
+			exp = 0;
 		}
 		
 //		PlayerInfo pif = new PlayerInfo(start);
@@ -29,6 +30,7 @@ public class Exper {
 			System.out.println("�젟�뾽 �씫��吏��뒗 �닚�꽌媛� �뼱�뵒易�?");
 			System.out.println("경험치 100 넘었다아");
 			
+
 			if(PlayerInfo.lev ==10) {
 				System.out.println("만렙 레벨업 없어어어어");
 				
@@ -41,11 +43,14 @@ public class Exper {
 				ro.levelUp(le);
 				PlayerInfo.exper = 0;
 			}
-			
-			
 		}else {
 			PlayerInfo.exper = upexper;
 		}
+		
+	}
+	public void exp() {
+		PlayerInfo.exper += 300;
+		plusExper(0);
 		
 	}
 

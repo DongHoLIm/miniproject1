@@ -1,5 +1,7 @@
 package com.kh.miniProject.model.vo;
 
+import java.util.Collections;
+
 public class Girl {
 	private String name;  //이름
 	private int age;   	//나이
@@ -97,6 +99,8 @@ public class Girl {
 		return "name : " + name + " age:" + age+ " gender:" + gender
 				+ " charactor:" + charactor+ " signature:" + signature+ " image:" + image + "\n";
 	}
+
+	
 	
 
 }
