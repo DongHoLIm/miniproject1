@@ -51,7 +51,7 @@ public class FlowerShop extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font =new Font("한컴 백제 M", Font.PLAIN, 15);
+		Font font =new Font("휴먼편지체", Font.BOLD, 15);
 		tf.setFont(font);
 		
 		this.add(tf);

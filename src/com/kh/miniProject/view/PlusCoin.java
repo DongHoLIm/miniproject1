@@ -78,7 +78,7 @@ public class PlusCoin extends JPanel{
 		JLabel pluscoin= new JLabel("구매하시겠습니까???");
 		pluscoin.setLocation(75,45);
 		pluscoin.setSize(300,50);
-		Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
+		Font font =new Font("휴먼편지체", Font.BOLD, 15);
 		pluscoin.setFont(font);
 
 		JButton exit=new JButton(new ImageIcon(img6)); 
@@ -91,13 +91,13 @@ public class PlusCoin extends JPanel{
 		JButton btn5=new JButton("Yes"); 
 		btn5.setLocation(50,125);
 		btn5.setSize(70,30);
-		Font font1=new Font("한컴 백제 M", Font.PLAIN, 15);
+		Font font1 =new Font("휴먼편지체", Font.BOLD, 15);
 		btn5.setFont(font1);
 
 		JButton btn6=new JButton("no"); 
 		btn6.setLocation(150,125);
 		btn6.setSize(70,30);
-		Font font2=new Font("한컴 백제 M", Font.PLAIN, 15);
+		Font font2 =new Font("휴먼편지체", Font.BOLD, 15);
 		btn6.setFont(font2);
 
 		exit.addActionListener(new Change());

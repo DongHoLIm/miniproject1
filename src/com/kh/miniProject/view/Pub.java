@@ -39,10 +39,10 @@ public class Pub extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //				JLabel PubBack = new JLabel(
-//						new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
+//						new ImageIcon(new ImageIcon("images/�쁺�솕愿�.PNG").getImage().getScaledInstance(960, 720, 0)));
 //				PubBack.setBounds(0, 0, 960, 720);
 		this.setBackground(Color.ORANGE);
-		System.out.println("패널 생성");
+		System.out.println("�뙣�꼸 �깮�꽦");
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -51,8 +51,7 @@ public class Pub extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-
-		Font font =new Font("한컴 백제 M", Font.PLAIN, 15);
+		Font font =new Font("휴먼편지체", Font.BOLD, 15);
 		tf.setFont(font);
 
 		this.add(tf);
@@ -80,7 +79,7 @@ public class Pub extends JPanel implements KeyListener{
 	}
 
 	public void PubInit() {
-		System.out.println("Pub 내부 인터");
+		System.out.println("Pub �궡遺� �씤�꽣");
 		rub.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -134,7 +133,7 @@ public class Pub extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("8잘드렁가니? " + girlnumber);
+		System.out.println("8�옒�뱶�쟻媛��땲? " + girlnumber);
 	}
 }
 

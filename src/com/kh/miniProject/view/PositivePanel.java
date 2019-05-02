@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -15,6 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import com.kh.miniProject.model.dao.GirlImages;
+import com.kh.miniProject.model.vo.CharmPer;
 import com.kh.miniProject.model.vo.Exper;
 import com.kh.miniProject.model.vo.GirllovePer;
 import com.kh.miniProject.model.vo.GrilNumber;
@@ -26,6 +28,10 @@ public class PositivePanel extends JPanel{
 	private JTextArea tf;
 	JFrame start = new JFrame();
 	JPanel positivePanel;
+	MylovePer mlp = new MylovePer();
+	GirllovePer glp = new GirllovePer();
+	CharmPer cp = new CharmPer();
+	
 	public PositivePanel(JFrame start) {
 			
 			 positivePanel = new JPanel();
@@ -73,14 +79,18 @@ public class PositivePanel extends JPanel{
 			//tf.addKeyListener(this);
 			tf.setCaretColor(Color.cyan);
 			tf.setFont(getFont().deriveFont(15.0f));
+			Font font =new Font("»ﬁ∏’∆Ì¡ˆ√º", Font.BOLD, 20);
+			tf.setFont(font);
 			Exper ex = new Exper();
 			ex.plusExper(1);
 
-			MylovePer mlp = new MylovePer();
+			
 			mlp.plusMylove(girlnum, 1);
 
-			GirllovePer glp = new GirllovePer();
 			glp.plusGirllove(girlnum);
+			
+			int cha = (int)(Math.random()*10)+1;
+			cp.plusCharm(cha);
 
 			JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage2[GrilNumber.grilnumber]));
 			girl.setBounds(110, 5, 700, 550);

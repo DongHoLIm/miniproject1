@@ -41,7 +41,7 @@ public class Prologue extends JPanel implements KeyListener {
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font=new Font("한컴 백제 M", Font.PLAIN, 20);
+		Font font =new Font("휴먼편지체", Font.BOLD, 20);
 		tf.setFont(font);
 		this.add(tf);
 		

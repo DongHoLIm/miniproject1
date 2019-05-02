@@ -29,6 +29,9 @@ public class NegativePanel extends JPanel{
 	private JPanel negativePanel;
 	private Image img;
 	private JTextArea tf;
+	Exper ex = new Exper();
+    MylovePer mlp = new MylovePer();
+    GirllovePer glp = new GirllovePer();
 	
 	
 	public NegativePanel(JFrame start) {
@@ -58,13 +61,13 @@ public class NegativePanel extends JPanel{
 			//tf.addKeyListener(this);
 			tf.setCaretColor(Color.cyan);
 			tf.setFont(getFont().deriveFont(15.0f));
+			Font font =new Font("휴먼편지체", Font.BOLD, 20);
+			tf.setFont(font);
 	    	
 	      
 			JButton but = new JButton("x");
 			but.setLocation(850, 50);
 			but.setSize(30, 30);
-			Font font =new Font("한컴 백제 M", Font.PLAIN, 10);
-			but.setFont(font);
 			but.addActionListener(new ActionListener() {
 				
 				@Override
@@ -79,14 +82,13 @@ public class NegativePanel extends JPanel{
 	      
 	      
 	      
-	      Exper ex = new Exper();
+	      
 	      ex.plusExper(2);
 	      
-	      MylovePer mlp = new MylovePer();
 	      mlp.plusMylove(girlnum, 2);
 	      
-	      GirllovePer glp = new GirllovePer();
 	     glp.ninusGirllove(girlnum);
+	     
 	     
 	    JLabel icon1 = new JLabel(new ImageIcon(img));
 		  icon1.setBounds(0, 0, 960, 720);
