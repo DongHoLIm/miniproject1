@@ -1,15 +1,17 @@
 package com.kh.miniProject.view;
 
 
-import java.awt.Font;
 import java.awt.Color;
-
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
-
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -29,6 +31,12 @@ public class NegativePanel extends JPanel{
 	private JPanel negativePanel;
 	private Image img;
 	private JTextArea tf;
+	private Clip clip;
+
+	Exper ex = new Exper();
+    MylovePer mlp = new MylovePer();
+    GirllovePer glp = new GirllovePer();
+
 	
 	
 	public NegativePanel(JFrame start) {
@@ -58,17 +66,32 @@ public class NegativePanel extends JPanel{
 			//tf.addKeyListener(this);
 			tf.setCaretColor(Color.cyan);
 			tf.setFont(getFont().deriveFont(15.0f));
-	    	
+
+			//File file = new File("sound/NegativePanel.wav");
+	         
+	         try {
+	             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/negativePanel.wav"));
+	             clip = AudioSystem.getClip();
+	             clip.open(stream);
+	             clip.start();
+	         } catch(Exception e) {
+	             e.printStackTrace();
+	         }
 	      
-			JButton but = new JButton("x");
-			but.setLocation(850, 50);
-			but.setSize(30, 30);
-			Font font =new Font("한컴 백제 M", Font.PLAIN, 10);
-			but.setFont(font);
-			but.addActionListener(new ActionListener() {
-				
+	         Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
+				JButton exit = new JButton(new ImageIcon(img6));
+				exit.setLocation(850, 50);
+				exit.setSize(30, 30);
+				exit.setContentAreaFilled(false);
+				exit.setFocusPainted(false);
+			  Font font =new Font("휴먼편지체", Font.BOLD, 20);
+        tf.setFont(font);
+			  exit.setFont(font);
+			  exit.addActionListener(new ActionListener() {
+			
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					clip.stop();
 					ChangePanel.StartChangePanle(start, negativePanel, new Main(start));
 					
 				}
@@ -79,14 +102,13 @@ public class NegativePanel extends JPanel{
 	      
 	      
 	      
-	      Exper ex = new Exper();
+	      
 	      ex.plusExper(2);
 	      
-	      MylovePer mlp = new MylovePer();
 	      mlp.plusMylove(girlnum, 2);
 	      
-	      GirllovePer glp = new GirllovePer();
 	     glp.ninusGirllove(girlnum);
+	     
 	     
 	    JLabel icon1 = new JLabel(new ImageIcon(img));
 		  icon1.setBounds(0, 0, 960, 720);
@@ -94,7 +116,7 @@ public class NegativePanel extends JPanel{
 			girl.setBounds(110, 5, 700, 550);
 			negativePanel.add(tf);
 			negativePanel.add(girl);
-			negativePanel.add(but);
+			negativePanel.add(exit);
 			negativePanel.add(icon1);
 			
 			

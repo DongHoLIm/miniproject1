@@ -41,7 +41,7 @@ public class Prologue extends JPanel implements KeyListener {
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font=new Font("한컴 백제 M", Font.PLAIN, 20);
+		Font font =new Font("휴먼편지체", Font.BOLD, 20);
 		tf.setFont(font);
 		this.add(tf);
 		
@@ -65,9 +65,6 @@ public class Prologue extends JPanel implements KeyListener {
 			if (str != null) {
 				tf.append(str);
 				// value++;
-			}else if(Main.totalDay > 10) {
-				System.out.println("BB");
-				ChangePanel.ChangePanel(start, prologue, new Credit(start));
 			} else {
 				System.out.println("AA");
 				ChangePanel.ChangePanel(start, prologue, new Main(start));

@@ -1,6 +1,10 @@
 package com.kh.miniProject.model.vo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
 
 import com.kh.miniProject.view.Main;
@@ -8,36 +12,66 @@ import com.kh.miniProject.view.Main;
 public class RoundOpen {
 	public static ArrayList<Girl> glist = new ArrayList<Girl>();
 
-
 	public void levelUp(int lev) {
-		//if(Main.day==0) {
-		switch(lev) {
-		case 1 : roundUp1();break;
-		case 2 : roundUp2();break;
-		case 3 : roundUp3();break;
-		case 4 : roundUp4();break;
-		case 5 : roundUp5();break;
-		case 6 : roundUp6();break;
-		case 7 : roundUp7();break;
-		case 8 : roundUp8();break;
-		case 9 : roundUp9();break;
-		case 10 : roundUp10();break;
+		// if(Main.day==0) {
+		switch (lev) {
+		case 1:
+			roundUp1();
+			break;
+		case 2:
+			roundUp2();
+			break;
+		case 3:
+			roundUp3();
+			break;
+		case 4:
+			roundUp4();
+			break;
+		case 5:
+			roundUp5();
+			break;
+		case 6:
+			roundUp6();
+			break;
+		case 7:
+			roundUp7();
+			break;
+		case 8:
+			roundUp8();
+			break;
+		case 9:
+			roundUp9();
+			break;
+		case 10:
+			roundUp10();
+			break;
 		}
 
 		System.out.println(glist);
 		System.out.println("리스트저장확인");
-		//}
+		// }
+//		Collections.sort(glist, new Comparator<Girl>() {
+//			@Override
+//			public int compare(Girl o1 , Girl o2) {
+//				if(o1.getMylovePer() > o2.getMylovePer()) {
+//					return 1;
+//				}else if (o1.getMylovePer() < o2.getMylovePer()) {
+//					return -1;
+//				}else {
+//					return 0;
+//				}
+//			}
+//		});
+		
 	}
-
 
 	public static ArrayList<Girl> getGlist() {
 		return glist;
 	}
+
 	public static void setGlist(ArrayList<Girl> glist) {
 		RoundOpen.glist = glist;
 	}
-
-
 
 	public void roundUp1() {
 		Girl g1 = new Girl();
@@ -63,7 +97,7 @@ public class RoundOpen {
 		g2.setCharactor("어머니");
 		g2.setSignature("술을 좋아한다.");
 		g2.setImage("images/girl2.png");
-
+		
 		glist.add(g2);
 		System.out.println("g2생성");
 
@@ -87,10 +121,9 @@ public class RoundOpen {
 
 	}
 
-
 	public void roundUp4() {
 		Girl g4 = new Girl();
-		g4.setName("여자4");
+		g4.setName("이국주");
 		g4.setAge(30);
 		g4.setGender('여');
 		g4.setCharactor("여자4 성격");
@@ -104,10 +137,9 @@ public class RoundOpen {
 
 	}
 
-
 	public void roundUp5() {
 		Girl g5 = new Girl();
-		g5.setName("여자5");
+		g5.setName("이수현");
 		g5.setAge(30);
 		g5.setGender('여');
 		g5.setCharactor("여자5 성격");
@@ -121,10 +153,9 @@ public class RoundOpen {
 
 	}
 
-
 	public void roundUp6() {
 		Girl g6 = new Girl();
-		g6.setName("여자6");
+		g6.setName("정유미");
 		g6.setAge(30);
 		g6.setGender('여');
 		g6.setCharactor("여자6 성격");
@@ -138,10 +169,9 @@ public class RoundOpen {
 
 	}
 
-
 	public void roundUp7() {
 		Girl g7 = new Girl();
-		g7.setName("여자7");
+		g7.setName("벤");
 		g7.setAge(30);
 		g7.setGender('여');
 		g7.setCharactor("여자7 성격");
@@ -155,10 +185,9 @@ public class RoundOpen {
 
 	}
 
-
 	public void roundUp8() {
 		Girl g8 = new Girl();
-		g8.setName("여자8");
+		g8.setName("모모");
 		g8.setAge(30);
 		g8.setGender('여');
 		g8.setCharactor("여자8 성격");
@@ -172,10 +201,9 @@ public class RoundOpen {
 
 	}
 
-
 	public void roundUp9() {
 		Girl g9 = new Girl();
-		g9.setName("여자9");
+		g9.setName("고준희");
 		g9.setAge(30);
 		g9.setGender('여');
 		g9.setCharactor("여자9 성격");
@@ -189,10 +217,9 @@ public class RoundOpen {
 
 	}
 
-
 	public void roundUp10() {
 		Girl g10 = new Girl();
-		g10.setName("여자10");
+		g10.setName("아이린");
 		g10.setAge(30);
 		g10.setGender('여');
 		g10.setCharactor("여자10 성격");
@@ -205,5 +232,7 @@ public class RoundOpen {
 		System.out.println(glist);
 
 	}
+
+	
 
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class PTextOutput {
 	private ArrayList al;
 	public static int prologueNum = 0;
-	
+	public static int epilogueNum = 0;
 	public int getPrologueNum() {
 		return prologueNum;
 	}
@@ -20,8 +20,15 @@ public class PTextOutput {
 	}
 
 	public File PtextOutput(String place) {
-		
+
 		File movielove = new File("Story/prologue" + prologueNum);
+		return movielove;
+
+	}
+
+	public File EtextOutput(String place) {
+
+		File movielove = new File("Story/Epilogue" + epilogueNum);
 		return movielove;
 
 	}

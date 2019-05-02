@@ -31,18 +31,18 @@ public class Ending extends JPanel {
 //					new ImageIcon(new ImageIcon("images/�쁺�솕愿�.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			EndingBack.setBounds(0, 0, 960, 720);
 		this.setBackground(Color.BLACK);
-		System.out.println("�뿏�뵫 �솕硫�");
+		System.out.println("마지막 그녀");
 
 		EndingInit();
 
 	}
 
 	public void EndingInit() {
-		System.out.println("Ending �궡遺� �씤�꽣");
+		System.out.println("Ending");
 		ending.setVisible(true);
-		JLabel endingName = new JLabel("留덉�留� 洹몃�");
-		endingName.setLocation(440, 260);
-		endingName.setSize(150, 50);
+		JLabel endingName = new JLabel("마지막 그녀");
+		endingName.setLocation(400, 260);
+		endingName.setSize(200, 50);
 		Font font1 =new Font("한컴 백제 M", Font.PLAIN, 30);
 		endingName.setFont(font1);
 		JButton ending = new JButton(new ImageIcon("images/Button(1).png"));
@@ -56,7 +56,7 @@ public class Ending extends JPanel {
 
 		JLabel icon1 = new JLabel(new ImageIcon("images/minimab.png"));
 		icon1.setBounds(0, 0, 960, 720);
-		PTextOutput.prologueNum = 10;
+		
 		
 		this.add(ending);
 		this.add(endingName);
@@ -73,10 +73,8 @@ public class Ending extends JPanel {
 			Main.dayBreak =0;
 			Main.totalDay =1;  
 			Main.day2 = 0;
-
-			PTextOutput.prologueNum = 10 ;
-
-			ChangePanel.ChangePanel(start, ending, new Prologue(start));
+			
+			ChangePanel.ChangePanel(start, ending, new SelectPanel2(start));
 		}
 
 	}
