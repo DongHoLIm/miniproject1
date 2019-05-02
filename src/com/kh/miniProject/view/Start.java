@@ -40,7 +40,10 @@ public class Start extends JFrame {
     
     	
     	
+
+
     	File file = new File("sound/startBGM.wav");
+
          
          
          try {
@@ -55,8 +58,8 @@ public class Start extends JFrame {
          } catch(Exception e) {
              
              e.printStackTrace();
-         }
-        //占쏙옙占� Panel 占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙占� 占쏙옙占�      
+         }            
+
     	startmain = new JPanel() {
             public void paintComponent(Graphics g) {
             	g.drawImage(img,0,0,960,730,this);
