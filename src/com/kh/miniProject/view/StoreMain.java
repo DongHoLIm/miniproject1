@@ -56,7 +56,9 @@ public class StoreMain extends JPanel {
 		citem1.setSize(120,120);
 		citem1.setLocation(20,20);
 		clothItems.add(citem1);
-		iteminfo = new JLabel("<html>�옒�깮湲댁듅�썕�씠 硫뗭죱�뼱<br>洹몃젃寃� 硫뗭쭊���꽍�씠...<br></html>");
+
+		iteminfo = new JLabel("<html>경현이가 자주 안입는옷  특정 여성 을 꼬실때 입는다 <br> 3000 코인 <br> 매력도 25 상승");
+
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		Font font=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -73,7 +75,9 @@ public class StoreMain extends JPanel {
 				JButton yes = new JButton("yes");
 				yes.setSize(300,150);
 				yes.setLocation(110,310);
+
 				Font font =new Font("한컴 백제 M", Font.PLAIN, 40);
+
 				yes.setFont(font);
 				yes.addActionListener(new ActionListener() {
 
@@ -119,7 +123,7 @@ public class StoreMain extends JPanel {
 		citem2.setSize(120,120);
 		citem2.setLocation(20,160);
 		clothItems.add(citem2);
-		iteminfo = new JLabel("item2info");
+		iteminfo = new JLabel("<html>경현이가 즐겨 입는 후드티 <br> 2500 코인 <br> 매력도 15 상승 ");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 		Font font2=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -178,7 +182,7 @@ public class StoreMain extends JPanel {
 		citem3.setSize(120,120);
 		citem3.setLocation(380,20);
 		clothItems.add(citem3);
-		iteminfo = new JLabel("item3info");
+		iteminfo = new JLabel("<html> 바지 <br> 1800 코인 <br> 매력도 15 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		Font font3=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -236,7 +240,7 @@ public class StoreMain extends JPanel {
 		citem4.setSize(120,120);
 		citem4.setLocation(380,160);
 		clothItems.add(citem4);
-		iteminfo = new JLabel("item4info");
+		iteminfo = new JLabel("<html> 바지 <br> 2000 코인 <br> 매력도 20 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		Font font4=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -309,7 +313,7 @@ public class StoreMain extends JPanel {
 		sitem1.setSize(120,120);
 		sitem1.setLocation(20,20);
 		shoesItems.add(sitem1);
-		iteminfo = new JLabel("item5info");
+		iteminfo = new JLabel("<html> 뉴 발란스 신발 <br> 코인 1000 <br> 매력도 5 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		Font font5=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -367,10 +371,12 @@ public class StoreMain extends JPanel {
 		sitem2.setSize(120,120);
 		sitem2.setLocation(20,160);
 		shoesItems.add(sitem2);
-		iteminfo = new JLabel("item6info");
+		iteminfo = new JLabel("<html> 뉴 발란스 신발 <br> 1200 코인 <br> 매력도 13 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
+
 		Font font6 =new Font("한컴 백제 M", Font.PLAIN, 15);
+
 		iteminfo.setFont(font6);
 		shoesItems.add(iteminfo);
 		sitem2.addActionListener(new ActionListener() {
@@ -425,7 +431,7 @@ public class StoreMain extends JPanel {
 		sitem3.setSize(120,120);
 		sitem3.setLocation(380,20);
 		shoesItems.add(sitem3);
-		iteminfo = new JLabel("item7info");
+		iteminfo = new JLabel("<html> 나이키 신발 <br> 1500 코인 <br> 매력도 15 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		Font font7=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -483,7 +489,7 @@ public class StoreMain extends JPanel {
 		sitem4.setSize(120,120);
 		sitem4.setLocation(380,160);
 		shoesItems.add(sitem4);
-		iteminfo = new JLabel("item8info");
+		iteminfo = new JLabel("<html> 나이키 신발 <br> 2500 코인 <br> 매력도 20 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		Font font8=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -558,7 +564,7 @@ public class StoreMain extends JPanel {
 		jitem1.setSize(120,120);
 		jitem1.setLocation(20,20);
 		jewerlyItems.add(jitem1);
-		iteminfo = new JLabel("item9info");
+		iteminfo = new JLabel("<html> 넥타이 <br> 500 코인 <br> 매력도 5 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		Font font9=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -616,7 +622,7 @@ public class StoreMain extends JPanel {
 		jitem2.setSize(120,120);
 		jitem2.setLocation(20,160);
 		jewerlyItems.add(jitem2);
-		iteminfo = new JLabel("item10info");
+		iteminfo = new JLabel("<html> 고오급 시계 <br> 3000 코인 <br> 매력도 25 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 		Font font10=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -673,7 +679,7 @@ public class StoreMain extends JPanel {
 		jitem3.setSize(120,120);
 		jitem3.setLocation(380,20);
 		jewerlyItems.add(jitem3);
-		iteminfo = new JLabel("item11info");
+		iteminfo = new JLabel("<html> 피어싱 <br> 1000 코인 <br> 매력도 10 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		Font font11=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);
@@ -731,7 +737,7 @@ public class StoreMain extends JPanel {
 		jitem4.setSize(120,120);
 		jitem4.setLocation(380,160);
 		jewerlyItems.add(jitem4);
-		iteminfo = new JLabel("item12info");
+		iteminfo = new JLabel("<html> 은 팔찌 <br> 1500 코인 <br> 매력도 13 상승");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		Font font12=new Font("�븳而� 諛깆젣 M", Font.PLAIN, 15);

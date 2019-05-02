@@ -39,10 +39,10 @@ public class SingingRoom extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //			JLabel singingRoomBack = new JLabel(
-//					new ImageIcon(new ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+//					new ImageIcon(new ImageIcon("images/ì˜í™”ê´€.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			singingRoomBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.magenta);
-		System.out.println("ÆĞ³Î »ı¼º");
+		System.out.println("íŒ¨ë„ ìƒì„±");
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -51,9 +51,11 @@ public class SingingRoom extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font =new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+
+		Font font =new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		tf.setFont(font);
 		
+
 		this.add(tf);
 		String place = "singingroom";
 		loveStory = sc.textOutgoTput(place);
@@ -79,7 +81,7 @@ public class SingingRoom extends JPanel implements KeyListener{
 	}
 
 	public void SingingRoomInit() {
-		System.out.println("singingRoom ³»ºÎ ÀÎÅÍ");
+		System.out.println("singingRoom ë‚´ë¶€ ì¸í„°");
 		singingRoom.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -133,6 +135,6 @@ public class SingingRoom extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("7Àßµå··°¡´Ï? " + girlnumber);
+		System.out.println("7ì˜ë“œë ê°€ë‹ˆ? " + girlnumber);
 	}
 }

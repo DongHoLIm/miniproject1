@@ -40,11 +40,11 @@ public class Cafe extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //		JLabel cafeBack = new JLabel(
-//				new ImageIcon(new ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+//				new ImageIcon(new ImageIcon("images/ì˜í™”ê´€.PNG").getImage().getScaledInstance(960, 720, 0)));
 //		cafeBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.ORANGE);
 		
-		System.out.println("ÆĞ³Î »ı¼º");
+		System.out.println("íŒ¨ë„ ìƒì„±");
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -53,9 +53,11 @@ public class Cafe extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font =new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+
+		Font font =new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		tf.setFont(font);
 		
+
 		this.add(tf);
 		String place = "cafe";
 		loveStory = sc.textOutgoTput(place);
@@ -74,7 +76,7 @@ public class Cafe extends JPanel implements KeyListener{
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
 		}
-		System.out.println("ÀÌ¹ÌÁö? " + GrilNumber.grilnumber);
+		System.out.println("ì´ë¯¸ì§€? " + GrilNumber.grilnumber);
 		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
 		girl.setBounds(110, 5, 700, 550);
 		icon1.add(girl);
@@ -87,7 +89,7 @@ public class Cafe extends JPanel implements KeyListener{
 	}
 
 	public void cafeInit() {
-		System.out.println("cafe ³»ºÎ ÀÎÅÍ");
+		System.out.println("cafe ë‚´ë¶€ ì¸í„°");
 		cafe.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -141,7 +143,7 @@ public class Cafe extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("2Àßµå··°¡´Ï? " + girlnumber);
+		System.out.println("2ì˜ë“œë ê°€ë‹ˆ? " + girlnumber);
 	}
 	
 

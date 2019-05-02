@@ -41,10 +41,10 @@ public class Park extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //		JLabel parkBack = new JLabel(
-//				new ImageIcon(new ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+//				new ImageIcon(new ImageIcon("images/ì˜í™”ê´€.PNG").getImage().getScaledInstance(960, 720, 0)));
 //		parkBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.lightGray);
-		System.out.println("ÆĞ³Î »ı¼º");
+		System.out.println("íŒ¨ë„ ìƒì„±");
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -53,8 +53,10 @@ public class Park extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font =new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+
+		Font font =new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		tf.setFont(font);
+
 		
 		this.add(tf);
 		String place = "park";
@@ -83,7 +85,7 @@ public class Park extends JPanel implements KeyListener{
 
 	}
 	public void parkInit() {
-		System.out.println("park ³»ºÎ ÀÎÅÍ");
+		System.out.println("park ë‚´ë¶€ ì¸í„°");
 		park.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -136,6 +138,6 @@ public class Park extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("3Àßµå··°¡´Ï? " + girlnumber);
+		System.out.println("3ì˜ë“œë ê°€ë‹ˆ? " + girlnumber);
 	}
 }

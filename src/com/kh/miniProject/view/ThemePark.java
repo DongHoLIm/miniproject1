@@ -39,10 +39,10 @@ public class ThemePark extends JPanel implements KeyListener{
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //				JLabel ThemeParkBack = new JLabel(
-//						new ImageIcon(new ImageIcon("images/¿µÈ­°ü.PNG").getImage().getScaledInstance(960, 720, 0)));
+//						new ImageIcon(new ImageIcon("images/ì˜í™”ê´€.PNG").getImage().getScaledInstance(960, 720, 0)));
 //				ThemeParkBack.setBounds(0, 0, 960, 720);
 		//this.setBackground(Color.ORANGE);
-		System.out.println("ÆĞ³Î »ı¼º");
+		System.out.println("íŒ¨ë„ ìƒì„±");
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -51,9 +51,11 @@ public class ThemePark extends JPanel implements KeyListener{
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font =new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 15);
+
+		Font font =new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 15);
 		tf.setFont(font);
 		
+
 		this.add(tf);
 		String place = "themepark";
 		loveStory = sc.textOutgoTput(place);
@@ -79,7 +81,7 @@ public class ThemePark extends JPanel implements KeyListener{
 	}
 
 	public void ThemeParkInit() {
-		System.out.println("ThemePark ³»ºÎ ÀÎÅÍ");
+		System.out.println("ThemePark ë‚´ë¶€ ì¸í„°");
 		themePark.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -133,7 +135,7 @@ public class ThemePark extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("10Àßµå··°¡´Ï? " + girlnumber);
+		System.out.println("10ì˜ë“œë ê°€ë‹ˆ? " + girlnumber);
 		
 	}
 }
