@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -57,6 +58,8 @@ public class Movie extends JPanel implements KeyListener {
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
+		Font font =new Font("한컴 백제 M", Font.PLAIN, 15);
+		tf.setFont(font);
 
 		this.add(tf);
 		String place = "movie";

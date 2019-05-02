@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,21 +28,23 @@ public class Ending extends JPanel {
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 //			JLabel EndingBack = new JLabel(
-//					new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
+//					new ImageIcon(new ImageIcon("images/�쁺�솕愿�.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			EndingBack.setBounds(0, 0, 960, 720);
 		this.setBackground(Color.BLACK);
-		System.out.println("엔딩 화면");
+		System.out.println("�뿏�뵫 �솕硫�");
 
 		EndingInit();
 
 	}
 
 	public void EndingInit() {
-		System.out.println("Ending 내부 인터");
+		System.out.println("Ending �궡遺� �씤�꽣");
 		ending.setVisible(true);
-		JLabel endingName = new JLabel("마지막 그녀");
+		JLabel endingName = new JLabel("留덉�留� 洹몃�");
 		endingName.setLocation(440, 260);
 		endingName.setSize(150, 50);
+		Font font1 =new Font("한컴 백제 M", Font.PLAIN, 30);
+		endingName.setFont(font1);
 		JButton ending = new JButton(new ImageIcon("images/Button(1).png"));
 
 		ending.setLocation(450, 300);
