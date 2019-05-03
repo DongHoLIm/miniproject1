@@ -31,6 +31,7 @@ public class AffOk extends JPanel{
 		//this.setBackground(Color.black);
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
 		JButton exit = new JButton(new ImageIcon(img6));
+//		imgBt = new ImageIcon("images/affButton.png");
 		exit.setBounds(850, 50, 50, 50);
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
