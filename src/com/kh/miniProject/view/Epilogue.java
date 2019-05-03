@@ -2,15 +2,16 @@ package com.kh.miniProject.view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -20,9 +21,10 @@ import com.kh.miniProject.controller.FileController;
 import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.dao.PTextOutput;
 import com.kh.miniProject.model.vo.EnterKeyAction;
+import com.kh.miniProject.model.vo.EpilogueSort;
 import com.kh.miniProject.model.vo.Girl;
-import com.kh.miniProject.model.vo.GrilNumber;
 import com.kh.miniProject.model.vo.RoundOpen;
+import com.kh.miniProject.view.MiniMap.ChangeMain;
 
 public class Epilogue extends JPanel implements KeyListener {
 	private JFrame start;
@@ -34,15 +36,17 @@ public class Epilogue extends JPanel implements KeyListener {
 	private ArrayList listStory;
 	RoundOpen ro = new RoundOpen();
 	Girl gl = new Girl();
-	int talkEnding = 0;
-	JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+	public static int talkEnding = 0;
+	JLabel icon1 = new JLabel();
+	JLabel girl = new JLabel();
+	
 	public Epilogue(JFrame start) {
 		this.start = start;
 		Epilogue = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 
-		System.out.println("ø°« ∑Œ±◊ ª˝º∫");
+		System.out.println("ÏóêÌïÑÎ°úÍ∑∏ ÏÉùÏÑ±");
 
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -51,55 +55,54 @@ public class Epilogue extends JPanel implements KeyListener {
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font = new Font("«—ƒƒ πÈ¡¶ M", Font.PLAIN, 20);
+		Font font = new Font("ÌïúÏª¥ Î∞±Ï†ú M", Font.PLAIN, 20);
 		tf.setFont(font);
 		this.add(tf);
 
-		Collections.sort(RoundOpen.glist, new Comparator<Girl>() {
-			@Override
-			public int compare(Girl o1, Girl o2) {
-				if (o1.getMylovePer() > o2.getMylovePer()) {
-					return 1;
-				} else if (o1.getMylovePer() < o2.getMylovePer()) {
-					return -1;
-				} else {
-					return 0;
-				}
-			}
-		});
 		
-		Collections.reverse(RoundOpen.glist);
-		if (PTextOutput.epilogueNum != 2) {
-			if (RoundOpen.glist.get(0).getGlovePer() > 69) {
-				System.out.println("º∫∞¯");
-				PTextOutput.epilogueNum = 1;
-			} else if (RoundOpen.glist.get(0).getGlovePer() < 70) {
-				System.out.println("Ω«∆–");
-				PTextOutput.epilogueNum = 0;
-			}
-		}
+		
+		EpilogueSort es = new EpilogueSort(PTextOutput.epilogueNum);
+		
+
 		String place = "Eplilogue";
 		loveStory = sc.EtextOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
 
-		
-		icon1.setBounds(0, 0, 960, 720);
+		if (PTextOutput.epilogueNum != 2) {
 
-		if (PTextOutput.epilogueNum == 1 || PTextOutput.epilogueNum == 0) {
-
-			System.out.println("¡§∑ƒ ¿ﬂ µ∆¥œ?" + RoundOpen.glist);
-
-			JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[RoundOpen.glist.get(0).getEndingNum()]));
-			girl.setBounds(110, 5, 700, 550);
-			icon1.add(girl);
-			System.out.println("∑¥∆€" + RoundOpen.glist.get(0).getGlovePer());
-			talkEnding += 1;
+			icon1 = new JLabel(new ImageIcon("images/res3.png"));
+			icon1.setBounds(0, 0, 960, 720);
+		} else {
+			icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+			icon1.setBounds(0, 0, 960, 720);
 		}
 
+		if (PTextOutput.epilogueNum != 2) {
+
+			System.out.println("Ï†ïÎ†¨ Ïûò ÎêêÎãà?" + RoundOpen.glist);
+
+			girl = new JLabel(new ImageIcon(GirlImages.girlImage[RoundOpen.glist.get(0).getEndingNum()]));
+			girl.setBounds(110, 5, 700, 550);
+			icon1.add(girl);
+			System.out.println("ÎüΩÌçº" + RoundOpen.glist.get(0).getGlovePer());
+			talkEnding += 1;
+		}
+		JButton stop = new JButton(new ImageIcon("images/img6"));
+		stop.setLocation(850, 50);
+		stop.setSize(50, 50);
+		stop.setContentAreaFilled(false);
+		stop.setFocusPainted(false);
+
+		stop.addActionListener(new ChangeCredit2());
+		
+		this.add(stop);
+
 		this.add(icon1);
-		
-		
+
 	}
+
+
+
 
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -110,8 +113,30 @@ public class Epilogue extends JPanel implements KeyListener {
 			if (str != null) {
 				tf.append(str);
 				// value++;
-			}else {
+			} else if (str == null && talkEnding == 3){
 				ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
+			}
+			else {
+				if(talkEnding == 1) {
+					
+					icon1.remove(girl);
+					JLabel girl2 = new JLabel(new ImageIcon(GirlImages.girlImage2[RoundOpen.glist.get(0).getEndingNum()]));
+					girl2.setBounds(110, 5, 700, 550);
+					icon1.add(girl2);
+					this.repaint();
+					talkEnding += 2;
+					//ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
+				}else if(talkEnding == 2) {
+					icon1.remove(girl);
+					JLabel girl2 = new JLabel(new ImageIcon(GirlImages.girlImage3[RoundOpen.glist.get(0).getEndingNum()]));
+					girl2.setBounds(110, 5, 700, 550);
+					icon1.add(girl2);
+					this.repaint();
+					talkEnding += 1;
+					//ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
+				} 
+				
+
 			} 
 		}
 	}
@@ -128,4 +153,12 @@ public class Epilogue extends JPanel implements KeyListener {
 
 	}
 
+	class ChangeCredit2 implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
+		}
+
+	}
 }
