@@ -28,6 +28,7 @@ public class AffOk extends JPanel{
 	PointMinus pm = new PointMinus();
 	private TextField affArea = new TextField();
 	
+
 	public AffOk(JFrame start) {
 		this.start = start;
 		this.affOk = this;
@@ -42,22 +43,21 @@ public class AffOk extends JPanel{
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
 		exit.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ChangePanel.ChangePanel(start, affOk, new StoreMain(start));
-				
+
 			}
 		});
-		
 		affBut = new JButton[PlayerInfo.lev];
 
 		if(affBut.length < 5) {
 			for(int i = 0; i < affBut.length; i++) {
-				System.out.println("¿ÍÀÌÃà°ª" + butY);
+				System.out.println("ì™€ì´ì¶•ê°’" + butY);
 				affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
 				affBut[i].setBounds(butY, 180, 120, 80);
-				Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+				Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
 				affBut[i].setFont(font);
 				butY += 170;
 				this.add(affBut[i]);
@@ -68,7 +68,7 @@ public class AffOk extends JPanel{
 				if(i < 5) {
 					affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
 					affBut[i].setBounds(butY, 180, 120, 80);
-					Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+					Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
 					affBut[i].setFont(font);
 					butY += 170;
 					this.add(affBut[i]);
@@ -76,7 +76,7 @@ public class AffOk extends JPanel{
 				}else {
 					affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
 					affBut[i].setBounds(butY2, 300, 120, 80);
-					Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+					Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
 					affBut[i].setFont(font);
 					butY2 += 170;
 					this.add(affBut[i]);
@@ -151,7 +151,7 @@ public class AffOk extends JPanel{
 			affBut[8].addActionListener(new CheckAff8());
 			affBut[9].addActionListener(new CheckAff9());
 		}
-		
+
 		this.add(exit);
 	}
 
@@ -164,8 +164,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk ,new CoinShop(start));
              }else if (PointMinus.resultcoin>=500) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(0).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-            	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+            	affArea.setText(RoundOpen.glist.get(0).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+            	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
             	affArea.setFont(font);
                 pm.pointMinus(500);
                 
@@ -183,8 +183,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=1000) {
             	affArea.remove(null);
-             	affArea.setText(RoundOpen.glist.get(1).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-             	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+             	affArea.setText(RoundOpen.glist.get(1).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+             	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
              	affArea.setFont(font);
                 pm.pointMinus(1000);
                 
@@ -192,7 +192,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff2 implements ActionListener{
 
 		@Override
@@ -202,15 +202,15 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=1500) {
             	affArea.remove(null);
-              	affArea.setText(RoundOpen.glist.get(2).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-              	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+              	affArea.setText(RoundOpen.glist.get(2).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+              	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
               	affArea.setFont(font);
                 pm.pointMinus(1500);
                 
              }
 		}
 	}
-	
+
 	class CheckAff3 implements ActionListener{
 
 		@Override
@@ -220,8 +220,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=2000) {
             	affArea.remove(null);
-              	affArea.setText(RoundOpen.glist.get(3).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-              	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+              	affArea.setText(RoundOpen.glist.get(3).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+              	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
               	affArea.setFont(font);
                 pm.pointMinus(2000);
                 
@@ -229,7 +229,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff4 implements ActionListener{
 
 		@Override
@@ -239,8 +239,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=2500) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(4).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-               	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+               	affArea.setText(RoundOpen.glist.get(4).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+               	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
                	affArea.setFont(font);
                 pm.pointMinus(2500);
                 
@@ -248,7 +248,7 @@ public class AffOk extends JPanel{
 			
 		}
 	}
-	
+
 	class CheckAff5 implements ActionListener{
 
 		@Override
@@ -258,8 +258,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=3000) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(5).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-               	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+               	affArea.setText(RoundOpen.glist.get(5).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+               	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
                	affArea.setFont(font);
                 pm.pointMinus(3000);
                 
@@ -267,7 +267,7 @@ public class AffOk extends JPanel{
 			
 		}
 	}
-	
+
 	class CheckAff6 implements ActionListener{
 
 		@Override
@@ -277,15 +277,15 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=3500) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(6).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-               	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+               	affArea.setText(RoundOpen.glist.get(6).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+               	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
                	affArea.setFont(font);
                 pm.pointMinus(3500);
                 
              }
 		}
 	}
-	
+
 	class CheckAff7 implements ActionListener{
 
 		@Override
@@ -295,8 +295,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
             }else if (PointMinus.resultcoin>=4000) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(7).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-            	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+            	affArea.setText(RoundOpen.glist.get(7).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+            	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
             	affArea.setFont(font);
             	pm.pointMinus(4000);
 
@@ -304,7 +304,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff8 implements ActionListener{
 
 		@Override
@@ -314,8 +314,8 @@ public class AffOk extends JPanel{
 				ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
 			}else if (PointMinus.resultcoin>=4500) {
 				affArea.remove(null);
-				affArea.setText(RoundOpen.glist.get(8).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-				Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+				affArea.setText(RoundOpen.glist.get(8).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+				Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
 				affArea.setFont(font);
 				pm.pointMinus(4500);
 
@@ -323,7 +323,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff9 implements ActionListener{
 
 		@Override
@@ -333,8 +333,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
             }else if (PointMinus.resultcoin>=5000) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(9).getName() + "ÀÇ ¾ÖÁ¤µµ´Â " + lovePer + "ÀÔ´Ï´Ù");
-            	Font font =new Font("ÈŞ¸ÕÆíÁöÃ¼", Font.BOLD, 15);
+            	affArea.setText(RoundOpen.glist.get(9).getName() + "ì˜ ì• ì •ë„ëŠ” " + lovePer + "ì…ë‹ˆë‹¤");
+            	Font font =new Font("íœ´ë¨¼í¸ì§€ì²´", Font.BOLD, 15);
             	affArea.setFont(font);
             	pm.pointMinus(5000);
 
