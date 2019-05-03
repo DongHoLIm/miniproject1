@@ -47,7 +47,7 @@ public class Credit  extends JPanel {
 	             e.printStackTrace();
 
 	         }
-			icon1 = new JLabel(new ImageIcon("images/gomin.png"));
+			icon1 = new JLabel(new ImageIcon("images/success.png"));
 		    icon1.setSize(960 , 720);
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
