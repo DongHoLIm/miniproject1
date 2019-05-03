@@ -27,7 +27,7 @@ public class PTextOutput {
 	}
 
 	public File EtextOutput(String place) {
-
+		
 		File movielove = new File("Story/Epilogue" + epilogueNum);
 		return movielove;
 
