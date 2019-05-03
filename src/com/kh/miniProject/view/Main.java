@@ -31,7 +31,7 @@ public class Main extends JPanel{
 	public static String str = "아침";
 	public static int day = 0;
 	public static int dayBreak =0;
-    public static int totalDay =10;  
+    public static int totalDay =1;  
     public static int day2 = 0;
    // static int totalDay2 = 1;
     public static String coinstr;
@@ -137,7 +137,7 @@ public class Main extends JPanel{
 		textlabel.setFont(font3);
 		JLabel textlabel2 = new JLabel();
 		textlabel2.setLocation(290,20);
-		textlabel2.setSize(50,20);
+		textlabel2.setSize(100,20);
 		textlabel2.setText(totalDay + "일차");
 		Font font1 =new Font("휴먼편지체", Font.BOLD, 19);
 		textlabel2.setFont(font1);
