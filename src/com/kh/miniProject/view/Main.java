@@ -31,9 +31,9 @@ public class Main extends JPanel{
 	public static String str = "아침";
 	public static int day = 0;
 	public static int dayBreak =0;
-    public static int totalDay =10;  
+    public static int totalDay =1;  
     public static int day2 = 0;
-   // static int totalDay2 = 1;
+    private static int i;
     public static String coinstr;
     private Clip clip;
    
@@ -45,6 +45,20 @@ public class Main extends JPanel{
 		this.setLocation(0,0);
 		this.setSize(960,720);
 		this.setLayout(null);
+		
+		try {
+	         if(i == 0) {
+	         i++;
+	            AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/MainBGM.wav"));
+	            clip = AudioSystem.getClip();
+	            clip.open(stream);
+	            clip.start();
+	         }
+	            
+	        } catch(Exception e) {
+	            
+	            e.printStackTrace();
+	        }
 
 		
 

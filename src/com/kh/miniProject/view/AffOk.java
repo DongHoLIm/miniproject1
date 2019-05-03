@@ -22,7 +22,7 @@ public class AffOk extends JPanel{
 	private int butY2 = 180;
 	private int yy2;
 	PointMinus pm = new PointMinus();
-	
+
 	public AffOk(JFrame start) {
 		this.start = start;
 		this.affOk = this;
@@ -35,14 +35,13 @@ public class AffOk extends JPanel{
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
 		exit.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ChangePanel.ChangePanel(start, affOk, new StoreMain(start));
-				
+
 			}
 		});
-		
 		affBut = new JButton[PlayerInfo.lev];
 		String[] grilName = new String[10];
 		grilName[0] = new String("박지선 500코인");
@@ -148,7 +147,7 @@ public class AffOk extends JPanel{
 			affBut[8].addActionListener(new CheckAff8());
 			affBut[9].addActionListener(new CheckAff9());
 		}
-		
+
 		this.add(exit);
 	}
 
@@ -183,7 +182,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff2 implements ActionListener{
 
 		@Override
@@ -199,7 +198,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff3 implements ActionListener{
 
 		@Override
@@ -215,7 +214,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff4 implements ActionListener{
 
 		@Override
@@ -231,7 +230,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff5 implements ActionListener{
 
 		@Override
@@ -247,7 +246,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff6 implements ActionListener{
 
 		@Override
@@ -263,7 +262,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff7 implements ActionListener{
 
 		@Override
@@ -279,7 +278,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff8 implements ActionListener{
 
 		@Override
@@ -295,7 +294,7 @@ public class AffOk extends JPanel{
 
 		}
 	}
-	
+
 	class CheckAff9 implements ActionListener{
 
 		@Override
