@@ -247,6 +247,7 @@ public class Card extends JPanel{
 		JPasswordField pass1=new JPasswordField();
 		pass1.setLocation(50,225);
 		pass1.setSize(50, 30);
+		pass1.setEchoChar('*');
 		Font font16 =new Font("휴먼편지체", Font.BOLD, 15);
 		pass1.setFont(font16);
 		pass1.addKeyListener(new KeyAdapter() {
@@ -270,7 +271,22 @@ public class Card extends JPanel{
 		Font font18 =new Font("휴먼편지체", Font.BOLD, 15);
 		btn1.setFont(font18);
 		
-		btn1.addActionListener(new goPlusCoin());
+		btn1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				if (((t1.getText().length())==4)&&((t2.getText().length())==4)
+						&&((t3.getText().length())==4)&&((t4.getText().length())==4)
+						&&((d1.getText().length())==2)&&((d2.getText().length())==2)
+						&&((c1.getText().length())==3)) {
+					btn1.addActionListener(new goPlusCoin());
+				}
+
+				
+			}
+		});
 			
 		
 		JButton btn2=new JButton("취소");
