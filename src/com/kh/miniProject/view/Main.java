@@ -31,11 +31,13 @@ public class Main extends JPanel{
 	public static String str = "아침";
 	public static int day = 0;
 	public static int dayBreak =0;
-    public static int totalDay =10;  
+    public static int totalDay =1;  
     public static int day2 = 0;
    // static int totalDay2 = 1;
     public static String coinstr;
-    private Clip clip;
+    public  Clip clip2;
+    
+   
    
 	public Main(JFrame start) {
 	
@@ -61,9 +63,11 @@ public class Main extends JPanel{
 		case 2 : startMent = "\n\n 오늘은 어떤 여자를 만날까~?";
 		try {
             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/2.wav"));
-            clip = AudioSystem.getClip();
-            clip.open(stream);
-            clip.start();
+            clip2 = AudioSystem.getClip();
+            clip2.open(stream);
+            clip2.start();
+            
+            
             
         } catch(Exception e) {
             
@@ -75,9 +79,9 @@ public class Main extends JPanel{
 		try {
             
             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/5.wav"));
-            clip = AudioSystem.getClip();
-            clip.open(stream);
-            clip.start();
+            clip2 = AudioSystem.getClip();
+            clip2.open(stream);
+            clip2.start();
             
         } catch(Exception e) {
             

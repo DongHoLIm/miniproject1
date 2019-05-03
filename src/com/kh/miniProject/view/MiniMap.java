@@ -5,9 +5,13 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -45,6 +49,8 @@ public class MiniMap extends JPanel {
 	public static int girlStop = 1;
 	private static String[] mmgi;
 	private String[] reGirl;
+	public static int BGM;
+	public static Clip clip;
 	public MiniMap(JFrame start) {
 		
 		if(PlayerInfo.lev == 1) {
@@ -91,6 +97,21 @@ public class MiniMap extends JPanel {
 		// };
 
 		this.setLayout(null);
+		
+		try {
+			if(BGM == 0) {
+			BGM++;
+            AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/MainBGM.wav"));
+            clip = AudioSystem.getClip();
+            clip.open(stream);
+            clip.start();
+			}
+            
+        } catch(Exception e) {
+            
+            e.printStackTrace();
+        }
+		clip.start();
 
 		hmap.putAll(CreatPlace());
 		hmap.putAll(CreatPlace2());
@@ -115,6 +136,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			clip.stop();
 			ChangePanel.ChangePanel(start, MiniMap, new Main(start));
 		}
 
