@@ -17,6 +17,10 @@ import javax.swing.JScrollPane;
 
 import com.kh.miniProject.model.vo.Girl;
 import com.kh.miniProject.model.vo.RoundOpen;
+import com.kh.miniProject.view.Main.Change;
+import com.kh.miniProject.view.Main.Change1;
+import com.kh.miniProject.view.Main.Change2;
+import com.kh.miniProject.view.Main.Change5;
 
 
 public class MyLovePercent extends JPanel{
@@ -27,15 +31,15 @@ public class MyLovePercent extends JPanel{
 	public MyLovePercent(JFrame start) {
 		this.start = start;
 		this.love = this;
-		
+
 		loveIn = new JPanel();
 		loveIn.setLocation(150,50);
 		loveIn.setSize(400,500);
 		loveIn.setLayout(null);
 		loveIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
-		
+
 		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
-	    icon1.setBounds(0, 0, 960, 720);
+		icon1.setBounds(0, 0, 960, 720);
 		this.setLocation(0,0);
 		this.setSize(960,720);
 		this.setLayout(null);
@@ -54,11 +58,11 @@ public class MyLovePercent extends JPanel{
 		exit.setFocusPainted(false);
 
 		loveIn.add(exit);
-		
+
 
 		//System.out.println(ro.getGlist().size());
 		int lev =RoundOpen.getGlist().size();
-		
+
 		JLabel label1 = new JLabel("경현이는 지금 " + lev + "명과 썸타는중~~");
 		label1.setSize(300, 50);
 		label1.setLocation(10, 30);
@@ -67,8 +71,8 @@ public class MyLovePercent extends JPanel{
 
 		loveIn.add(label0);
 		loveIn.add(label1);
-		
-		
+
+
 		JPanel scrollback = new JPanel();
 		scrollback.setLayout(null);
 		scrollback.setBounds(3, 80, 390, 415);
@@ -78,38 +82,38 @@ public class MyLovePercent extends JPanel{
 		scrollpanel.setLayout(null);
 		scrollpanel.setPreferredSize(new Dimension(380,60*RoundOpen.getGlist().size()));
 		scrollpanel.setBorder(BorderFactory.createLineBorder(Color.magenta,1));
-		
+
 		JPanel[] backpan = new JPanel[lev];  
 		Image[] img = new Image[lev];        
 		JLabel[] imglabel = new JLabel[lev];  
 		JPanel[] mlpview = new JPanel[lev]; 
 		JLabel[] redlabel = new JLabel[lev];
-		
+
 		Girl g;
 		String str;
 		int a = 1;
 		int b = 0;
-		
+
 		int mlper=0;
 		Image red = new ImageIcon("images/red.jpg").getImage().getScaledInstance(300, 30, 0);
-		
+
 		for(int i=0 ; i<lev ; i++) {
-			
+
 			backpan[i] = new JPanel();
 			backpan[i].setLayout(null);
 			backpan[i].setBounds(a,b, 380,50);
 			backpan[i].setBorder(BorderFactory.createLineBorder(Color.black, 1));
-			
-			
+
+
 			//이미지 라벨
 			g = RoundOpen.getGlist().get(i); //Girl 타입 g에 i번째 girl 가져오기
 			str = g.getImage();  //str에 i번째 여자 이미지 디렉토리 담기
 			img[i] = new ImageIcon(str).getImage().getScaledInstance(50, 50, 0);  //img[i]에 로드한 이미지 저장
 			imglabel[i] = new JLabel(new ImageIcon(img[i])); //i번째 라벨에 i번째 이미지 저장
 			imglabel[i].setBounds(10,3, 50, 50);
-//			imglabel[i].setLocation(, );
-//			imglabel[i].setSize(50,50);
-			
+			//			imglabel[i].setLocation(, );
+			//			imglabel[i].setSize(50,50);
+
 			//애정도 패널
 			mlper = g.getMylovePer();
 			//mlper=50;
@@ -117,46 +121,46 @@ public class MyLovePercent extends JPanel{
 			mlpview[i].setLayout(null);
 			mlpview[i].setBounds(70,22, 300, 12);
 			mlpview[i].setBorder(BorderFactory.createLineBorder(Color.red,1));
-			
+
 			redlabel[i] = new JLabel(new ImageIcon(red));
 			redlabel[i].setBounds(0,0,(mlper*3),12);
-			
+
 			mlpview[i].add(redlabel[i]);
-			
-			
+
+
 			backpan[i].add(imglabel[i]);
 			backpan[i].add(mlpview[i]);
-			
+
 			scrollpanel.add(backpan[i]);
-			
+
 			b+=60;
 
 
 		}
-		
+
 		//scrollpanel.setBackground(Color.white);
 		JScrollPane glistscroll = new JScrollPane(scrollpanel);
 		glistscroll.setBounds(0, 0,390,415);
 		glistscroll.setBorder(BorderFactory.createLineBorder(Color.yellow, 1));
 		//glistscroll.setPreferredSize(new Dimension(380,50));
-	
+
 		//glistscroll.getVerticalScrollBar().setUnitIncrement(16);
 		glistscroll.requestFocus();
-		
+
 		scrollback.add(glistscroll);
 		loveIn.add(scrollback);
-		
+
 		this.add(loveIn);
-		
-		
-		
+
+
+
 		Image img1 = new ImageIcon("images/store.png").getImage().getScaledInstance(60, 60, 0);
 		Image img2 = new ImageIcon("images/inventory.png").getImage().getScaledInstance(80, 80, 0);
 		Image img3 = new ImageIcon("images/heart.png").getImage().getScaledInstance(60, 60, 0);
 		Image img4 = new ImageIcon("images/coin.png").getImage().getScaledInstance(60, 60, 0);
 		Image img5 = new ImageIcon("images/map.png").getImage().getScaledInstance(80, 80, 0);
-		
-		
+
+
 		JButton info = new JButton((new ImageIcon(img2)));
 		info.setLocation(50,50);
 		info.setSize(70,70);
@@ -172,7 +176,7 @@ public class MyLovePercent extends JPanel{
 		JButton map = new JButton(new ImageIcon(img5));
 		map.setLocation(850,50);
 		map.setSize(70,70);
-		
+
 		info.setContentAreaFilled(false);
 		info.setFocusPainted(false);
 		shop.setContentAreaFilled(false);
@@ -183,28 +187,84 @@ public class MyLovePercent extends JPanel{
 		coin.setFocusPainted(false);
 		map.setContentAreaFilled(false);
 		map.setFocusPainted(false);
-		
+
 		exit.addActionListener(new Change());
-		
+
+		info.addActionListener(new Change1());
+		shop.addActionListener(new Change2()); 
+		coin.addActionListener(new Change3());
+		map.addActionListener(new Change4());
+
+
 		this.add(info);
 		this.add(shop);
 		this.add(aff);
 		this.add(coin);
 		this.add(map);
 		this.add(icon1);
-		
-		
-		
+
+
+
 
 	}
-	
-class Change implements ActionListener{
-		
+
+	class Change implements ActionListener{
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			ChangePanel.ChangePanel(start, love, new Main(start));
 		}
-		
+
 	}
+
+
+	class Change1 implements ActionListener{
+
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, love, new PlayerInfo(start));			
+		}
+
+
+	}
+
+	class Change2 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, love, new StoreMain(start));
+
+		}
+
+	}
+
+
+	class Change3 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e1) {
+			ChangePanel.ChangePanel(start, love, new CoinShop(start));
+
+		}
+
+	}
+
+	class Change4 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if(Main.totalDay == 11) {
+				ChangePanel.ChangePanel(start, love, new Ending(start));
+			}else {
+				ChangePanel.ChangePanel(start, love,new MiniMap(start));
+
+			}
+		}
+
+	}
+
+
+
 
 }
