@@ -1,9 +1,12 @@
 package com.kh.miniProject.view;
 
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,13 +14,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.kh.miniProject.model.dao.PTextOutput;
-import com.kh.miniProject.model.vo.Day;
 
 public class Credit  extends JPanel {
 	private JFrame start;
 
 	private JPanel credit;
 	private JLabel icon1;
+	private Clip clip;
 
 	public Credit(JFrame start) {
 		this.start = start;
@@ -30,15 +33,43 @@ public class Credit  extends JPanel {
 		
 		System.out.println("¼ýÀÚ ¹¹ÀÓ ?"+PTextOutput.epilogueNum);
 		if(PTextOutput.epilogueNum==1) {
+			try {
+	             
+	             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/success.wav"));
+	             clip = AudioSystem.getClip();
+	             clip.open(stream);
+	             clip.start();
+	             
+	             
+	             
+	         } catch(Exception e) {
+	             
+	             e.printStackTrace();
+
+	         }
 			icon1 = new JLabel(new ImageIcon("images/gomin.png"));
 		    icon1.setSize(960 , 720);
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
 		}
 		if(PTextOutput.epilogueNum==0) {
-			icon1 = new JLabel(new ImageIcon("images/VS.png"));
-		    icon1.setSize(960 , 720);
-			icon1.setBounds(0, 0, 960, 720);
+			try {
+	             
+	             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/failure.wav"));
+	             clip = AudioSystem.getClip();
+	             clip.open(stream);
+	             clip.start();
+	             
+	             
+	             
+	         } catch(Exception e) {
+	             
+	             e.printStackTrace();
+
+	         }
+			icon1 = new JLabel(new ImageIcon("images/failure.png"));
+		  //  icon1.setSize(960 , 720);
+			icon1.setBounds(50, -80,960, 720);
 			this.add(icon1);
 		}
 				   
@@ -65,6 +96,7 @@ public class Credit  extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			clip.stop();
 			Main.day = 0;
 			Main.day2 = 0;
 			Main.dayBreak = 0;

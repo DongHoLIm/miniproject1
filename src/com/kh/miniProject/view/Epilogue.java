@@ -9,6 +9,9 @@ import java.awt.event.KeyListener;
 import java.io.File;
 import java.util.ArrayList;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -34,6 +37,7 @@ public class Epilogue extends JPanel implements KeyListener {
 	private File loveStory;
 	private EnterKeyAction ek = new EnterKeyAction();
 	private ArrayList listStory;
+	private Clip clip2;
 	RoundOpen ro = new RoundOpen();
 	Girl gl = new Girl();
 	public static int talkEnding = 0;
@@ -46,8 +50,19 @@ public class Epilogue extends JPanel implements KeyListener {
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 
-		System.out.println("에필로그 생성");
-
+		System.out.println("�뿉�븘濡쒓렇 �깮�꽦");
+		try {
+            AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/credit.wav"));
+            clip2 = AudioSystem.getClip();
+            clip2.open(stream);
+            clip2.start();
+            
+            
+            
+        } catch(Exception e) {
+            
+            e.printStackTrace();
+        }
 		tf = new JTextArea();
 		tf.setLayout(null);
 		tf.setBounds(150, 450, 600, 150);
@@ -55,7 +70,7 @@ public class Epilogue extends JPanel implements KeyListener {
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font = new Font("한컴 백제 M", Font.PLAIN, 20);
+		Font font = new Font("�븳而� 諛깆젣 M", Font.PLAIN, 20);
 		tf.setFont(font);
 		this.add(tf);
 
@@ -79,12 +94,12 @@ public class Epilogue extends JPanel implements KeyListener {
 
 		if (PTextOutput.epilogueNum != 2) {
 
-			System.out.println("정렬 잘 됐니?" + RoundOpen.glist);
+			System.out.println("�젙�젹 �옒 �릱�땲?" + RoundOpen.glist);
 
 			girl = new JLabel(new ImageIcon(GirlImages.girlImage[RoundOpen.glist.get(0).getEndingNum()]));
 			girl.setBounds(110, 5, 700, 550);
 			icon1.add(girl);
-			System.out.println("럽퍼" + RoundOpen.glist.get(0).getGlovePer());
+			System.out.println("�읇�띁" + RoundOpen.glist.get(0).getGlovePer());
 			talkEnding += 1;
 		}
 		JButton stop = new JButton(new ImageIcon("images/img6"));
@@ -114,6 +129,7 @@ public class Epilogue extends JPanel implements KeyListener {
 				tf.append(str);
 				// value++;
 			} else if (str == null && talkEnding == 3){
+				clip2.stop();
 				ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
 			}
 			else {
@@ -157,6 +173,7 @@ public class Epilogue extends JPanel implements KeyListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			clip2.stop();
 			ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
 		}
 

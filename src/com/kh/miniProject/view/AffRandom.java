@@ -2,6 +2,7 @@ package com.kh.miniProject.view;
 
 import java.awt.Color;
 import java.awt.Image;
+import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.kh.miniProject.model.vo.GirllovePer;
+import com.kh.miniProject.model.vo.PointMinus;
 import com.kh.miniProject.model.vo.RoundOpen;
 
 
@@ -24,12 +26,16 @@ public class AffRandom extends JPanel{
 	private int j;
 	private int i = 0;
 	JButton but;
+	PointMinus pm = new PointMinus();
+	private TextField affArea = new TextField();
 	
 	public AffRandom(JFrame start) {
 		this.start = start;
 		aff = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
+		affArea.setBounds(50, 500, 800, 50);
+		this.add(affArea);
 		
 		affBnt = new JButton[PlayerInfo.lev];
 		if(affBnt.length < 5) {
@@ -153,16 +159,12 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			if(i == 1) {
-				ChangePanel.ChangePanel(start, aff, new StoreMain(start));
-			}else {
 			new GirllovePer().random(0);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(170, 200, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			i++;
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
     	
@@ -172,12 +174,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(1);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(170, 300, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
@@ -186,12 +188,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(2);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(170, 400, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
@@ -200,12 +202,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(3);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(170, 500, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
@@ -214,12 +216,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(4);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(170, 600, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
@@ -228,12 +230,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(5);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(570, 200, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
@@ -242,12 +244,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(6);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(570, 300, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
@@ -256,12 +258,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(7);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(570, 400, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
@@ -270,12 +272,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(8);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(570, 500, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
@@ -284,12 +286,12 @@ public class AffRandom extends JPanel{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			new GirllovePer().random(9);
-			JLabel random = new JLabel(GirllovePer.str);
-			random.setBounds(570, 600, 300, 50);
-			random.setBackground(Color.BLACK);
-			aff.add(random);
-			aff.repaint();
-			
+			if(PointMinus.resultcoin>=1500) {
+				affArea.setText(GirllovePer.str);
+			pm.pointMinus(1500);
+			}else if (PointMinus.resultcoin<1499) {
+				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
+			}
 		}
     	
     }
