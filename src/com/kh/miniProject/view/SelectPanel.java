@@ -75,8 +75,10 @@ public class SelectPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (answerInt1 == 1) {
+					MiniMap.clip.stop();
 					ChangePanel.ChangePanel(start, select, new PositivePanel(start));
 				} else if (answerInt1 == 2) {
+					MiniMap.clip.stop();
 					ChangePanel.ChangePanel(start, select, new NegativePanel(start));
 				}
 
@@ -93,8 +95,10 @@ public class SelectPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (answerInt2 == 1) {
+					MiniMap.clip.stop();
 					ChangePanel.ChangePanel(start, select, new PositivePanel(start));
 				} else if (answerInt2 == 2) {
+					MiniMap.clip.stop();
 					ChangePanel.ChangePanel(start, select, new NegativePanel(start));
 				}
 			}

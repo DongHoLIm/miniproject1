@@ -200,7 +200,7 @@ public class Card extends JPanel{
 		d2.setLocation(220,110);
 		d2.setSize(50, 30);
 		Font font11 =new Font("휴먼편지체", Font.BOLD, 15);
-		d1.setFont(font11);
+		d2.setFont(font11);
 		d2.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
@@ -236,6 +236,7 @@ public class Card extends JPanel{
 		cvc1.setSize(250,15);
 		Font font14 =new Font("휴먼편지체", Font.BOLD, 15);
 		cvc1.setFont(font14);
+		
 		//비밀번호
 		JLabel pass=new JLabel("비밀 번호 앞 두자리");
 		pass.setLocation(50, 210);

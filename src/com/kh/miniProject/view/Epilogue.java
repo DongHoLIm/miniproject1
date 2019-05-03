@@ -46,7 +46,7 @@ public class Epilogue extends JPanel implements KeyListener {
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 
-		System.out.println("¿¡ÇÊ·Î±× »ı¼º");
+		System.out.println("ì—í•„ë¡œê·¸ ìƒì„±");
 
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -55,13 +55,15 @@ public class Epilogue extends JPanel implements KeyListener {
 		tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-		Font font = new Font("ÇÑÄÄ ¹éÁ¦ M", Font.PLAIN, 20);
+		Font font = new Font("í•œì»´ ë°±ì œ M", Font.PLAIN, 20);
 		tf.setFont(font);
 		this.add(tf);
+
 		
 		
 		EpilogueSort es = new EpilogueSort(PTextOutput.epilogueNum);
 		
+
 		String place = "Eplilogue";
 		loveStory = sc.EtextOutgoTput(place);
 		listStory = ek.enterAction(loveStory);
@@ -77,12 +79,12 @@ public class Epilogue extends JPanel implements KeyListener {
 
 		if (PTextOutput.epilogueNum != 2) {
 
-			System.out.println("Á¤·Ä Àß µÆ´Ï?" + RoundOpen.glist);
+			System.out.println("ì •ë ¬ ì˜ ëë‹ˆ?" + RoundOpen.glist);
 
 			girl = new JLabel(new ImageIcon(GirlImages.girlImage[RoundOpen.glist.get(0).getEndingNum()]));
 			girl.setBounds(110, 5, 700, 550);
 			icon1.add(girl);
-			System.out.println("·´ÆÛ" + RoundOpen.glist.get(0).getGlovePer());
+			System.out.println("ëŸ½í¼" + RoundOpen.glist.get(0).getGlovePer());
 			talkEnding += 1;
 		}
 		JButton stop = new JButton(new ImageIcon("images/img6"));

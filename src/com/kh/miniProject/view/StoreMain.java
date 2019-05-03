@@ -82,10 +82,11 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						cp.test(1);
-
-						if (PointMinus.resultcoin>=3000) {
+						if (PointMinus.resultcoin<2999) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if (PointMinus.resultcoin>=3000) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							cp.test(1);
 							pm.pointMinus(3000);
 							cap.plusCharm(25);
 							
@@ -141,9 +142,11 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						cp.test(2);
-						if (PointMinus.resultcoin>=2500) {
+						if (PointMinus.resultcoin<2499) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if (PointMinus.resultcoin>=2500) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							cp.test(2);
 							pm.pointMinus(2500);
 							cap.plusCharm(15);
 							
@@ -197,11 +200,14 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						cp.test(3);
-						if (PointMinus.resultcoin>=1800) {
+						if (PointMinus.resultcoin<1800) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if (PointMinus.resultcoin>=1800) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							cp.test(3);
 							pm.pointMinus(1800);
 							cap.plusCharm(15);
+							
 						}
 					}
 				});
@@ -252,9 +258,11 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						cp.test(4);
-						if (PointMinus.resultcoin>=2000) {
+						if (PointMinus.resultcoin<1999) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if (PointMinus.resultcoin>=2000) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							cp.test(4);
 							pm.pointMinus(2000);
 							cap.plusCharm(20);
 							
@@ -323,9 +331,11 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						sp.test(5);
-						if (PointMinus.resultcoin>=1000) {
+						if (PointMinus.resultcoin<1000) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if (PointMinus.resultcoin>=1000) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							sp.test(5);
 							pm.pointMinus(1000);
 							cap.plusCharm(5);
 							
@@ -381,11 +391,14 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						sp.test(6);
-						if (PointMinus.resultcoin>=1200) {
+						if (PointMinus.resultcoin<1199) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if (PointMinus.resultcoin>=1200) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							sp.test(6);
 							pm.pointMinus(1200);
 							cap.plusCharm(13);
+							
 						}
 					}
 				});
@@ -436,11 +449,14 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						sp.test(7);
-						if (PointMinus.resultcoin>=1500) {
+						if (PointMinus.resultcoin<1499) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if(PointMinus.resultcoin>=1500) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							sp.test(7);
 							pm.pointMinus(1500);
 							cap.plusCharm(15);
+							
 						}
 					}
 				});
@@ -491,11 +507,14 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						sp.test(8);
-						if (PointMinus.resultcoin>=2500) {
+						if (PointMinus.resultcoin<2499) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if(PointMinus.resultcoin>=2500) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							sp.test(8);
 							pm.pointMinus(2500);
 							cap.plusCharm(20);
+							
 						}
 					}
 				});
@@ -563,12 +582,13 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
+						if (PointMinus.resultcoin<499) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if(PointMinus.resultcoin>=500) {
+							ChangePanel.ChangePanel(start, check,shopmain );
 						ap.test(9);
-						if (PointMinus.resultcoin>=500) {
-							pm.pointMinus(500);
-							cap.plusCharm(5);
-							
+						pm.pointMinus(500);
+						cap.plusCharm(5);
 						}
 					}
 				});
@@ -619,11 +639,14 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						ap.test(10);
-						if (PointMinus.resultcoin>=3000) {
+						if (PointMinus.resultcoin<2999) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if(PointMinus.resultcoin>=3000) {
+							ChangePanel.ChangePanel(start, check,shopmain );
+							ap.test(10);
 							pm.pointMinus(3000);
 							cap.plusCharm(25);
+							
 						}
 					}
 				});
@@ -674,11 +697,13 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						ap.test(11);
-						if (PointMinus.resultcoin>=1000) {
-							pm.pointMinus(1000);
+						if (PointMinus.resultcoin<999) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if(PointMinus.resultcoin>=1000) {
 							cap.plusCharm(10);
+							pm.pointMinus(1000);
+							ap.test(11);
+							ChangePanel.ChangePanel(start, check,shopmain );
 						}
 					}
 				});
@@ -729,12 +754,14 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						ap.test(12);
-						if (PointMinus.resultcoin>=1500) {
+						if (PointMinus.resultcoin<1499) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+							
+						}else if(PointMinus.resultcoin>=1500) {
+							ap.test(12);
 							pm.pointMinus(1500);
 							cap.plusCharm(13);
-							
+							ChangePanel.ChangePanel(start, check,shopmain );
 						}
 					}
 				});
@@ -802,11 +829,13 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
 						new ReRandom().reRandom();
-						if (PointMinus.resultcoin>1299) {
+						if (PointMinus.resultcoin<999) {
 
-							pm.pointMinus(1300);
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if(PointMinus.resultcoin>=1000) {
+							pm.pointMinus(1000);
+							ChangePanel.ChangePanel(start, check,shopmain );
 						}
 					}
 				});
@@ -858,10 +887,14 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,shopmain );
-						if (PointMinus.resultcoin>999) {
+						if (PointMinus.resultcoin<3999) {
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if(PointMinus.resultcoin>3999) {
+							ChangePanel.ChangePanel(start, check,shopmain );
 							new Exper().exp();
-							pm.pointMinus(1000);
+
+							pm.pointMinus(4000);
+
 						}
 					}
 				});
@@ -940,7 +973,7 @@ public class StoreMain extends JPanel {
 		item4.setSize(120,120);
 		item4.setLocation(380,160);
 		item.add(item4); 
-		iteminfo = new JLabel("<html>애정도 랜덤<br> 증가 / 감소");
+		iteminfo = new JLabel("<html>애정도 랜덤<br> 증가 / 감소 <br> 1500 코인");
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		Font font16 =new Font("휴먼편지체", Font.BOLD, 15);
@@ -963,10 +996,12 @@ public class StoreMain extends JPanel {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						ChangePanel.ChangePanel(start, check,new AffRandom(start));
-						if (PointMinus.resultcoin>1599) {
+						if (PointMinus.resultcoin<1499) {
 
-							pm.pointMinus(1600);
+							ChangePanel.ChangePanel(start, check,new CoinShop(start));
+						}else if(PointMinus.resultcoin>1499) {
+							pm.pointMinus(1500);
+							ChangePanel.ChangePanel(start, check,new AffRandom(start));
 						}
 					}
 				});

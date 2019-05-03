@@ -14,6 +14,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.view.PlayerInfo.Change3;
+import com.kh.miniProject.view.PlayerInfo.Change4;
+import com.kh.miniProject.view.PlayerInfo.Change5;
+
 public class CoinShop extends JPanel{
 	private JFrame start;
 	private JPanel coin;
@@ -160,6 +164,14 @@ public class CoinShop extends JPanel{
 	    coinIn.add(btn3);
 	    coinIn.add(btn4);
 	    
+	    
+	    info.addActionListener(new Change3()); 
+		shop.addActionListener(new Change4());
+		aff.addActionListener(new Change5());
+		map.addActionListener(new Change6());
+
+	    
+	    
 	    this.add(map);
 		this.add(info);
 		this.add(coin);
@@ -213,5 +225,51 @@ public class CoinShop extends JPanel{
 		}
 		
 	}
+	
+	class Change3 implements ActionListener{
+
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, coin, new PlayerInfo(start));			
+		}
+
+		
+	}
+	
+	class Change4 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, coin, new StoreMain(start));
+			
+		}
+		
+	}
+	
+	
+	class Change5 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, coin, new MyLovePercent(start));
+		}
+
+	}
+	
+	class Change6 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if(Main.totalDay == 11) {
+				ChangePanel.ChangePanel(start, coin, new Ending(start));
+			}else {
+				ChangePanel.ChangePanel(start, coin,new MiniMap(start));
+
+			}
+		}
+
+	}
+	
 
 }

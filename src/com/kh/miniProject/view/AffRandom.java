@@ -22,6 +22,7 @@ public class AffRandom extends JPanel{
 	private int butY = 180;
 	private int butY2 = 180;
 	private int j;
+	private int i = 0;
 	JButton but;
 	
 	public AffRandom(JFrame start) {
@@ -34,7 +35,7 @@ public class AffRandom extends JPanel{
 		if(affBnt.length < 5) {
 	         for(int i = 0; i < affBnt.length; i++) {
 	        	 j = i;
-	            System.out.println("¿ÍÀÌÃà°ª" + butY);
+	            System.out.println("쩔횒�횑횄횪째짧" + butY);
 	            affBnt[i] = new JButton(RoundOpen.glist.get(i).getName());
 	            affBnt[i].setBounds(50, butY, 80, 80);
 	            butY += 100;
@@ -146,19 +147,23 @@ public class AffRandom extends JPanel{
 		
 		this.add(but);
 
-
 }
+	
 	class Random0 implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			if(i == 1) {
+				ChangePanel.ChangePanel(start, aff, new StoreMain(start));
+			}else {
 			new GirllovePer().random(0);
 			JLabel random = new JLabel(GirllovePer.str);
 			random.setBounds(170, 200, 300, 50);
 			random.setBackground(Color.BLACK);
 			aff.add(random);
 			aff.repaint();
-			
+			i++;
+			}
 		}
     	
     }
