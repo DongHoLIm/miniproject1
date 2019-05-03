@@ -17,6 +17,7 @@ public class Credit  extends JPanel {
 	private JFrame start;
 
 	private JPanel credit;
+	private JLabel icon1;
 
 	public Credit(JFrame start) {
 		this.start = start;
@@ -26,11 +27,23 @@ public class Credit  extends JPanel {
 //			JLabel EndingBack = new JLabel(
 //					new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			EndingBack.setBounds(0, 0, 960, 720);
-		JLabel icon1 = new JLabel(new ImageIcon("images/gomin.png"));
-	    icon1.setSize(960 , 720);
-		icon1.setBounds(0, 0, 960, 720);
-	    
-	    this.add(icon1);
+		
+		System.out.println("숫자 뭐임 ?"+PTextOutput.epilogueNum);
+		if(PTextOutput.epilogueNum==1) {
+			icon1 = new JLabel(new ImageIcon("images/gomin.png"));
+		    icon1.setSize(960 , 720);
+			icon1.setBounds(0, 0, 960, 720);
+			this.add(icon1);
+		}
+		if(PTextOutput.epilogueNum==0) {
+			icon1 = new JLabel(new ImageIcon("images/VS.png"));
+		    icon1.setSize(960 , 720);
+			icon1.setBounds(0, 0, 960, 720);
+			this.add(icon1);
+		}
+				   
+		
+		 
 		System.out.println("크레딧 이동");
 
 		CreditInit();
