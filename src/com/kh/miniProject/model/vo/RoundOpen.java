@@ -16,36 +16,16 @@ public class RoundOpen {
 
 		// if(Main.day==0) {
 		switch (lev) {
-		case 1:
-			roundUp1();
-			break;
-		case 2:
-			roundUp2();
-			break;
-		case 3:
-			roundUp3();
-			break;
-		case 4:
-			roundUp4();
-			break;
-		case 5:
-			roundUp5();
-			break;
-		case 6:
-			roundUp6();
-			break;
-		case 7:
-			roundUp7();
-			break;
-		case 8:
-			roundUp8();
-			break;
-		case 9:
-			roundUp9();
-			break;
-		case 10:
-			roundUp10();
-			break;
+		case 1 :roundUp1(); break;
+		case 2 :roundUp2(); break;
+		case 3 :roundUp3(); break;
+		case 4 :roundUp4(); break;
+		case 5 :roundUp5(); break;
+		case 6 :roundUp6(); break;
+		case 7 :roundUp7(); break;
+		case 8 :roundUp8(); break;
+		case 9 :roundUp9(); break;
+		case 10 :roundUp10(); break;
 		}
 
 		System.out.println(glist);
