@@ -155,7 +155,7 @@ public class Main extends JPanel{
 		textlabel.setFont(font3);
 		JLabel textlabel2 = new JLabel();
 		textlabel2.setLocation(290,20);
-		textlabel2.setSize(50,20);
+		textlabel2.setSize(100,20);
 		textlabel2.setText(totalDay + "일차");
 		Font font1 =new Font("휴먼편지체", Font.BOLD, 19);
 		textlabel2.setFont(font1);

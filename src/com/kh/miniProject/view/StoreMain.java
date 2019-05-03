@@ -892,7 +892,9 @@ public class StoreMain extends JPanel {
 						}else if(PointMinus.resultcoin>3999) {
 							ChangePanel.ChangePanel(start, check,shopmain );
 							new Exper().exp();
+
 							pm.pointMinus(4000);
+
 						}
 					}
 				});

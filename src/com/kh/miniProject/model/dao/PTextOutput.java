@@ -11,6 +11,7 @@ public class PTextOutput {
 	private ArrayList al;
 	public static int prologueNum = 0;
 	public static int epilogueNum = 0;
+	
 	public int getPrologueNum() {
 		return prologueNum;
 	}

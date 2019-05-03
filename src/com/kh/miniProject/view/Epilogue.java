@@ -67,6 +67,7 @@ public class Epilogue extends JPanel implements KeyListener {
 				}
 			}
 		});
+		
 		Collections.reverse(RoundOpen.glist);
 		if (PTextOutput.epilogueNum != 2) {
 			if (RoundOpen.glist.get(0).getGlovePer() > 69) {
