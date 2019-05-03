@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -12,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import com.kh.miniProject.view.PlusCoin.Change;
 
@@ -93,6 +96,7 @@ public class PlusCoin extends JPanel{
 		btn5.setSize(70,30);
 		Font font1 =new Font("휴먼편지체", Font.BOLD, 15);
 		btn5.setFont(font1);
+	
 
 		JButton btn6=new JButton("no"); 
 		btn6.setLocation(150,125);
@@ -102,6 +106,7 @@ public class PlusCoin extends JPanel{
 
 		exit.addActionListener(new Change());
 		btn5.addActionListener(new Change2());
+		btn6.addActionListener(new Change());
 
 		plusIn.add(pluscoin);
 		plusIn.add(exit);
@@ -131,6 +136,7 @@ public class PlusCoin extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			
 			ChangePanel.ChangePanel(start, plus, new Main(start));			
 		}
 

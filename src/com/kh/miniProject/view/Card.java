@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import com.kh.miniProject.model.vo.PointMinus;
@@ -86,6 +87,8 @@ public class Card extends JPanel{
 		exit.setSize(30,30);
 		exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
+		
+	
 		//카드 번호
 		JLabel cardName=new JLabel("카드 번호 :");
 		cardName.setLocation(50, 60);
@@ -102,6 +105,7 @@ public class Card extends JPanel{
 			public void keyTyped(KeyEvent ke) {
 				JTextField src=(JTextField)ke.getSource();
 				if (src.getText().length()>=4)ke.consume(); 
+				
 			}
 		});
 
