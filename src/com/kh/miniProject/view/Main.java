@@ -51,7 +51,10 @@ public class Main extends JPanel{
 	
 		
 
-		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;
+		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(300, 400, 0);
+		
+		JLabel icon2 = new JLabel(new ImageIcon(icon));
+		icon2.setSize(960,720);
 		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
 	    icon1.setBounds(0, 0, 960, 720);
 
@@ -133,10 +136,7 @@ public class Main extends JPanel{
 		Image img5 = new ImageIcon("images/map.png").getImage().getScaledInstance(80, 80, 0);
 		
 		
-		JLabel label = new JLabel();
-		label.setIcon(new ImageIcon(icon));
-		label.setLocation(350,310);
-		label.setSize(200,300);
+
 		JButton info = new JButton((new ImageIcon(img2)));
 		info.setLocation(50,50);
 		info.setSize(70,70);
@@ -234,11 +234,11 @@ public class Main extends JPanel{
 		this.add(textlabel);
 		this.add(textlabel2);
 		this.add(textLabel2);
-		this.add(label);
 		this.add(info);
 		this.add(shop);
 		this.add(aff);
 		this.add(coin);
+		this.add(icon2);
 		this.add(icon1);
 		//start.add(this);
 		
