@@ -174,7 +174,9 @@ public class Start extends JFrame {
         
         RoundOpen ro = new RoundOpen();
 		ro.roundUp1();
-        
+		
+		
+		
         this.add(startmain);
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
