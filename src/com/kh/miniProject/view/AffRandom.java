@@ -19,11 +19,11 @@ public class AffRandom extends JPanel{
 	private JFrame start;
 	private JPanel aff;
 	private JButton[] affBnt;
+	private JButton but;
 	private int butY = 180;
 	private int butY2 = 180;
 	private int j;
 	private int i = 0;
-	JButton but;
 	
 	public AffRandom(JFrame start) {
 		this.start = start;

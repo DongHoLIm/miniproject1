@@ -20,21 +20,25 @@ public class FileController {
 	public Image goImageOutput(int i) {
 
 		return new ImageOutput().imageOutput(i);
+		
 	}
 
 	public File textOutgoTput(String place) {
 
 		return new TextOutput().textOutput(place);
+		
 	}
 
 	public File PtextOutgoTput(String place) {
 
 		return new PTextOutput().PtextOutput(place);
+		
 	}
 
 	public File EtextOutgoTput(String place) {
 
 		return new PTextOutput().EtextOutput(place);
+		
 	}
 
 }
