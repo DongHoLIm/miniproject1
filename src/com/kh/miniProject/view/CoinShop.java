@@ -90,7 +90,12 @@ public class CoinShop extends JPanel{
 	    exit.setContentAreaFilled(false);
 		exit.setFocusPainted(false);
 	    
-	    JButton btn1=new JButton("500"); 
+		Image icon11=new ImageIcon("images/5000.png").getImage()
+				.getScaledInstance(150, 150, 0);
+		JLabel label1=new JLabel(new ImageIcon(icon11));
+		label1.setLocation(15,120);
+		label1.setSize(150, 150);
+	    JButton btn1=new JButton("5000"); 
 	    btn1.setLocation(50,280);
 	    btn1.setSize(75,30);
 	    Font font1 =new Font("»ﬁ∏’∆Ì¡ˆ√º", Font.BOLD, 15);
@@ -99,13 +104,18 @@ public class CoinShop extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				int point1 =500;
+				int point1 =5000;
 				Card.plusCoin = point1;
 								
 			}
 		});
-
-	    JButton btn2=new JButton("1000"); 
+	    
+	    Image icon12=new ImageIcon("images/10000.png").getImage()
+				.getScaledInstance(100, 150, 0);
+		JLabel label2=new JLabel(new ImageIcon(icon12));
+		label2.setLocation(120,120);
+		label2.setSize(100, 150);
+	    JButton btn2=new JButton("10000"); 
 	    btn2.setLocation(150,280);
 	    btn2.setSize(75,30);
 	    Font font2 =new Font("»ﬁ∏’∆Ì¡ˆ√º", Font.BOLD, 15);
@@ -114,13 +124,17 @@ public class CoinShop extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				int point2 =1000;
+				int point2 =10000;
 				Card.plusCoin =point2;
 				
 			}
 		});
-
-	    JButton btn3=new JButton("1500"); 
+	    Image icon13=new ImageIcon("images/30000.png").getImage()
+				.getScaledInstance(150, 150, 0);
+		JLabel label3=new JLabel(new ImageIcon(icon13));
+		label3.setLocation(200,120);
+		label3.setSize(150, 150);
+	    JButton btn3=new JButton("30000"); 
 	    btn3.setLocation(250,280);
 	    btn3.setSize(75,30);
 	    Font font3 =new Font("»ﬁ∏’∆Ì¡ˆ√º", Font.BOLD, 15);
@@ -129,13 +143,18 @@ public class CoinShop extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				int point3 =1500;
+				int point3 =30000;
 				Card.plusCoin = point3;
 				
 			}
 		});
 
-	    JButton btn4=new JButton("2000"); 
+	    Image icon14=new ImageIcon("images/5000.png").getImage()
+				.getScaledInstance(150, 150, 0);
+		JLabel label4=new JLabel(new ImageIcon(icon14));
+		label4.setLocation(300,120);
+		label4.setSize(150, 150);
+	    JButton btn4=new JButton("50000"); 
 	    btn4.setLocation(350,280);
 	    btn4.setSize(75,30);
 	    Font font4 =new Font("»ﬁ∏’∆Ì¡ˆ√º", Font.BOLD, 15);
@@ -144,7 +163,7 @@ public class CoinShop extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				int point4 = 2000;
+				int point4 = 50000;
 				Card.plusCoin =point4;
 				
 			}
@@ -163,7 +182,10 @@ public class CoinShop extends JPanel{
 	    coinIn.add(btn2);
 	    coinIn.add(btn3);
 	    coinIn.add(btn4);
-	    
+	    coinIn.add(label1);
+	    coinIn.add(label2);
+	    coinIn.add(label3);
+	    coinIn.add(label4);
 	    
 	    info.addActionListener(new Change3()); 
 		shop.addActionListener(new Change4());
