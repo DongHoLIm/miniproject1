@@ -735,7 +735,7 @@ public class MiniMap extends JPanel {
 				label.setFont(font);
 				place.add(label);
 				place.repaint();
-				y += 30;
+				y += 60;
 			} else if (temp[b] == 2) {
 				hmap.putAll(Cafe());
 				JLabel label2 = new JLabel("카페");
@@ -744,7 +744,7 @@ public class MiniMap extends JPanel {
 				label2.setFont(font);
 				place.add(label2);
 				place.repaint();
-				y += 50;
+				y += 60;
 			} else if (temp[b] == 3) {
 				hmap.putAll(Park());
 				JLabel label3 = new JLabel("공원");
@@ -753,7 +753,7 @@ public class MiniMap extends JPanel {
 				label3.setFont(font);
 				place.add(label3);
 				place.repaint();
-				y += 50;
+				y += 60;
 			} else if (temp[b] == 4) {
 				hmap.putAll(Beach());
 				JLabel label4 = new JLabel("바다");
@@ -762,7 +762,7 @@ public class MiniMap extends JPanel {
 				label4.setFont(font);
 				place.add(label4);
 				place.repaint();
-				y += 50;
+				y += 60;
 			} else if (temp[b] == 5) {
 				hmap.putAll(Restaurant());
 				JLabel label5 = new JLabel("식당");
@@ -771,7 +771,7 @@ public class MiniMap extends JPanel {
 				label5.setFont(font);
 				place.add(label5);
 				place.repaint();
-				y += 50;
+				y += 60;
 			} else if (temp[b] == 6) {
 				hmap.putAll(HotPlace());
 				JLabel label6 = new JLabel("번화가");
@@ -780,7 +780,7 @@ public class MiniMap extends JPanel {
 				label6.setFont(font);
 				place.add(label6);
 				place.repaint();
-				y += 50;
+				y += 60;
 			}
 
 			else if (temp[b] == 7) {
@@ -791,7 +791,7 @@ public class MiniMap extends JPanel {
 				label7.setFont(font);
 				place.add(label7);
 				place.repaint();
-				y += 50;
+				y += 60;
 			} else if (temp[b] == 8) {
 				hmap.putAll(Pub());
 				JLabel label8 = new JLabel("술집");
@@ -800,7 +800,7 @@ public class MiniMap extends JPanel {
 				label8.setFont(font);
 				place.add(label8);
 				place.repaint();
-				y += 50;
+				y += 60;
 			} else if (temp[b] == 9) {
 				hmap.putAll(FlowerShop());
 				JLabel label9 = new JLabel("꽃집");
@@ -809,16 +809,16 @@ public class MiniMap extends JPanel {
 				label9.setFont(font);
 				place.add(label9);
 				place.repaint();
-				y += 50;
+				y += 60;
 			} else if (temp[b] == 10) {
 				hmap.putAll(ThemePark());
 				JLabel label10 = new JLabel("놀이공원");
+				label10.setBounds(10, y, 70, 50);
 				Font font =new Font("휴먼편지체", Font.BOLD, 15);
 				label10.setFont(font);
-				label10.setBounds(10, y, 50, 50);
 				place.add(label10);
 				place.repaint();
-				y += 50;
+				y += 60;
 			}
 		}
 //		for (int b = 0; b < temp.length; b++) {
@@ -1149,7 +1149,7 @@ public class MiniMap extends JPanel {
 				System.out.println("들어갔나? " + la);
 				la.setBounds(70 , sgoi , 50 , 50);
 				place.add(la);
-				sgoi +=50;	
+				sgoi +=60;	
 				girlStop++;
 			}
 		}else if(girlStop > 1) {
@@ -1168,7 +1168,7 @@ public class MiniMap extends JPanel {
 				System.out.println("들어갔나? " + la);
 				la.setBounds(70 , sgoi , 50 , 50);
 				place.add(la);
-				sgoi +=50;		
+				sgoi +=60;		
 			}
 		}
 		System.out.println("@@@@비교할값 여자@@@@" + mmgi.length);

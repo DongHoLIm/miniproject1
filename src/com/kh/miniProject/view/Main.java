@@ -31,7 +31,7 @@ public class Main extends JPanel{
 	public static String str = "아침";
 	public static int day = 0;
 	public static int dayBreak =0;
-    public static int totalDay =1;  
+    public static int totalDay =10;  
     public static int day2 = 0;
     private static int i;
     public static String coinstr;
@@ -48,20 +48,7 @@ public class Main extends JPanel{
 		this.setSize(960,720);
 		this.setLayout(null);
 		
-		try {
-	         if(i == 0) {
-	         i++;
-	            AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/MainBGM.wav"));
-	            clip = AudioSystem.getClip();
-	            clip.open(stream);
-	            clip.start();
-	         }
-	            
-	        } catch(Exception e) {
-	            
-	            e.printStackTrace();
-	        }
-
+	
 		
 
 		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;
@@ -73,8 +60,20 @@ public class Main extends JPanel{
 		int mentRan = (int)(Math.random()*5)+1;
 		
 		switch(mentRan) {
-		case 1 : startMent = "\n\n 아 연애 하고싶다~"; break;
-		case 2 : startMent = "\n\n 오늘은 어떤 여자를 만날까~?";
+		case 1 : startMent = "\n 아 연애 하고싶다~";
+		try {
+            AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/1.wav"));
+            clip2 = AudioSystem.getClip();
+            clip2.open(stream);
+            clip2.start();
+            
+            
+            
+        } catch(Exception e) {
+            
+            e.printStackTrace();
+        }break;
+		case 2 : startMent = "\n 오늘은 어떤 여자를 만날까~?";
 		try {
             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/2.wav"));
             clip2 = AudioSystem.getClip();
@@ -87,9 +86,33 @@ public class Main extends JPanel{
             
             e.printStackTrace();
         }break;
-		case 3 : startMent = "\n\n 오늘은 누구와 데이트 해볼까~?"; break;
-		case 4 : startMent = "\n\n 모쏠 탈출 가즈아~~"; break;
-		case 5 : startMent = "\n\n 아 여자친구 사귀고 싶다~"; 
+		case 3 : startMent = "\n 오늘은 누구와 데이트 해볼까~?";
+		try {
+            AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/3.wav"));
+            clip2 = AudioSystem.getClip();
+            clip2.open(stream);
+            clip2.start();
+            
+            
+            
+        } catch(Exception e) {
+            
+            e.printStackTrace();
+        }break;
+		case 4 : startMent = "\n 모쏠 탈출 가즈아~~"; 
+		try {
+            AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/4.wav"));
+            clip2 = AudioSystem.getClip();
+            clip2.open(stream);
+            clip2.start();
+            
+            
+            
+        } catch(Exception e) {
+            
+            e.printStackTrace();
+        }break;
+		case 5 : startMent = "\n 아 여자친구 사귀고 싶다~"; 
 		try {
             
             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/5.wav"));
@@ -155,7 +178,9 @@ public class Main extends JPanel{
 		textlabel.setFont(font3);
 		JLabel textlabel2 = new JLabel();
 		textlabel2.setLocation(290,20);
+
 		textlabel2.setSize(100,20);
+
 		textlabel2.setText(totalDay + "일차");
 		Font font1 =new Font("휴먼편지체", Font.BOLD, 19);
 		textlabel2.setFont(font1);

@@ -54,7 +54,7 @@ public class Ending extends JPanel {
 		ending.setBorderPainted(false);
 		ending.addActionListener(new ChangeCredit());
 
-		JLabel icon1 = new JLabel(new ImageIcon("images/minimab.png"));
+		JLabel icon1 = new JLabel(new ImageIcon("images/endingMiniMap.png"));
 		icon1.setBounds(0, 0, 960, 720);
 		
 		
