@@ -1,5 +1,6 @@
 package com.kh.miniProject.view;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -50,6 +51,13 @@ public class Credit  extends JPanel {
 			icon1 = new JLabel(new ImageIcon("images/success.png"));
 		    icon1.setSize(960 , 720);
 			icon1.setBounds(0, 0, 960, 720);
+			JLabel icon2 = new JLabel(new ImageIcon("images/success2.png"));
+			icon2.setBounds(50, -300, 960, 720);
+			JLabel icon3 = new JLabel(new ImageIcon("images/success3.gif"));
+			icon3.setBounds(0, 0, 960, 720);
+			this.setBackground(Color.BLACK);
+			this.add(icon3);
+			this.add(icon2);
 			this.add(icon1);
 		}
 		if(PTextOutput.epilogueNum==0) {
@@ -97,12 +105,7 @@ public class Credit  extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			clip.stop();
-			Main.day = 0;
-			Main.day2 = 0;
-			Main.dayBreak = 0;
-			Main.totalDay = 1;
-			PTextOutput.prologueNum = 0;
-			ChangePanel.ChangePanel(start, credit, Start.startmain);
+			ChangePanel.ChangePanel(start, credit, new Credit2(start));
 		}
 
 	}
