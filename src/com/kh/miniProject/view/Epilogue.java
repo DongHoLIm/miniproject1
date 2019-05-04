@@ -131,6 +131,9 @@ public class Epilogue extends JPanel implements KeyListener {
 			} else if (str == null && talkEnding == 3){
 				clip2.stop();
 				ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
+			}else if (str == null && talkEnding == 4){
+				clip2.stop();
+				ChangePanel.ChangePanel(start, Epilogue, new Credit2(start));
 			}
 			else {
 				if(talkEnding == 1) {
@@ -149,6 +152,10 @@ public class Epilogue extends JPanel implements KeyListener {
 					icon1.add(girl2);
 					this.repaint();
 					talkEnding += 1;
+					//ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
+				} else if(talkEnding == 0) {
+					
+					talkEnding += 4;
 					//ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
 				} 
 				
@@ -174,7 +181,7 @@ public class Epilogue extends JPanel implements KeyListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			clip2.stop();
-			ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
+			ChangePanel.ChangePanel(start, Epilogue, new Credit2(start));
 		}
 
 	}

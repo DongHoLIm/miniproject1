@@ -26,7 +26,6 @@ public class AffRandom extends JPanel{
 	private int butY2 = 180;
 	private int j;
 	private int i = 0;
-	JButton but;
 	PointMinus pm = new PointMinus();
 	private TextField affArea = new TextField();
 	
