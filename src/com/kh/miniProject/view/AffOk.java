@@ -20,13 +20,13 @@ import com.kh.miniProject.model.vo.RoundOpen;
 public class AffOk extends JPanel{
 	private JPanel affOk;
 	private JFrame start;
-	private JPanel shopmain = new StoreMain(start);
 	private JButton[] affBut;
 	private int butY = 50;
 	private int butY2 = 50;
 	private int yy2;
+	JPanel shopmain = new StoreMain(start);
 	PointMinus pm = new PointMinus();
-	private TextField affArea = new TextField();
+	TextField affArea = new TextField();
 	
 
 	public AffOk(JFrame start) {
@@ -54,10 +54,9 @@ public class AffOk extends JPanel{
 
 		if(affBut.length < 5) {
 			for(int i = 0; i < affBut.length; i++) {
-				System.out.println("와이축값" + butY);
 				affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
 				affBut[i].setBounds(butY, 180, 120, 80);
-				Font font =new Font("휴먼편지체", Font.BOLD, 15);
+				Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
 				affBut[i].setFont(font);
 				butY += 170;
 				this.add(affBut[i]);
@@ -68,7 +67,7 @@ public class AffOk extends JPanel{
 				if(i < 5) {
 					affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
 					affBut[i].setBounds(butY, 180, 120, 80);
-					Font font =new Font("휴먼편지체", Font.BOLD, 15);
+					Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
 					affBut[i].setFont(font);
 					butY += 170;
 					this.add(affBut[i]);
@@ -76,7 +75,7 @@ public class AffOk extends JPanel{
 				}else {
 					affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
 					affBut[i].setBounds(butY2, 300, 120, 80);
-					Font font =new Font("휴먼편지체", Font.BOLD, 15);
+					Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
 					affBut[i].setFont(font);
 					butY2 += 170;
 					this.add(affBut[i]);
@@ -164,8 +163,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk ,new CoinShop(start));
              }else if (PointMinus.resultcoin>=500) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(0).getName() + "의 애정도는 " + lovePer + "입니다");
-            	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+            	affArea.setText(RoundOpen.glist.get(0).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+            	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
             	affArea.setFont(font);
                 pm.pointMinus(500);
                 
@@ -183,8 +182,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=1000) {
             	affArea.remove(null);
-             	affArea.setText(RoundOpen.glist.get(1).getName() + "의 애정도는 " + lovePer + "입니다");
-             	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+             	affArea.setText(RoundOpen.glist.get(1).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+             	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
              	affArea.setFont(font);
                 pm.pointMinus(1000);
                 
@@ -202,8 +201,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=1500) {
             	affArea.remove(null);
-              	affArea.setText(RoundOpen.glist.get(2).getName() + "의 애정도는 " + lovePer + "입니다");
-              	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+              	affArea.setText(RoundOpen.glist.get(2).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+              	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
               	affArea.setFont(font);
                 pm.pointMinus(1500);
                 
@@ -220,8 +219,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=2000) {
             	affArea.remove(null);
-              	affArea.setText(RoundOpen.glist.get(3).getName() + "의 애정도는 " + lovePer + "입니다");
-              	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+              	affArea.setText(RoundOpen.glist.get(3).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+              	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
               	affArea.setFont(font);
                 pm.pointMinus(2000);
                 
@@ -239,8 +238,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=2500) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(4).getName() + "의 애정도는 " + lovePer + "입니다");
-               	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+               	affArea.setText(RoundOpen.glist.get(4).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+               	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
                	affArea.setFont(font);
                 pm.pointMinus(2500);
                 
@@ -258,8 +257,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=3000) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(5).getName() + "의 애정도는 " + lovePer + "입니다");
-               	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+               	affArea.setText(RoundOpen.glist.get(5).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+               	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
                	affArea.setFont(font);
                 pm.pointMinus(3000);
                 
@@ -277,8 +276,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
              }else if (PointMinus.resultcoin>=3500) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(6).getName() + "의 애정도는 " + lovePer + "입니다");
-               	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+               	affArea.setText(RoundOpen.glist.get(6).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+               	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
                	affArea.setFont(font);
                 pm.pointMinus(3500);
                 
@@ -295,8 +294,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
             }else if (PointMinus.resultcoin>=4000) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(7).getName() + "의 애정도는 " + lovePer + "입니다");
-            	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+            	affArea.setText(RoundOpen.glist.get(7).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+            	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
             	affArea.setFont(font);
             	pm.pointMinus(4000);
 
@@ -314,8 +313,8 @@ public class AffOk extends JPanel{
 				ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
 			}else if (PointMinus.resultcoin>=4500) {
 				affArea.remove(null);
-				affArea.setText(RoundOpen.glist.get(8).getName() + "의 애정도는 " + lovePer + "입니다");
-				Font font =new Font("휴먼편지체", Font.BOLD, 15);
+				affArea.setText(RoundOpen.glist.get(8).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+				Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
 				affArea.setFont(font);
 				pm.pointMinus(4500);
 
@@ -333,8 +332,8 @@ public class AffOk extends JPanel{
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
             }else if (PointMinus.resultcoin>=5000) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(9).getName() + "의 애정도는 " + lovePer + "입니다");
-            	Font font =new Font("휴먼편지체", Font.BOLD, 15);
+            	affArea.setText(RoundOpen.glist.get(9).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+            	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
             	affArea.setFont(font);
             	pm.pointMinus(5000);
 

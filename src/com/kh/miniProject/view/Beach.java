@@ -40,12 +40,6 @@ public class Beach extends JPanel implements KeyListener{
 		beach = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-//		JLabel BeachBack = new JLabel(
-//				new ImageIcon(new ImageIcon("images/�뜝�룞�삕�솕�뜝�룞�삕.PNG").getImage().getScaledInstance(960, 720, 0)));
-//		BeachBack.setBounds(0, 0, 960, 720);
-		//this.setBackground(Color.yellow);
-		
-		
 		
 		tf = new JTextArea();
 		tf.setBounds(150,450, 600,150);
