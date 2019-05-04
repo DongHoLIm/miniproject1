@@ -50,11 +50,25 @@ public class AffOk extends JPanel{
 
 			}
 		});
+		
 		affBut = new JButton[PlayerInfo.lev];
-
+		
+		Image[] namebut = new Image[10];
+		namebut[0] = new ImageIcon("images/1but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[1] = new ImageIcon("images/2but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[2] = new ImageIcon("images/3but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[3] = new ImageIcon("images/4but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[4] = new ImageIcon("images/5but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[5] = new ImageIcon("images/6but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[6] = new ImageIcon("images/7but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[7] = new ImageIcon("images/8but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[8] = new ImageIcon("images/9but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[9] = new ImageIcon("images/10but.png").getImage().getScaledInstance(120, 80, 0);
+		
+		
 		if(affBut.length < 5) {
 			for(int i = 0; i < affBut.length; i++) {
-				affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
+				affBut[i] = new JButton(new ImageIcon(namebut[i]));
 				affBut[i].setBounds(butY, 180, 120, 80);
 				Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
 				affBut[i].setFont(font);
@@ -65,7 +79,7 @@ public class AffOk extends JPanel{
 		}else {
 			for(int i = 0; i < affBut.length; i++) {
 				if(i < 5) {
-					affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
+					affBut[i] = new JButton(new ImageIcon(namebut[i]));
 					affBut[i].setBounds(butY, 180, 120, 80);
 					Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
 					affBut[i].setFont(font);
@@ -73,7 +87,7 @@ public class AffOk extends JPanel{
 					this.add(affBut[i]);
 					this.repaint();
 				}else {
-					affBut[i] = new JButton(RoundOpen.glist.get(i).getName());
+					affBut[i] = new JButton(new ImageIcon(namebut[i]));
 					affBut[i].setBounds(butY2, 300, 120, 80);
 					Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
 					affBut[i].setFont(font);
