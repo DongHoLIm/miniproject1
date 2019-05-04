@@ -75,13 +75,13 @@ public class MyLovePercent extends JPanel{
 
 		JPanel scrollback = new JPanel();
 		scrollback.setLayout(null);
-		scrollback.setBounds(3, 80, 390, 415);
-		scrollback.setBorder(BorderFactory.createLineBorder(Color.green, 1));
+		scrollback.setBounds(3, 80, 392, 415);
+		//scrollback.setBorder(BorderFactory.createLineBorder(Color.green, 1));
 
 		JPanel scrollpanel = new JPanel();
 		scrollpanel.setLayout(null);
-		scrollpanel.setPreferredSize(new Dimension(380,60*RoundOpen.getGlist().size()));
-		scrollpanel.setBorder(BorderFactory.createLineBorder(Color.magenta,1));
+		scrollpanel.setPreferredSize(new Dimension(373,60*RoundOpen.getGlist().size()));
+		//scrollpanel.setBorder(BorderFactory.createLineBorder(Color.magenta,1));
 
 		JPanel[] backpan = new JPanel[lev];  
 		Image[] img = new Image[lev];        
@@ -101,8 +101,8 @@ public class MyLovePercent extends JPanel{
 
 			backpan[i] = new JPanel();
 			backpan[i].setLayout(null);
-			backpan[i].setBounds(a,b, 380,50);
-			backpan[i].setBorder(BorderFactory.createLineBorder(Color.black, 1));
+			backpan[i].setBounds(a,b, 370,50);
+			//backpan[i].setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
 
 			//이미지 라벨
@@ -110,7 +110,7 @@ public class MyLovePercent extends JPanel{
 			str = g.getImage();  //str에 i번째 여자 이미지 디렉토리 담기
 			img[i] = new ImageIcon(str).getImage().getScaledInstance(50, 50, 0);  //img[i]에 로드한 이미지 저장
 			imglabel[i] = new JLabel(new ImageIcon(img[i])); //i번째 라벨에 i번째 이미지 저장
-			imglabel[i].setBounds(10,3, 50, 50);
+			imglabel[i].setBounds(5,0, 50, 50);
 			//			imglabel[i].setLocation(, );
 			//			imglabel[i].setSize(50,50);
 
@@ -119,7 +119,7 @@ public class MyLovePercent extends JPanel{
 			//mlper=50;
 			mlpview[i] = new JPanel();
 			mlpview[i].setLayout(null);
-			mlpview[i].setBounds(70,22, 300, 12);
+			mlpview[i].setBounds(60,22, 300, 12);
 			mlpview[i].setBorder(BorderFactory.createLineBorder(Color.red,1));
 
 			redlabel[i] = new JLabel(new ImageIcon(red));
@@ -140,8 +140,8 @@ public class MyLovePercent extends JPanel{
 
 		//scrollpanel.setBackground(Color.white);
 		JScrollPane glistscroll = new JScrollPane(scrollpanel);
-		glistscroll.setBounds(0, 0,390,415);
-		glistscroll.setBorder(BorderFactory.createLineBorder(Color.yellow, 1));
+		glistscroll.setBounds(0, 0,392,415);
+		//glistscroll.setBorder(BorderFactory.createLineBorder(Color.yellow, 1));
 		//glistscroll.setPreferredSize(new Dimension(380,50));
 
 		//glistscroll.getVerticalScrollBar().setUnitIncrement(16);

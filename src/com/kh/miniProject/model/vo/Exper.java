@@ -25,7 +25,7 @@ public class Exper {
 		int upexper = PlayerInfo.exper+exp;
 		
 
-		if(upexper>100) {
+		if(upexper>=100) {
 			
 			System.out.println("�젟�뾽 �씫��吏��뒗 �닚�꽌媛� �뼱�뵒易�?");
 			System.out.println("경험치 100 넘었다아");
