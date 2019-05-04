@@ -31,7 +31,7 @@ public class Main extends JPanel{
 	public static String str = "아침";
 	public static int day = 0;
 	public static int dayBreak =0;
-    public static int totalDay =10;  
+    public static int totalDay =1;  
     public static int day2 = 0;
     private static int i;
     public static String coinstr;

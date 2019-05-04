@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 import com.kh.miniProject.view.MiniMap;
 import com.kh.miniProject.view.PlayerInfo;
+import com.kh.miniProject.view.StartStoryPanel;
 
 public class Exper {
 	private JFrame start;
@@ -42,6 +43,7 @@ public class Exper {
 				RoundOpen ro = new RoundOpen();
 				ro.levelUp(le);
 				PlayerInfo.exper = 0;
+				StartStoryPanel.startnum = 0;
 			}
 		}else {
 			PlayerInfo.exper = upexper;

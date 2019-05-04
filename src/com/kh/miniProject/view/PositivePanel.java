@@ -63,7 +63,9 @@ public class PositivePanel extends JPanel{
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-
+		Exper ex = new Exper();
+		ex.plusExper(1);
+		
 		int girlnum = GrilNumber.grilnumber;
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
 		JButton exit = new JButton(new ImageIcon(img6));
@@ -77,7 +79,12 @@ public class PositivePanel extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				clip.stop();
-				ChangePanel.StartChangePanle(start, positivePanel, new Main(start));
+				if(StartStoryPanel.startnum == 0) {
+					ChangePanel.StartChangePanle(start, positivePanel, new StartStoryPanel(start));
+					StartStoryPanel.startnum++;
+				}else {
+					ChangePanel.StartChangePanle(start, positivePanel, new Main(start));					
+				}
 
 			}
 
@@ -100,8 +107,8 @@ public class PositivePanel extends JPanel{
 		tf.setFont(getFont().deriveFont(15.0f));
 		Font font =new Font("휴먼편지체", Font.BOLD, 20);
 		tf.setFont(font);
-		Exper ex = new Exper();
-		ex.plusExper(1);
+		
+		
 
 
 		mlp.plusMylove(girlnum, 1);

@@ -76,6 +76,7 @@ public class NegativePanel extends JPanel{
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		ex.plusExper(2);
 
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
 		JButton exit = new JButton(new ImageIcon(img6));
@@ -91,7 +92,12 @@ public class NegativePanel extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				clip.stop();
-				ChangePanel.StartChangePanle(start, negativePanel, new Main(start));
+				if(StartStoryPanel.startnum == 0) {
+					ChangePanel.StartChangePanle(start, negativePanel, new StartStoryPanel(start));
+					StartStoryPanel.startnum++;
+				}else {
+					ChangePanel.StartChangePanle(start, negativePanel, new Main(start));					
+				}
 
 			}
 
@@ -102,7 +108,7 @@ public class NegativePanel extends JPanel{
 
 
 
-		ex.plusExper(2);
+		
 
 		mlp.plusMylove(girlnum, 2);
 
