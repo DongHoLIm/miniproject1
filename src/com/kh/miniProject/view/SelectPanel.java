@@ -33,9 +33,6 @@ public class SelectPanel extends JPanel {
 		this.setBackground(Color.black);
 		this.setLayout(null);
 
-		/*JLabel icon1 = new JLabel(new ImageIcon("images/gomin.png"));
-		icon1.setBounds(0, 0, 960, 720);*/
-
 		String[] str = new String[20];
 
 		String answer1 = "";
@@ -105,10 +102,10 @@ public class SelectPanel extends JPanel {
 		});
 		JLabel jl = new JLabel(new ImageIcon("images/VS.png"));
 		jl.setBounds(200, 100, 500, 500);
-		Main.day2++;
-		Main.day++;
-		Main.dayBreak++;
-		new Day().day();
+		Main.dc.getDate().setDay2(Main.dc.getDate().getDay2()+1);
+		Main.dc.getDate().setDay(Main.dc.getDate().getDay()+1);
+		Main.dc.getDate().setDayBreak(Main.dc.getDate().getDayBreak()+1);
+		Main.dc.day();
 		
 		this.add(jl);
 		this.add(spb1);

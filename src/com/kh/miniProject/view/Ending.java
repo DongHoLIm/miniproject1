@@ -18,7 +18,6 @@ import com.kh.miniProject.view.MiniMap.ChangeMovie;
 
 public class Ending extends JPanel {
 	private JFrame start;
-
 	private JPanel ending;
 	
 
@@ -27,9 +26,6 @@ public class Ending extends JPanel {
 		ending = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-//			JLabel EndingBack = new JLabel(
-//					new ImageIcon(new ImageIcon("images/�쁺�솕愿�.PNG").getImage().getScaledInstance(960, 720, 0)));
-//			EndingBack.setBounds(0, 0, 960, 720);
 		this.setBackground(Color.BLACK);
 		System.out.println("마지막 그녀");
 
@@ -69,10 +65,10 @@ public class Ending extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			Main.day = 0;
-			Main.dayBreak =0;
-			Main.totalDay =1;  
-			Main.day2 = 0;
+			Main.dc.getDate().setDay(0);
+			Main.dc.getDate().setDay2(0);
+			Main.dc.getDate().setDayBreak(0);
+			Main.dc.getDate().setTotalDay(1);
 			
 			ChangePanel.ChangePanel(start, ending, new SelectPanel2(start));
 		}

@@ -18,23 +18,22 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.kh.miniProject.controller.EnterKeyactionController;
 import com.kh.miniProject.controller.FileController;
 import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.Day;
 import com.kh.miniProject.model.vo.EnterKeyAction;
-import com.kh.miniProject.model.vo.GirlImageOut;
-import com.kh.miniProject.model.vo.GrilNumber;
+
 
 public class Movie extends JPanel implements KeyListener {
 	private JFrame start;
 	private JPanel movie;
 	private JTextArea tf;
-	private FileController sc = new FileController();
 	private File loveStory;
-	private EnterKeyAction ek = new EnterKeyAction();
 	private ArrayList listStory;
 	private JLabel icon1;
-	/*int girlnumber;*/
+	FileController sc = new FileController();
+	EnterKeyactionController ec = new EnterKeyactionController();
 	
 
 	public Movie(JFrame start) {
@@ -42,13 +41,6 @@ public class Movie extends JPanel implements KeyListener {
 		movie = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-		// JLabel MovieBack = new JLabel(
-		// new ImageIcon(new
-		// ImageIcon("images/�쁺�솕愿�.PNG").getImage().getScaledInstance(960, 720, 0)));
-		// MovieBack.setBounds(0, 0, 960, 720);
-
-		// this.setBackground(Color.cyan);
-		System.out.println("�뙣�꼸 �깮�꽦");
 		
 		
 		tf = new JTextArea();
@@ -66,42 +58,27 @@ public class Movie extends JPanel implements KeyListener {
 		this.add(tf);
 		String place = "movie";
 		loveStory = sc.textOutgoTput(place);
-		listStory = ek.enterAction(loveStory);
-		if (Main.day == 0) {
+		listStory = ec.enterAction(loveStory);
+		if (Main.dc.getDate().getDay() == 0) {
 			icon1 = new JLabel(new ImageIcon("images/movie.png"));
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
-		} else if (Main.day == 1) {
+		} else if (Main.dc.getDate().getDay() == 1) {
 			icon1 = new JLabel(new ImageIcon("images/movie2.png"));
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
-		} else if (Main.day == 2) {
+		} else if (Main.dc.getDate().getDay() == 2) {
 			icon1 = new JLabel(new ImageIcon("images/movie3.png"));
 			icon1.setBounds(0, 0, 960, 720);
 			this.add(icon1);
 		}
-		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[Main.gc.girlnum.getGirlnumber()]));
 		girl.setBounds(110, 5, 700, 550);
 		icon1.add(girl);
 		
 		
 		
 		movieInit();
-		
-
-		// mf.addKeyListener(new KeyAdapter() {
-		//
-		// @Override
-		// public void keyTyped(KeyEvent e) {
-		// int num = 0;
-		//
-		// if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-		// num = 1;
-		// }
-		//
-		// }
-		//
-		// });
 
 	}
 
@@ -113,24 +90,7 @@ public class Movie extends JPanel implements KeyListener {
 		exit.setSize(30, 30);
 		exit.setText("x");
 		exit.addActionListener(new ChangeMain());
-		// exit.addMouseListener(new MouseAdapter() {
-		// @Override
-		// public void mouseClicked(MouseEvent e) {
-		// ChangePanel cp = new ChangePanel(mf , movie);
-		// MiniMap mm = new MiniMap(mf);
-		//
-		//
-		// cp.replacePanel(mm);
-		// }
-		// });
-//		System.out.println("�뀅�뀅�뀅"+girlnumber);
-//		Image gi = new ImageIcon(GirlImages.girlImage[girlnumber]).getImage();
-//		JLabel girl = new JLabel(new ImageIcon(gi));
 		
-		
-		
-		
-		//movie.add(girl);
 		movie.add(exit);
 		
 
@@ -140,10 +100,10 @@ public class Movie extends JPanel implements KeyListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			Main.day2++;
-			Main.day++;
-			Main.dayBreak++;
-			new Day().day();
+			Main.dc.getDate().setDay2(Main.dc.getDate().getDay2()+1);
+			Main.dc.getDate().setDay(Main.dc.getDate().getDay()+1);
+			Main.dc.getDate().setDayBreak(Main.dc.getDate().getDayBreak()+1);
+			Main.dc.day();
 			ChangePanel.ChangePanel(start, movie, new Main(start));
 		}
 
@@ -152,7 +112,7 @@ public class Movie extends JPanel implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-			String str = ek.goEnterAction(listStory);
+			String str = ec.goEnterAction(listStory);
 			System.out.println(str);
 			if (str.length() != 0) {
 				tf.append(str);
@@ -179,17 +139,6 @@ public class Movie extends JPanel implements KeyListener {
 
 	public void acceptGirl(int girlnumber) {
 		System.out.println("1�옒�뱶�쟻媛��땲? " + girlnumber);
-		//this.girlnumber = girlnumber;
-		
-		/*
-		Image gi = new ImageIcon(GirlImages.girlImage[girlnumber]).getImage().getScaledInstance(120, 120, 0);
-		JLabel girl = new JLabel(new ImageIcon(gi));
-		girl.setLayout(null);
-		girl.setBounds(120, 120, 50, 50);
-		*/
-		
-		
-		
 
 	}
 }

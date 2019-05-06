@@ -43,11 +43,11 @@ public class Credit2 extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			Main.day = 0;
-			Main.day2 = 0;
-			Main.dayBreak = 0;
-			Main.totalDay = 1;
-			PTextOutput.prologueNum = 0;
+			Main.dc.getDate().setDay(0);
+			Main.dc.getDate().setDay2(0);
+			Main.dc.getDate().setDayBreak(0);
+			Main.dc.getDate().setTotalDay(1);
+			Main.ec.ev.setPrologueNum(0);
 			ChangePanel.ChangePanel(start, credit2,  Start.startmain);
 		}
 

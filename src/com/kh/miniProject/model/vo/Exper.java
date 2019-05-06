@@ -7,54 +7,35 @@ import com.kh.miniProject.view.PlayerInfo;
 import com.kh.miniProject.view.StartStoryPanel;
 
 public class Exper {
-	private JFrame start;
-	RoundOpen ro = new RoundOpen();
-
-	public void plusExper(int pn) {
-		int exp;
-		if(pn==1) {
-			exp = (int)(Math.random()*20)+31;
-		}else if(pn==2){
-			exp = (int)(Math.random()*20)+21;			
-		}else {
-			exp = 0;
-		}
-		
-//		PlayerInfo pif = new PlayerInfo(start);
-//		pif.setExper(pif.getExper()+exp);
-		
-		int upexper = PlayerInfo.exper+exp;
-		
-
-		if(upexper>=100) {
-			
-			System.out.println("�젟�뾽 �씫��吏��뒗 �닚�꽌媛� �뼱�뵒易�?");
-			System.out.println("경험치 100 넘었다아");
-			
-
-			if(PlayerInfo.lev ==10) {
-				System.out.println("만렙 레벨업 없어어어어");
-				
-			}else {
-				int le = PlayerInfo.lev+1;
-				PlayerInfo.lev = le;
-				System.out.println("레벨업~~~~~!!");
-				MiniMap.girlStop = 1;
-				RoundOpen ro = new RoundOpen();
-				ro.levelUp(le);
-				PlayerInfo.exper = 0;
-				StartStoryPanel.startnum = 0;
-			}
-		}else {
-			PlayerInfo.exper = upexper;
-		}
-		
+	private int exper = 0;
+	private int lev = 1;
+	private int levBreak = 0;
+	
+	public int getExper() {
+		return exper;
 	}
-	public void exp() {
-		PlayerInfo.exper += 50;
-		plusExper(0);
-		
+	
+	public int getLev() {
+		return lev;
 	}
+	
+	public int getLevBreak() {
+		return levBreak;
+	}
+	
+	
+	public void setExper(int exper) {
+		this.exper = exper;
+	}
+	
+	public void setLev(int lev) {
+		this.lev = lev;
+	}
+	
+	public void setLevBreak(int levBreak) {
+		this.levBreak = levBreak;
+	}
+	
 
 }
 

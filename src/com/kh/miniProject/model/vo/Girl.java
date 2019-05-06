@@ -104,8 +104,9 @@ public class Girl {
 	public void setEndingNum(int endingNum) {
 		this.endingNum = endingNum;
 	}
-
 	
+
+
 	@Override
 	public String toString() {
 		return "name : " + name + " age:" + age+ " gender:" + gender

@@ -11,8 +11,6 @@ import com.kh.miniProject.controller.FileController;
 
 public class ItemPanel {
 	public static JPanel item = new JPanel();
-	public PlusImage plusImage;
-	private int x = 10;
 	private static int y = 10;
 	
 
@@ -24,7 +22,7 @@ public class ItemPanel {
 	}
 	
 	public void test(int i) {
-		new PlusImage().plusimage(i,x,y);
+		new PlusImage().plusimage(i,10,y);
 		y += 80;
 	}
 	

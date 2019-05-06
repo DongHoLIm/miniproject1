@@ -24,21 +24,6 @@ public class PlayerInfo extends JPanel{
 	private JFrame start;
 	private JPanel pinfo;
 	private JPanel playerInfoIn;
-	public static int lev = 1;
-	public static int exper=0;
-	public static int charmm=0;
-
-
-	public static int levBreak = 0;
-	public static int getLevBreak() {
-		return levBreak;
-	}
-
-	public static void setLevBreak(int levBreak) {
-		PlayerInfo.levBreak = levBreak;
-	}
-
-
 	private JLabel levelIn;
 
 	public PlayerInfo(JFrame start) {
@@ -113,7 +98,7 @@ public class PlayerInfo extends JPanel{
 
 
 
-		JLabel level = new JLabel("Level:" + lev);
+		JLabel level = new JLabel("Level:" + Main.ic.getExper().getLev());
 		level.setLocation(180,180);
 		level.setSize(110,30);
 		Font font1 =new Font("휴먼편지체", Font.BOLD, 15);
@@ -140,7 +125,7 @@ public class PlayerInfo extends JPanel{
 		pluscha.setBorder(BorderFactory.createLineBorder(Color.red,1));
 
 		JLabel redla = new JLabel(new ImageIcon(red));
-		redla.setBounds(0,0,(int)(charmm*2.7),12);
+		redla.setBounds(0,0,(int)(Main.ic.getCharm().getCharmm()*2.7),12);
 
 		pluscha.add(redla);	
 		charmPan.add(charm);
@@ -164,7 +149,7 @@ public class PlayerInfo extends JPanel{
 		plusexp.setBorder(BorderFactory.createLineBorder(Color.red,1));
 
 		JLabel redla2 = new JLabel(new ImageIcon(red));
-		redla2.setBounds(0,0,(int)(exper*2.7),12);
+		redla2.setBounds(0,0,(int)(Main.ic.getExper().getExper()*2.7),12);
 
 		plusexp.add(redla2);	
 		expPan.add(experr);
@@ -172,7 +157,7 @@ public class PlayerInfo extends JPanel{
 
 
 
-		String strlev = String.valueOf(lev).toString();
+		String strlev = String.valueOf(Main.ic.getExper().getLev()).toString();
 		levelIn = new JLabel(strlev);
 		levelIn.setBounds(210,145,100,100);
 
@@ -203,66 +188,7 @@ public class PlayerInfo extends JPanel{
 		this.add(playerInfoIn);
 		this.add(icon1);
 
-
-
-
-
-
-
-		//		main.add(this);
-		//		main.repaint();
 	}
-
-	public JFrame getStart() {
-		return start;
-	}
-
-	public void setStart(JFrame start) {
-		this.start = start;
-	}
-
-	public JPanel getPinfo() {
-		return pinfo;
-	}
-
-	public void setPinfo(JPanel pinfo) {
-		this.pinfo = pinfo;
-	}
-
-	public JPanel getPlayerInfoIn() {
-		return playerInfoIn;
-	}
-
-	public void setPlayerInfoIn(JPanel playerInfoIn) {
-		this.playerInfoIn = playerInfoIn;
-	}
-
-	public static int getLev() {
-		return lev;
-	}
-
-	public static void setLev(int lev) {
-		PlayerInfo.lev = lev;
-	}
-
-	public JLabel getLevelIn() {
-		return levelIn;
-	}
-
-	public void setLevelIn(JLabel levelIn) {
-		this.levelIn = levelIn;
-	}
-
-	public int getExper() {
-		return exper;
-	}
-
-	public void setExper(int exper) {
-		this.exper = exper;
-	}
-
-
-
 
 
 	class Change implements ActionListener{
@@ -322,7 +248,7 @@ public class PlayerInfo extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			if(Main.totalDay == 11) {
+			if(Main.dc.getDate().getTotalDay() == 11) {
 				ChangePanel.ChangePanel(start, pinfo, new Ending(start));
 			}else {
 				ChangePanel.ChangePanel(start, pinfo,new MiniMap(start));

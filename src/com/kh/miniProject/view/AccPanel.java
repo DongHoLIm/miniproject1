@@ -12,8 +12,7 @@ import com.kh.miniProject.controller.FileController;
 public class AccPanel {
 	public static JPanel acc = new JPanel();
 	public PlusImage plusImage;
-	private int x = 10;
-	private static int y = 10;
+	private int y = 10;
 	
 	public AccPanel() {
 
@@ -23,7 +22,7 @@ public class AccPanel {
 	}
 	
 	public void test(int i) {
-		new PlusImage().plusimage(i,x,y);
+		new PlusImage().plusimage(i,10,y);
 		y += 80;
 	}
 	

@@ -17,11 +17,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.kh.miniProject.controller.EnterKeyactionController;
 import com.kh.miniProject.controller.FileController;
 import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.Day;
 import com.kh.miniProject.model.vo.EnterKeyAction;
-import com.kh.miniProject.model.vo.GrilNumber;
 
 
 public class Cafe extends JPanel implements KeyListener{
@@ -31,20 +31,15 @@ public class Cafe extends JPanel implements KeyListener{
 	private JLabel icon1;
 	private File loveStory;
 	private ArrayList listStory;
-	private FileController sc = new FileController();
-	private EnterKeyAction ek = new EnterKeyAction();
+	FileController sc = new FileController();
+	EnterKeyactionController ec = new EnterKeyactionController();
 
 	public Cafe(JFrame start) {
 		this.start = start;
 		cafe = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-//		JLabel cafeBack = new JLabel(
-//				new ImageIcon(new ImageIcon("images/��ȭ��.PNG").getImage().getScaledInstance(960, 720, 0)));
-//		cafeBack.setBounds(0, 0, 960, 720);
-		//this.setBackground(Color.ORANGE);
-		
-		System.out.println("�г� ��");
+
 		
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -59,23 +54,22 @@ public class Cafe extends JPanel implements KeyListener{
 		this.add(tf);
 		String place = "cafe";
 		loveStory = sc.textOutgoTput(place);
-		listStory = ek.enterAction(loveStory);
+		listStory = ec.enterAction(loveStory);
 		
-		if(Main.day == 0) {
+		if(Main.dc.getDate().getDay() == 0) {
 			icon1 = new JLabel(new ImageIcon("images/cafe2.png"));
 	    icon1.setBounds(0, 0, 960, 720);
 	    this.add(icon1);
-		}else if(Main.day == 1) {
+		}else if(Main.dc.getDate().getDay() == 1) {
 			icon1 = new JLabel(new ImageIcon("images/cafe3.png"));
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
-		}else if(Main.day == 2) {
+		}else if(Main.dc.getDate().getDay() == 2) {
 			icon1 = new JLabel(new ImageIcon("images/cafe4.png"));
 		    icon1.setBounds(0, 0, 960, 720);
 		    this.add(icon1);
 		}
-		System.out.println("�̹���? " + GrilNumber.grilnumber);
-		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[GrilNumber.grilnumber]));
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage[Main.gc.girlnum.getGirlnumber()]));
 		girl.setBounds(110, 5, 700, 550);
 		icon1.add(girl);
 		
@@ -103,10 +97,10 @@ public class Cafe extends JPanel implements KeyListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			Main.day2++;
-			Main.day++;
-			Main.dayBreak++;
-			new Day().day();
+			Main.dc.getDate().setDay2(Main.dc.getDate().getDay2()+1);
+			Main.dc.getDate().setDay(Main.dc.getDate().getDay()+1);
+			Main.dc.getDate().setDayBreak(Main.dc.getDate().getDayBreak()+1);
+			Main.dc.day();
 			ChangePanel.ChangePanel(start, cafe, new Main(start));
 		}
 
@@ -115,7 +109,7 @@ public class Cafe extends JPanel implements KeyListener{
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
-			String str = ek.goEnterAction(listStory);
+			String str = ec.goEnterAction(listStory);
 			System.out.println(str);
 			if(str.length() != 0) {
 				tf.append(str);

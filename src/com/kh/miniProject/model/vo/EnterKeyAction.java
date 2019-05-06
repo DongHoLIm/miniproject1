@@ -8,94 +8,33 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class EnterKeyAction {
-	private ArrayList al;
-	private ArrayList storyarr;
+	private ArrayList al = new ArrayList();
+	private ArrayList storyarr = new ArrayList();
 	private int value = 0;
 	
-	public ArrayList enterAction(File loveStory) {
-		al = new ArrayList();
-		String[] str = new String[20];
-		
-		try {
-			BufferedReader br = new BufferedReader(new FileReader(loveStory));
-			for(int i = 0; i < str.length; i++) {
-				str[i] = br.readLine();
-			}
-			for(int i = 0; i < str.length; i++) {
-				if(str[i] != null) {
-					al.add(str[i]);
-				}else {
-					break;
-				}
-			}
-			return al;
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return null;
+	public ArrayList getAl() {
+		return al;
 	}
 	
-	public String goEnterAction(ArrayList al) {
-		
-		for(int i = 0; i < al.size(); i++) {
-			if(i == value) {
-				if(value <= al.size()) {
-					String a = al.get(i).toString();
-					value++;
-					return a;
-				}else {
-					break;
-				}
-			}
-		}
-		return null;
+	public ArrayList getStoryarr() {
+		return storyarr;
 	}
 	
-	public ArrayList startEnterAction(File startStory) {
-		storyarr = new ArrayList();
-		String[] str = new String[20];
-		
-		try {
-			BufferedReader br = new BufferedReader(new FileReader(startStory));
-			for(int i = 0; i < str.length; i++) {
-				str[i] = br.readLine();
-			}
-			for(int i = 0; i < str.length; i++) {
-				if(str[i] != null) {
-					storyarr.add(str[i]);
-				}else {
-					break;
-				}
-			}
-			return storyarr;
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return null;
+	public int getValue() {
+		return value;
 	}
 	
-	public String startStory(ArrayList storyarr) {
-		
-		for(int i = 0; i < storyarr.size(); i++) {
-			if(i == value) {
-				if(value <= storyarr.size()) {
-					String a = storyarr.get(i).toString();
-					value++;
-					return a;
-				}else {
-					break;
-				}
-			}
-		}
-		return null;
+	public void setAl(ArrayList al) {
+		this.al = al;
 	}
-
+	
+	public void setStoryarr(ArrayList storyarr) {
+		this.storyarr = storyarr;
+	}
+	
+	public void setValue(int value) {
+		this.value = value;
+	}
+	
+	
 }

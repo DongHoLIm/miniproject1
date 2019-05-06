@@ -20,11 +20,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.kh.miniProject.controller.EnterKeyactionController;
 import com.kh.miniProject.controller.FileController;
 import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.dao.PTextOutput;
 import com.kh.miniProject.model.vo.EnterKeyAction;
-import com.kh.miniProject.model.vo.EpilogueSort;
 import com.kh.miniProject.model.vo.Girl;
 import com.kh.miniProject.model.vo.RoundOpen;
 import com.kh.miniProject.view.MiniMap.ChangeMain;
@@ -33,14 +33,11 @@ public class Epilogue extends JPanel implements KeyListener {
 	private JFrame start;
 	private JPanel Epilogue;
 	private JTextArea tf;
-	private FileController sc = new FileController();
 	private File loveStory;
-	private EnterKeyAction ek = new EnterKeyAction();
 	private ArrayList listStory;
 	private Clip clip2;
-	RoundOpen ro = new RoundOpen();
-	Girl gl = new Girl();
-	public static int talkEnding = 0;
+	FileController sc = new FileController();
+	EnterKeyactionController ec = new EnterKeyactionController();
 	JLabel icon1 = new JLabel();
 	JLabel girl = new JLabel();
 	
@@ -76,14 +73,13 @@ public class Epilogue extends JPanel implements KeyListener {
 
 		
 		
-		EpilogueSort es = new EpilogueSort(PTextOutput.epilogueNum);
+		Main.ec.epilogueSort();
 		
-
 		String place = "Eplilogue";
 		loveStory = sc.EtextOutgoTput(place);
-		listStory = ek.enterAction(loveStory);
+		listStory = ec.enterAction(loveStory);
 
-		if (PTextOutput.epilogueNum != 2) {
+		if (Main.ec.ev.getEpilogueNum() != 2) {
 
 			icon1 = new JLabel(new ImageIcon("images/res3.png"));
 			icon1.setBounds(0, 0, 960, 720);
@@ -92,15 +88,13 @@ public class Epilogue extends JPanel implements KeyListener {
 			icon1.setBounds(0, 0, 960, 720);
 		}
 
-		if (PTextOutput.epilogueNum != 2) {
+		if (Main.ec.ev.getEpilogueNum() != 2) {
 
-			System.out.println("�젙�젹 �옒 �릱�땲?" + RoundOpen.glist);
 
-			girl = new JLabel(new ImageIcon(GirlImages.girlImage[RoundOpen.glist.get(0).getEndingNum()]));
+			girl = new JLabel(new ImageIcon(GirlImages.girlImage[Main.oc.ro.getGlist().get(0).getEndingNum()]));
 			girl.setBounds(110, 5, 700, 550);
 			icon1.add(girl);
-			System.out.println("�읇�띁" + RoundOpen.glist.get(0).getGlovePer());
-			talkEnding += 1;
+			Main.ec.ev.setTalkEnding(Main.ec.ev.getTalkEnding()+1);
 		}
 		JButton stop = new JButton(new ImageIcon("images/img6"));
 		stop.setLocation(850, 50);
@@ -123,40 +117,37 @@ public class Epilogue extends JPanel implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 
-			String str = ek.goEnterAction(listStory);
+			String str = ec.goEnterAction(listStory);
 			System.out.println(str);
 			if (str != null) {
 				tf.append(str);
 				// value++;
-			} else if (str == null && talkEnding == 3){
+			} else if (str == null && Main.ec.ev.getTalkEnding() == 3){
 				clip2.stop();
 				ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
-			}else if (str == null && talkEnding == 4){
+			}else if (str == null && Main.ec.ev.getTalkEnding() == 4){
 				clip2.stop();
 				ChangePanel.ChangePanel(start, Epilogue, new Credit2(start));
 			}
 			else {
-				if(talkEnding == 1) {
+				if(Main.ec.ev.getTalkEnding() == 1) {
 					
 					icon1.remove(girl);
-					JLabel girl2 = new JLabel(new ImageIcon(GirlImages.girlImage2[RoundOpen.glist.get(0).getEndingNum()]));
+					JLabel girl2 = new JLabel(new ImageIcon(GirlImages.girlImage2[Main.oc.ro.getGlist().get(0).getEndingNum()]));
 					girl2.setBounds(110, 5, 700, 550);
 					icon1.add(girl2);
 					this.repaint();
-					talkEnding += 2;
-					//ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
-				}else if(talkEnding == 2) {
+					Main.ec.ev.setTalkEnding(Main.ec.ev.getTalkEnding()+2);
+				}else if(Main.ec.ev.getTalkEnding() == 2) {
 					icon1.remove(girl);
-					JLabel girl2 = new JLabel(new ImageIcon(GirlImages.girlImage3[RoundOpen.glist.get(0).getEndingNum()]));
+					JLabel girl2 = new JLabel(new ImageIcon(GirlImages.girlImage3[Main.oc.ro.getGlist().get(0).getEndingNum()]));
 					girl2.setBounds(110, 5, 700, 550);
 					icon1.add(girl2);
 					this.repaint();
-					talkEnding += 1;
-					//ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
-				} else if(talkEnding == 0) {
+					Main.ec.ev.setTalkEnding(Main.ec.ev.getTalkEnding()+1);
+				} else if(Main.ec.ev.getTalkEnding() == 0) {
 					
-					talkEnding += 4;
-					//ChangePanel.ChangePanel(start, Epilogue, new Credit(start));
+					Main.ec.ev.setTalkEnding(Main.ec.ev.getTalkEnding()+4);
 				} 
 				
 

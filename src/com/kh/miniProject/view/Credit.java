@@ -18,7 +18,6 @@ import com.kh.miniProject.model.dao.PTextOutput;
 
 public class Credit  extends JPanel {
 	private JFrame start;
-
 	private JPanel credit;
 	private JLabel icon1;
 	private Clip clip;
@@ -28,12 +27,8 @@ public class Credit  extends JPanel {
 		credit = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-//			JLabel EndingBack = new JLabel(
-//					new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
-//			EndingBack.setBounds(0, 0, 960, 720);
-		
-		System.out.println("숫자 뭐임 ?"+PTextOutput.epilogueNum);
-		if(PTextOutput.epilogueNum==1) {
+
+		if(Main.ec.ev.getEpilogueNum()==1) {
 			try {
 	             
 	             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/success.wav"));
@@ -60,7 +55,7 @@ public class Credit  extends JPanel {
 			this.add(icon2);
 			this.add(icon1);
 		}
-		if(PTextOutput.epilogueNum==0) {
+		if(Main.ec.ev.getEpilogueNum()==0) {
 			try {
 	             
 	             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/failure.wav"));
@@ -76,7 +71,6 @@ public class Credit  extends JPanel {
 
 	         }
 			icon1 = new JLabel(new ImageIcon("images/failure.png"));
-		  //  icon1.setSize(960 , 720);
 			icon1.setBounds(50, -80,960, 720);
 			this.add(icon1);
 		}

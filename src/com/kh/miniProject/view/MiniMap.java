@@ -21,8 +21,6 @@ import javax.swing.JPanel;
 
 import com.kh.miniProject.controller.FileController;
 import com.kh.miniProject.model.dao.GirlImages;
-import com.kh.miniProject.model.vo.GirlImageOut;
-import com.kh.miniProject.model.vo.GrilNumber;
 import com.kh.miniProject.model.vo.RandomPlace;
 
 
@@ -30,71 +28,29 @@ public class MiniMap extends JPanel {
 	private JFrame start;
 	private JPanel MiniMap;
 	private JPanel main;
-	public Map hmap;
-	GirlImages gi = new GirlImages();
-	public static int te[] ;
-	public static int temp[] ;
-	public static int temp2[] = new int[5];
-	public static int temp3[] = new int[5];
-	public static int[] girlImages = new int[5];
-	RandomPlace rp = new RandomPlace();
-	FileController fc = new FileController();
-	private JPanel place = new JPanel();
-	public static int[] intiarr;
-	//StartStory ss = new StartStory();
-	public static GrilNumber gn = new GrilNumber();
+	private Map hmap;
 	private int girlresultnumber;
-	private int[] temparr;
-	public static int[] grilarr;
-	public static int girlStop = 1;
-	private static String[] mmgi;
-	private String[] reGirl;
+	JPanel place = new JPanel();
+	FileController fc = new FileController();
+	GirlImages gi = new GirlImages();
 	public static int BGM;
+	public static int temp[];
+	public static String[] mmgi;
 	public static Clip clip;
+	
 	public MiniMap(JFrame start) {
-		
-		if(PlayerInfo.lev == 1) {
-			temparr = new int[1];
-		}else if(PlayerInfo.lev ==2) {
-			temparr = new int[2];
-		}else if(PlayerInfo.lev ==3) {
-			temparr =new int[3];
-		}else if(PlayerInfo.lev ==4) {
-			temparr =new int[4];
-		}else if(PlayerInfo.lev>=5) {
-			temparr =new int[5];
-		}
-		if(PlayerInfo.lev == 1) {
-			grilarr = new int[1];
-		}else if(PlayerInfo.lev ==2) {
-			grilarr = new int[2];
-		}else if(PlayerInfo.lev ==3) {
-			grilarr =new int[3];
-		}else if(PlayerInfo.lev ==4) {
-			grilarr =new int[4];
-		}else if(PlayerInfo.lev>=5) {
-			grilarr =new int[5];
-		}
-		// RandomPlaceManager rpm = new RandomPlaceManager(null);
+
 		this.start = start;
 		hmap = new HashMap();
-		//main = this;
+
 		MiniMap = this;
 		this.setBounds(0, 0, 960, 720);
-		//this.setBackground(Color.gray);
+
 		this.setSize(960, 720);
 
 		JLabel icon1 = new JLabel(new ImageIcon("images/minimab.png"));
 	    icon1.setBounds(0, 0, 960, 720);
 
-		// 배경 Panel 생성후 컨텐츠페인으로 지정
-		// MiniMap = new JPanel() {
-		// public void paintComponent(Graphics g) {
-		// g.drawImage(icon.getImage(), 0, 0,960,720, null);
-		// setOpaque(false);
-		// super.paintComponent(g);
-		// }
-		// };
 
 		this.setLayout(null);
 		
@@ -146,29 +102,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i] =GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 1) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 1) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new Movie(start));
 			
 		}
@@ -179,29 +119,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 3) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 3) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new Park(start));
 		}
 
@@ -211,29 +135,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 2) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 2) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new Cafe(start));
 		}
 
@@ -243,29 +151,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 4) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 4) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new Beach(start));
 		}
 
@@ -275,29 +167,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 5) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 5) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new Restraurant(start));
 		}
 
@@ -307,29 +183,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 6) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 6) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new HotPlace(start));
 		}
 
@@ -339,29 +199,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 7) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 7) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new SingingRoom(start));
 		}
 
@@ -371,29 +215,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 8) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 8) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new Pub(start));
 		}
 
@@ -403,29 +231,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 9) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 9) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new FlowerShop(start));
 		}
 
@@ -435,30 +247,13 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-//			for(int i = 0;i <temp.length;i++) {
-//				if(temp[i]!=0) {
-//					temparr[i]=temp[i];
-//				}
-//			}
-//			for(int i =0;i <grilarr.length;i++) {
-//				if(grilarr[i]!=0) {
-//					grilarr[i]=GirlImageOut.iarr[i];
-//				}
-//			}
-//	       
-//			for(int i = 0; i < temparr.length; i++) {
-//				if(temparr[i] == 10) {
-//					girlresultnumber = grilarr[i];
-//				}else if(temp[i] == 0) {
-//					break;
-//				}
-//			}
+
 			for(int i = 0; i < temp.length; i++) {
 				if(temp[i] == 10) {
-					girlresultnumber = GirlImageOut.iarr[i];
+					girlresultnumber = Main.mc.iarr[i];;
 				}
 			}
-			gn.grilNumberResult(girlresultnumber);
+			Main.gc.grilNumberResult(girlresultnumber);
 			ChangePanel.ChangePanel(start, MiniMap, new ThemePark(start));
 		}
 
@@ -660,56 +455,24 @@ public class MiniMap extends JPanel {
 
 	public Map CreatPlace() {
 		
-		if(girlStop == 1) {
-			te = new int[rp.getRandom2().length];
-			for (int c = 0; c < rp.getRandom2().length; c++) {
-				te[c] = rp.getRandom2()[c];
+		if(Main.rc.getRp().getGilrStop() == 1) {
+			Main.rc.randomPlace();
+			temp = new int[Main.rc.getRp().getRandom2().length];
+			for (int c = 0; c < temp.length; c++) {
+				temp[c] = Main.rc.getRp().getRandom2()[c];
+				System.out.println("아오ㄹㅇ짜증나 " + temp[c]);
 				
 			}	
 		}
-		if(girlStop == 1) {
-			temp = new int[te.length];
-			for(int f = 0; f < te.length; f++) {
-				temp[f] = te[f];
-			}			
-		}
-		System.out.println("@@@@비교할값 장소@@@@" + temp.length);
+		if (Main.dc.getDate().getDayBreak() == 1 && Main.dc.getDate().getTotalDay() != 11) {
+			Main.dc.getDate().setDayBreak(2);
 
-//		for (int f = 0; f < temp.length; f++) {
-//			if (Main.day == 0 && Main.dayBreak == 1 && Main.totalDay != 11) {
-//				temp[f] += te[f];
-//
-//				System.out.println("호출됨");
-//			}
-			// else if (Main.day == 1 && Main.dayBreak == 4 && Main.totalDay != 11) {
-			//
-			// temp2[f] += te[f];
-			//
-			// } else if (Main.day == 2 && Main.dayBreak == 7 && Main.totalDay != 11) {
-			//
-			// temp3[f] += te[f];
-			//
-			// }
+		} else if (Main.dc.getDate().getDayBreak() == 4 && Main.dc.getDate().getTotalDay() != 11) {
+			Main.dc.getDate().setDayBreak(5);
 
-		
-		System.out.println("day" + Main.day);
-		System.out.println("db" + Main.dayBreak);
-		System.out.println("total" + Main.totalDay);
-		if (Main.dayBreak == 1 && Main.totalDay != 11) {
+		} else if (Main.dc.getDate().getDayBreak() == 7 && Main.dc.getDate().getTotalDay() != 11) {
+			Main.dc.getDate().setDayBreak(8);
 
-			Main.dayBreak = 2;
-			System.out.println("day2" + Main.day);
-			System.out.println("db2" + Main.dayBreak);
-		} else if (Main.dayBreak == 4 && Main.totalDay != 11) {
-
-			Main.dayBreak = 5;
-			System.out.println("day3" + Main.day);
-			System.out.println("db3" + Main.dayBreak);
-		} else if (Main.dayBreak == 7 && Main.totalDay != 11) {
-
-			Main.dayBreak = 8;
-			System.out.println("day4" + Main.day);
-			System.out.println("db4" + Main.dayBreak);
 		}
 
 		return hmap;
@@ -821,427 +584,43 @@ public class MiniMap extends JPanel {
 				y += 60;
 			}
 		}
-//		for (int b = 0; b < temp.length; b++) {
-//			System.out.println("길이길이 : " + temp.length);
-//			System.out.println("호출됨 2");
-//			if (Main.dayBreak == 2 && Main.totalDay != 11) {
-//				if (temp[b] == 1) {
-//					hmap.putAll(Movie());
-//					JLabel label = new JLabel("영화관");
-//					label.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label.setFont(font);
-//					place.add(label);
-//					place.repaint();
-//					y += 30;
-//				} else if (temp[b] == 2) {
-//					hmap.putAll(Cafe());
-//					JLabel label2 = new JLabel("카페");
-//					label2.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label2.setFont(font);
-//					place.add(label2);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 3) {
-//					hmap.putAll(Park());
-//					JLabel label3 = new JLabel("공원");
-//					label3.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label3.setFont(font);
-//					place.add(label3);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 4) {
-//					hmap.putAll(Beach());
-//					JLabel label4 = new JLabel("바다");
-//					label4.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label4.setFont(font);
-//					place.add(label4);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 5) {
-//					hmap.putAll(Restaurant());
-//					JLabel label5 = new JLabel("식당");
-//					label5.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label5.setFont(font);
-//					place.add(label5);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 6) {
-//					hmap.putAll(HotPlace());
-//					JLabel label6 = new JLabel("번화가");
-//					label6.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label6.setFont(font);
-//					place.add(label6);
-//					place.repaint();
-//					y += 50;
-//				}
-//
-//				else if (temp[b] == 7) {
-//					hmap.putAll(SiningRoom());
-//					JLabel label7 = new JLabel("노래방");
-//					label7.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label7.setFont(font);
-//					place.add(label7);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 8) {
-//					hmap.putAll(Pub());
-//					JLabel label8 = new JLabel("술집");
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label8.setFont(font);
-//					label8.setBounds(10, y, 50, 50);
-//					place.add(label8);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 9) {
-//					hmap.putAll(FlowerShop());
-//					JLabel label9 = new JLabel("꽃집");
-//					label9.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label9.setFont(font);
-//					place.add(label9);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 10) {
-//					hmap.putAll(ThemePark());
-//					JLabel label10 = new JLabel("놀이공원");
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label10.setFont(font);
-//					label10.setBounds(10, y, 50, 50);
-//					place.add(label10);
-//					place.repaint();
-//					y += 50;
-//				}
-//
-//			} else if (Main.dayBreak == 5 && Main.totalDay != 11) {
-//				if (temp[b] == 1) {
-//					hmap.putAll(Movie());
-//					JLabel label = new JLabel("영화관");
-//					label.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label.setFont(font);
-//					place.add(label);
-//					place.repaint();
-//					y += 30;
-//				} else if (temp[b] == 2) {
-//					hmap.putAll(Cafe());
-//					JLabel label2 = new JLabel("카페");
-//					label2.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label2.setFont(font);
-//					place.add(label2);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 3) {
-//					hmap.putAll(Park());
-//					JLabel label3 = new JLabel("공원");
-//					label3.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label3.setFont(font);
-//					place.add(label3);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 4) {
-//					hmap.putAll(Beach());
-//					JLabel label4 = new JLabel("바다");
-//					label4.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label4.setFont(font);
-//					place.add(label4);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 5) {
-//					hmap.putAll(Restaurant());
-//					JLabel label5 = new JLabel("식당");
-//					label5.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label5.setFont(font);
-//					place.add(label5);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 6) {
-//					hmap.putAll(HotPlace());
-//					JLabel label6 = new JLabel("번화가");
-//					label6.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label6.setFont(font);
-//					place.add(label6);
-//					place.repaint();
-//					y += 50;
-//				}
-//
-//				else if (temp[b] == 7) {
-//					hmap.putAll(SiningRoom());
-//					JLabel label7 = new JLabel("노래방");
-//					label7.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label7.setFont(font);
-//					place.add(label7);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 8) {
-//					hmap.putAll(Pub());
-//					JLabel label8 = new JLabel("술집");
-//					label8.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label8.setFont(font);
-//					place.add(label8);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 9) {
-//					hmap.putAll(FlowerShop());
-//					JLabel label9 = new JLabel("꽃집");
-//					label9.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label9.setFont(font);
-//					place.add(label9);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 10) {
-//					hmap.putAll(ThemePark());
-//					JLabel label10 = new JLabel("놀이공원");
-//					label10.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label10.setFont(font);
-//					place.add(label10);
-//					place.repaint();
-//					y += 50;
-//				}
-//			} else if (Main.dayBreak == 8 && Main.totalDay != 11) {
-//				if (temp[b] == 1) {
-//					hmap.putAll(Movie());
-//					JLabel label = new JLabel("영화관");
-//					label.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label.setFont(font);
-//					place.add(label);
-//					place.repaint();
-//					y += 30;
-//				} else if (temp[b] == 2) {
-//					hmap.putAll(Cafe());
-//					JLabel label2 = new JLabel("카페");
-//					label2.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label2.setFont(font);
-//					place.add(label2);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 3) {
-//					hmap.putAll(Park());
-//					JLabel label3 = new JLabel("공원");
-//					label3.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label3.setFont(font);
-//					place.add(label3);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 4) {
-//					hmap.putAll(Beach());
-//					JLabel label4 = new JLabel("바다");
-//					label4.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label4.setFont(font);
-//					place.add(label4);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 5) {
-//					hmap.putAll(Restaurant());
-//					JLabel label5 = new JLabel("식당");
-//					label5.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label5.setFont(font);
-//					place.add(label5);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 6) {
-//					hmap.putAll(HotPlace());
-//					JLabel label6 = new JLabel("번화가");
-//					label6.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label6.setFont(font);
-//					place.add(label6);
-//					place.repaint();
-//					y += 50;
-//				}
-//
-//				else if (temp[b] == 7) {
-//					hmap.putAll(SiningRoom());
-//					JLabel label7 = new JLabel("노래방");
-//					label7.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label7.setFont(font);
-//					place.add(label7);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 8) {
-//					hmap.putAll(Pub());
-//					JLabel label8 = new JLabel("술집");
-//					label8.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label8.setFont(font);
-//					place.add(label8);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 9) {
-//					hmap.putAll(FlowerShop());
-//					JLabel label9 = new JLabel("꽃집");
-//					label9.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label9.setFont(font);
-//					place.add(label9);
-//					place.repaint();
-//					y += 50;
-//				} else if (temp[b] == 10) {
-//					hmap.putAll(ThemePark());
-//					JLabel label10 = new JLabel("놀이공원");
-//					label10.setBounds(10, y, 50, 50);
-//					Font font=new Font("한컴 백제 M", Font.PLAIN, 15);
-//					label10.setFont(font);
-//					place.add(label10);
-//					place.repaint();
-//					y += 50;
-//				}
-//			}
-//		}
-		intiarr = new int[temp.length];
-		for(int i = 0; i < temp.length; i++) {
-			intiarr[i] = temp[i];
-			System.out.println("a" + temp[i]);
-			System.out.println("b" +intiarr[i]);
-		}
-//		ss.startStory();
-//		for(int i = 0; i < temp.length; i++) {
-//			
-//			if(i==0) {
-//				gn.grilNumberResult(GirlImageOut.iarr[0]);
-//				break;
-//			}
-//		}
-//		gn.grilNumberResult(StartStory.grilnumber);
 		
 		return hmap;
 	}
 	
 	public void plusGirlImage() {
 		
-		int levResult = PlayerInfo.lev;
-		System.out.println("레벨값 : " + levResult);
-		if(girlStop == 1) {
-			mmgi = fc.goGirlImages(levResult);
-			System.out.println("배열길이 : " + mmgi.length);
-			System.out.println("무슨값 ? : " + mmgi[0]);
+
+		if(Main.rc.getRp().getGilrStop() == 1) {
+			mmgi = fc.goGirlImages(Main.ic.getExper().getLev());
 			Image[] gImage = new Image[mmgi.length];
-			System.out.println("이미지 배열길이 : " + gImage.length);
 			JLabel[] gLabel = new JLabel[mmgi.length];
-			System.out.println("라벨 배열길이 : " + gLabel.length);
 			int sgoi = 10;
 			for(int g = 0 ; g < gImage.length ; g++) {
 				gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
-				System.out.println("무슨값이 들어갔을까? " + gImage[g]);
 				JLabel la = new JLabel();
 				la.setIcon(new ImageIcon(gImage[g]));
-				System.out.println("들어갔나? " + la);
 				la.setBounds(70 , sgoi , 50 , 50);
 				place.add(la);
-				sgoi +=60;	
-				girlStop++;
+				sgoi +=60;
+				Main.rc.getRp().setGilrStop(Main.rc.getRp().getGilrStop()+1);
 			}
-		}else if(girlStop > 1) {
-			System.out.println("배열길이 : " + mmgi.length);
-			System.out.println("무슨값 ? : " + mmgi[0]);
+		}else if(Main.rc.getRp().getGilrStop() > 1) {
 			Image[] gImage = new Image[mmgi.length];
-			System.out.println("이미지 배열길이 : " + gImage.length);
 			JLabel[] gLabel = new JLabel[mmgi.length];
-			System.out.println("라벨 배열길이 : " + gLabel.length);
 			int sgoi = 10;
 			for(int g = 0 ; g < gImage.length ; g++) {
 				gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
-				System.out.println("무슨값이 들어갔을까? " + gImage[g]);
 				JLabel la = new JLabel();
 				la.setIcon(new ImageIcon(gImage[g]));
-				System.out.println("들어갔나? " + la);
 				la.setBounds(70 , sgoi , 50 , 50);
 				place.add(la);
 				sgoi +=60;		
 			}
 		}
-		System.out.println("@@@@비교할값 여자@@@@" + mmgi.length);
 
 	}
 
 }
-	
-//	public void startStory() {
-//		System.out.println("왜 널값? " + intiarr.length);
-//		for(int i = 0; i < intiarr.length; i++) {
-//			System.out.println("intiarr의 값은 과연? " + intiarr[i]);
-//		}
-//		for(int i = 0; i < GirlImageOut.iarr.length; i++) {
-//			System.out.println("iarr의 값은 과연? " + GirlImageOut.iarr[i]);
-//		}
-//		
-//		for(int i = 0; i < intiarr.length; i++) {
-//			for(int j = 0; j < GirlImageOut.iarr.length; j++) {
-//				
-//				if(intiarr[i] == 1) {
-//					if(i==j) {
-//						place1.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//				}else if(intiarr[i] == 2) {
-//					if(i==j) {
-//						place2.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}else if(intiarr[i] == 3) {
-//					if(i==j) {
-//						place3.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}else if(intiarr[i] == 4) {
-//					if(i==j) {
-//						place4.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}else if(intiarr[i] == 5) {
-//					if(i==j) {
-//						place5.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}else if(intiarr[i] == 6) {
-//					if(i==j) {
-//						place6.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}else if(intiarr[i] == 7) {
-//					if(i==j) {
-//						place7.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}else if(intiarr[i] == 8) {
-//					if(i==j) {
-//						place8.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}else if(intiarr[i] == 9) {
-//					if(i==j) {
-//						place9.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}else if(intiarr[i] == 10) {
-//					if(i==j) {
-//						place10.acceptGirl(GirlImageOut.iarr[j]);
-//					}
-//					
-//				}
-//			}
-//			
-//		}
-//	}
 
 
