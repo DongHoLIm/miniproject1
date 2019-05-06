@@ -33,16 +33,27 @@ public class AffRandom extends JPanel{
 		aff = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-		affArea.setBounds(50, 500, 800, 50);
+		affArea.setBounds(50, 50, 800, 50);
 		this.add(affArea);
 		
 		affBnt = new JButton[Main.ic.getExper().getLev()];
+		Image[] namebut = new Image[10];
+		namebut[0] = new ImageIcon("images/1but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[1] = new ImageIcon("images/2but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[2] = new ImageIcon("images/3but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[3] = new ImageIcon("images/4but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[4] = new ImageIcon("images/5but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[5] = new ImageIcon("images/6but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[6] = new ImageIcon("images/7but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[7] = new ImageIcon("images/8but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[8] = new ImageIcon("images/9but.png").getImage().getScaledInstance(120, 80, 0);
+		namebut[9] = new ImageIcon("images/10but.png").getImage().getScaledInstance(120, 80, 0);
 		if(affBnt.length < 5) {
 	         for(int i = 0; i < affBnt.length; i++) {
 	        	 j = i;
 	            System.out.println("쩔횒�횑횄횪째짧" + butY);
-	            affBnt[i] = new JButton(Main.oc.ro.getGlist().get(i).getName());
-	            affBnt[i].setBounds(50, butY, 80, 80);
+	            affBnt[i] = new JButton(new ImageIcon(namebut[i]));
+	            affBnt[i].setBounds(50, butY, 120, 80);
 	            butY += 100;
 	            this.add(affBnt[i]);
 	            this.repaint();
@@ -51,15 +62,15 @@ public class AffRandom extends JPanel{
 	         for(int i = 0; i < affBnt.length; i++) {
 	            if(i < 5) {
 	            	j = i;
-	               affBnt[i] = new JButton(Main.oc.ro.getGlist().get(i).getName());
-	               affBnt[i].setBounds(50, butY, 80, 80);
+	               affBnt[i] = new JButton(new ImageIcon(namebut[i]));
+	               affBnt[i].setBounds(50, butY, 120, 80);
 	               butY += 100;
 	               this.add(affBnt[i]);
 	               this.repaint();
 	            }else {
 	            	j = i;
-	               affBnt[i] = new JButton(Main.oc.ro.getGlist().get(i).getName());
-	               affBnt[i].setBounds(450, butY2, 80, 80);
+	               affBnt[i] = new JButton(new ImageIcon(namebut[i]));
+	               affBnt[i].setBounds(450, butY2, 120, 80);
 	               butY2 += 100;
 	               this.add(affBnt[i]);
 	               this.repaint();
