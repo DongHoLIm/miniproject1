@@ -75,7 +75,6 @@ public class SingingRoom extends JPanel implements KeyListener{
 	}
 
 	public void SingingRoomInit() {
-		System.out.println("singingRoom �궡遺� �씤�꽣");
 		singingRoom.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -104,12 +103,10 @@ public class SingingRoom extends JPanel implements KeyListener{
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
 			String str = ec.goEnterAction(listStory);
-			System.out.println(str);
 			if(str.length() != 0) {
 				tf.append(str);
 				//value++;
 			}else{
-				System.out.println("AA");
 				ChangePanel.ChangePanel(start, singingRoom, new SelectPanel(start,loveStory));
 			}
 		}
@@ -129,6 +126,5 @@ public class SingingRoom extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("7�옒�뱶�쟻媛��땲? " + girlnumber);
 	}
 }

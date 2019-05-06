@@ -83,7 +83,6 @@ public class Movie extends JPanel implements KeyListener {
 	}
 
 	public void movieInit() {
-		System.out.println("movie �궡遺� �씤�꽣");
 		movie.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(890, 20);
@@ -113,12 +112,10 @@ public class Movie extends JPanel implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			String str = ec.goEnterAction(listStory);
-			System.out.println(str);
 			if (str.length() != 0) {
 				tf.append(str);
 				// value++;
 			} else {
-				System.out.println("AA");
 				ChangePanel.ChangePanel(start, movie, new SelectPanel(start, loveStory));
 			}
 		}
@@ -138,7 +135,6 @@ public class Movie extends JPanel implements KeyListener {
 	}
 
 	public void acceptGirl(int girlnumber) {
-		System.out.println("1�옒�뱶�쟻媛��땲? " + girlnumber);
 
 	}
 }

@@ -29,7 +29,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult2.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult2[i] = image[iarr[i]];
 	         }
 	         return imageResult2;
@@ -46,7 +45,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult3.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult3[i] = image[iarr[i]];
 	         }
 	         return imageResult3;
@@ -63,7 +61,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult4.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult4[i] = image[iarr[i]];
 	         }
 	         return imageResult4;
@@ -80,7 +77,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult[i] = image[iarr[i]];
 	         }
 	         return imageResult;
@@ -97,7 +93,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult[i] = image[iarr[i]];
 	         }
 	         return imageResult;
@@ -114,7 +109,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult[i] = image[iarr[i]];
 	         }
 	         return imageResult;
@@ -131,7 +125,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult[i] = image[iarr[i]];
 	         }
 	         return imageResult;
@@ -148,7 +141,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult[i] = image[iarr[i]];
 	         }
 	         return imageResult;
@@ -165,7 +157,6 @@ public class GirlImageController {
 	            }
 	         }
 	         for(int i = 0; i < imageResult.length; i++) {
-	            System.out.println(iarr[i]);
 	            imageResult[i] = image[iarr[i]];
 	         }
 	         return imageResult;

@@ -147,12 +147,10 @@ public class StartStoryPanel extends JPanel implements KeyListener{
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
 			String str = ec.startStory(startArr);
-			System.out.println(str);
 			if(str.length() != 0) {
 				startArea.append(str);
 				//value++;
 			}else{
-				System.out.println("AA");
 				ChangePanel.ChangePanel(start, StartStoryPanel, new Main(start));
 			}
 		}

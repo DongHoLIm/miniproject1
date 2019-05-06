@@ -22,8 +22,6 @@ public class RoundOpenController {
 		case 10 :roundUp10(); break;
 		}
 
-		System.out.println(ro.getClass());
-		System.out.println("府胶飘历厘犬牢");
 		
 	}
 	
@@ -37,9 +35,7 @@ public class RoundOpenController {
 		g1.setImage("images/0nomal.png");
 		g1.setEndingNum(0);
 		ro.getGlist().add(g1);
-		System.out.println("g1积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -54,9 +50,7 @@ public class RoundOpenController {
 		g2.setEndingNum(1);
 
 		ro.getGlist().add(g2);
-		System.out.println("g2积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -70,9 +64,7 @@ public class RoundOpenController {
 		g3.setImage("images/2nomal.png");
 		g3.setEndingNum(2);
 		ro.getGlist().add(g3);
-		System.out.println("g3积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -86,9 +78,7 @@ public class RoundOpenController {
 		g4.setImage("images/3nomal.png");
 		g4.setEndingNum(3);
 		ro.getGlist().add(g4);
-		System.out.println("g4积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -102,9 +92,7 @@ public class RoundOpenController {
 		g5.setImage("images/4nomal.png");
 		g5.setEndingNum(4);
 		ro.getGlist().add(g5);
-		System.out.println("g5积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -118,9 +106,7 @@ public class RoundOpenController {
 		g6.setImage("images/5nomal.png");
 		g6.setEndingNum(5);
 		ro.getGlist().add(g6);
-		System.out.println("g6积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -134,9 +120,7 @@ public class RoundOpenController {
 		g7.setImage("images/6nomal.png");
 		g7.setEndingNum(6);
 		ro.getGlist().add(g7);
-		System.out.println("g7积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -150,9 +134,7 @@ public class RoundOpenController {
 		g8.setImage("images/7nomal.png");
 		g8.setEndingNum(7);
 		ro.getGlist().add(g8);
-		System.out.println("g8积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -166,9 +148,7 @@ public class RoundOpenController {
 		g9.setImage("images/8nomal.png");
 		g9.setEndingNum(8);
 		ro.getGlist().add(g9);
-		System.out.println("g9积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 
@@ -182,9 +162,7 @@ public class RoundOpenController {
 		g10.setImage("images/9nomal.png");
 		g10.setEndingNum(9);
 		ro.getGlist().add(g10);
-		System.out.println("g10积己");
 
-		System.out.println(ro.getGlist());
 
 	}
 	

@@ -27,14 +27,12 @@ public class Ending extends JPanel {
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 		this.setBackground(Color.BLACK);
-		System.out.println("마지막 그녀");
 
 		EndingInit();
 
 	}
 
 	public void EndingInit() {
-		System.out.println("Ending");
 		ending.setVisible(true);
 		JLabel endingName = new JLabel("마지막 그녀");
 		endingName.setLocation(400, 260);
