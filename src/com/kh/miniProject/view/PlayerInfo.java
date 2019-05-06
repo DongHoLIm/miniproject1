@@ -125,7 +125,12 @@ public class PlayerInfo extends JPanel{
 		pluscha.setBorder(BorderFactory.createLineBorder(Color.red,1));
 
 		JLabel redla = new JLabel(new ImageIcon(red));
-		redla.setBounds(0,0,(int)(Main.ic.getCharm().getCharmm()*2.7),12);
+		
+		if((int)(Main.ic.getCharm().getCharmm()*2.7)>270) {
+			redla.setBounds(0,0,270,12);
+		}else {
+			redla.setBounds(0,0,(int)(Main.ic.getCharm().getCharmm()*2.7),12);
+		}
 
 		pluscha.add(redla);	
 		charmPan.add(charm);
@@ -149,7 +154,12 @@ public class PlayerInfo extends JPanel{
 		plusexp.setBorder(BorderFactory.createLineBorder(Color.red,1));
 
 		JLabel redla2 = new JLabel(new ImageIcon(red));
-		redla2.setBounds(0,0,(int)(Main.ic.getExper().getExper()*2.7),12);
+		
+		if((int)(Main.ic.getExper().getExper()*2.7)>270) {
+			redla2.setBounds(0,0,270,12);
+		}else {
+			redla2.setBounds(0,0,(int)(Main.ic.getExper().getExper()*2.7),12);			
+		}
 
 		plusexp.add(redla2);	
 		expPan.add(experr);
