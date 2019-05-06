@@ -115,7 +115,13 @@ public class MyLovePercent extends JPanel{
 			mlpview[i].setBorder(BorderFactory.createLineBorder(Color.red,1));
 
 			redlabel[i] = new JLabel(new ImageIcon(red));
-			redlabel[i].setBounds(0,0,(mlper*3),12);
+			
+			if(mlper*3>300) {
+				redlabel[i].setBounds(0,0,300,12);
+			}else {
+				redlabel[i].setBounds(0,0,(mlper*3),12);
+				
+			}
 
 			mlpview[i].add(redlabel[i]);
 
