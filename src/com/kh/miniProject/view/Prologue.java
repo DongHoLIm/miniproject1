@@ -33,7 +33,6 @@ public class Prologue extends JPanel implements KeyListener {
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 
-		System.out.println("패널 생성");
 
 		tf = new JTextArea();
 		tf.setLayout(null);
@@ -62,12 +61,10 @@ public class Prologue extends JPanel implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			
 			String str = ec.goEnterAction(listStory);
-			System.out.println(str);
 			if (str != null) {
 				tf.append(str);
 				// value++;
 			} else {
-				System.out.println("AA");
 				ChangePanel.ChangePanel(start, prologue, new Main(start));
 			}
 		}

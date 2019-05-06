@@ -460,7 +460,6 @@ public class MiniMap extends JPanel {
 			temp = new int[Main.rc.getRp().getRandom2().length];
 			for (int c = 0; c < temp.length; c++) {
 				temp[c] = Main.rc.getRp().getRandom2()[c];
-				System.out.println("아오ㄹㅇ짜증나 " + temp[c]);
 				
 			}	
 		}

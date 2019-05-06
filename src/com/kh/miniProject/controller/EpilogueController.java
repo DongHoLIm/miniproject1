@@ -28,10 +28,8 @@ public class EpilogueController {
 		Collections.reverse(Main.oc.ro.getGlist());
 		if (ev.getEpilogueNum() != 2) {
 			if (Main.oc.ro.getGlist().get(0).getGlovePer() > 69) {
-				System.out.println("성공");
 				ev.setEpilogueNum(1);
 			} else if (Main.oc.ro.getGlist().get(0).getGlovePer() < 70) {
-				System.out.println("실패");
 				ev.setEpilogueNum(0);
 				ev.setTalkEnding(ev.getTalkEnding()+1);
 			}

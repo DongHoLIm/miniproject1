@@ -77,14 +77,12 @@ public class Credit  extends JPanel {
 				   
 		
 		 
-		System.out.println("크레딧 이동");
 
 		CreditInit();
 
 	}
 
 	public void CreditInit() {
-		System.out.println("Ending 내부 인터");
 		credit.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);

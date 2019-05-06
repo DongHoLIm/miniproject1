@@ -51,7 +51,6 @@ public class AffRandom extends JPanel{
 		if(affBnt.length < 5) {
 	         for(int i = 0; i < affBnt.length; i++) {
 	        	 j = i;
-	            System.out.println("쩔횒�횑횄횪째짧" + butY);
 	            affBnt[i] = new JButton(new ImageIcon(namebut[i]));
 	            affBnt[i].setBounds(50, butY, 120, 80);
 	            butY += 100;

@@ -33,7 +33,6 @@ public class AccPanel {
 		public void plusimage(int j, int x, int y) {
 			JLabel item = new JLabel();
 			item.setIcon(new ImageIcon(new FileController().goImageOutput(j)));
-			System.out.println(y);
 			item.setBounds(x, y, 70, 70);
 			acc.add(item);
 			acc.repaint();

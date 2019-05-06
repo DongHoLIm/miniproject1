@@ -47,7 +47,6 @@ public class Epilogue extends JPanel implements KeyListener {
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
 
-		System.out.println("�뿉�븘濡쒓렇 �깮�꽦");
 		try {
             AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/credit.wav"));
             clip2 = AudioSystem.getClip();
@@ -118,7 +117,6 @@ public class Epilogue extends JPanel implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 
 			String str = ec.goEnterAction(listStory);
-			System.out.println(str);
 			if (str != null) {
 				tf.append(str);
 				// value++;

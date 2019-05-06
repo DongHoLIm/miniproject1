@@ -75,7 +75,6 @@ public class FlowerShop extends JPanel implements KeyListener{
 	}
 
 	public void FlowerShopInit() {
-		System.out.println("FlowerShop 내부 인터");
 		flowerShop.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -104,12 +103,10 @@ public class FlowerShop extends JPanel implements KeyListener{
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
 			String str = ec.goEnterAction(listStory);
-			System.out.println(str);
 			if(str.length() != 0) {
 				tf.append(str);
 				//value++;
 			}else{
-				System.out.println("AA");
 				ChangePanel.ChangePanel(start, flowerShop, new SelectPanel(start,loveStory));
 			}
 		}
@@ -129,7 +126,6 @@ public class FlowerShop extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("9잘드렁가니? " + girlnumber);
 	}
 }
 

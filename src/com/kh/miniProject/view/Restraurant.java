@@ -76,7 +76,6 @@ public class Restraurant extends JPanel implements KeyListener{
 	}
 
 	public void RestraurantInit() {
-		System.out.println("Restraurant �궡遺� �씤�꽣");
 		restraurant.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(850, 50);
@@ -105,11 +104,9 @@ public class Restraurant extends JPanel implements KeyListener{
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
 			String str = ec.goEnterAction(listStory);
-			System.out.println(str);
 			if(str.length() != 0) {
 				tf.append(str);
 			}else{
-				System.out.println("AA");
 				ChangePanel.ChangePanel(start, restraurant, new SelectPanel(start,loveStory));
 			}
 		}
@@ -129,6 +126,5 @@ public class Restraurant extends JPanel implements KeyListener{
 	}
 	
 	public void acceptGirl(int girlnumber) {
-		System.out.println("5�옒�뱶�쟻媛��땲? " + girlnumber);
 	}
 }

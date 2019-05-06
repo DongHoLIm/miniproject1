@@ -16,7 +16,6 @@ public class InfoController {
 	public void charmUp(int cha) {
 		
 		charm.setCharmm(charm.getCharmm() + cha);
-		System.out.println("¸Å·Âµµ " + cha+" ¸¸Å­ »ó½Â~~~");
 		
 	}
 	
@@ -40,7 +39,6 @@ public class InfoController {
 
 		if(upexper >= 100) {
 			if(exper.getLev() == 10) {
-				System.out.println("¸¸·¾");
 			}else {
 				exper.setLev(exper.getLev()+1);
 				Main.rc.getRp().setGilrStop(1);

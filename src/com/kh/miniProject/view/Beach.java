@@ -111,12 +111,10 @@ public class Beach extends JPanel implements KeyListener{
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
 			String str = ec.goEnterAction(listStory);
-			System.out.println(str);
 			if(str.length() != 0) {
 				tf.append(str);
 				//value++;
 			}else{
-				System.out.println("AA");
 				ChangePanel.ChangePanel(start, beach, new SelectPanel(start,loveStory));
 			}
 		}
