@@ -30,10 +30,6 @@ public class SelectPanel2 extends JPanel {
 		this.setBackground(Color.black);
 		this.setLayout(null);
 
-		/*JLabel icon1 = new JLabel(new ImageIcon("images/gomin.png"));
-		icon1.setBounds(0, 0, 960, 720);*/
-
-
 		JButton spb1 = new JButton("그녀에게 고백한다");
 		spb1.setSize(500, 50);
 		spb1.setLocation(200, 250);
@@ -43,7 +39,6 @@ public class SelectPanel2 extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				
 					ChangePanel.ChangePanel(start, select, new Epilogue(start));
-				
 
 			}
 		});
@@ -55,7 +50,7 @@ public class SelectPanel2 extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-					PTextOutput.epilogueNum = 2;
+					Main.ec.ev.setEpilogueNum(2);
 					ChangePanel.ChangePanel(start, select, new Epilogue(start));
 				
 			}
@@ -64,6 +59,6 @@ public class SelectPanel2 extends JPanel {
 		
 		this.add(spb1);
 		this.add(spb2);
-		//this.add(icon1);
+
 	}
 }

@@ -59,9 +59,7 @@ public class MyLovePercent extends JPanel{
 
 		loveIn.add(exit);
 
-
-		//System.out.println(ro.getGlist().size());
-		int lev =RoundOpen.getGlist().size();
+		int lev = Main.oc.ro.getGlist().size();
 
 		JLabel label1 = new JLabel("경현이는 지금 " + lev + "명과 썸타는중~~");
 		label1.setSize(300, 50);
@@ -76,12 +74,10 @@ public class MyLovePercent extends JPanel{
 		JPanel scrollback = new JPanel();
 		scrollback.setLayout(null);
 		scrollback.setBounds(3, 80, 392, 415);
-		//scrollback.setBorder(BorderFactory.createLineBorder(Color.green, 1));
 
 		JPanel scrollpanel = new JPanel();
 		scrollpanel.setLayout(null);
-		scrollpanel.setPreferredSize(new Dimension(373,60*RoundOpen.getGlist().size()));
-		//scrollpanel.setBorder(BorderFactory.createLineBorder(Color.magenta,1));
+		scrollpanel.setPreferredSize(new Dimension(373,60*Main.oc.ro.getGlist().size()));
 
 		JPanel[] backpan = new JPanel[lev];  
 		Image[] img = new Image[lev];        
@@ -102,21 +98,17 @@ public class MyLovePercent extends JPanel{
 			backpan[i] = new JPanel();
 			backpan[i].setLayout(null);
 			backpan[i].setBounds(a,b, 370,50);
-			//backpan[i].setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
 
 			//이미지 라벨
-			g = RoundOpen.getGlist().get(i); //Girl 타입 g에 i번째 girl 가져오기
+			g = Main.oc.ro.getGlist().get(i); //Girl 타입 g에 i번째 girl 가져오기
 			str = g.getImage();  //str에 i번째 여자 이미지 디렉토리 담기
 			img[i] = new ImageIcon(str).getImage().getScaledInstance(50, 50, 0);  //img[i]에 로드한 이미지 저장
 			imglabel[i] = new JLabel(new ImageIcon(img[i])); //i번째 라벨에 i번째 이미지 저장
 			imglabel[i].setBounds(5,0, 50, 50);
-			//			imglabel[i].setLocation(, );
-			//			imglabel[i].setSize(50,50);
 
 			//애정도 패널
 			mlper = g.getMylovePer();
-			//mlper=50;
 			mlpview[i] = new JPanel();
 			mlpview[i].setLayout(null);
 			mlpview[i].setBounds(60,22, 300, 12);
@@ -138,13 +130,9 @@ public class MyLovePercent extends JPanel{
 
 		}
 
-		//scrollpanel.setBackground(Color.white);
 		JScrollPane glistscroll = new JScrollPane(scrollpanel);
 		glistscroll.setBounds(0, 0,392,415);
-		//glistscroll.setBorder(BorderFactory.createLineBorder(Color.yellow, 1));
-		//glistscroll.setPreferredSize(new Dimension(380,50));
 
-		//glistscroll.getVerticalScrollBar().setUnitIncrement(16);
 		glistscroll.requestFocus();
 
 		scrollback.add(glistscroll);
@@ -203,9 +191,6 @@ public class MyLovePercent extends JPanel{
 		this.add(map);
 		this.add(icon1);
 
-
-
-
 	}
 
 	class Change implements ActionListener{
@@ -254,7 +239,7 @@ public class MyLovePercent extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			if(Main.totalDay == 11) {
+			if(Main.dc.getDate().getTotalDay() == 11) {
 				ChangePanel.ChangePanel(start, love, new Ending(start));
 			}else {
 				ChangePanel.ChangePanel(start, love,new MiniMap(start));

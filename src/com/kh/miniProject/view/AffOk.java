@@ -1,22 +1,18 @@
 package com.kh.miniProject.view;
 
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.TextArea;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import com.kh.miniProject.model.vo.PointMinus;
+import com.kh.miniProject.controller.PointController;
+import com.kh.miniProject.model.vo.Point;
 import com.kh.miniProject.model.vo.RoundOpen;
 
 public class AffOk extends JPanel{
@@ -25,9 +21,7 @@ public class AffOk extends JPanel{
 	private JButton[] affBut;
 	private int butY = 50;
 	private int butY2 = 50;
-	private int yy2;
 	JPanel shopmain = new StoreMain(start);
-	PointMinus pm = new PointMinus();
 	TextField affArea = new TextField();
 	
 
@@ -36,7 +30,6 @@ public class AffOk extends JPanel{
 		this.affOk = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-		//this.setBackground(Color.black);
 		affArea.setBounds(50, 500, 800, 50);
 		this.add(affArea);
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
@@ -53,7 +46,7 @@ public class AffOk extends JPanel{
 			}
 		});
 		
-		affBut = new JButton[PlayerInfo.lev];
+		affBut = new JButton[Main.ic.getExper().getLev()];
 		
 		Image[] namebut = new Image[10];
 		namebut[0] = new ImageIcon("images/1but.png").getImage().getScaledInstance(120, 80, 0);
@@ -174,15 +167,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(0).getGlovePer()).toString();
-            if (PointMinus.resultcoin<500) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(0).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<500) {
                 ChangePanel.ChangePanel(start, affOk ,new CoinShop(start));
-             }else if (PointMinus.resultcoin>=500) {
+             }else if (PointController.p.getResultcoin()>=500) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(0).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+            	affArea.setText(Main.oc.ro.getGlist().get(0).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
             	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
             	affArea.setFont(font);
-                pm.pointMinus(500);
+                Main.pc.pointDown(500);
                 
              }
 
@@ -193,15 +186,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(1).getGlovePer()).toString();
-            if (PointMinus.resultcoin<1000) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(1).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<1000) {
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-             }else if (PointMinus.resultcoin>=1000) {
+             }else if (PointController.p.getResultcoin()>=1000) {
             	affArea.remove(null);
-             	affArea.setText(RoundOpen.glist.get(1).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+             	affArea.setText(Main.oc.ro.getGlist().get(1).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
              	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
              	affArea.setFont(font);
-                pm.pointMinus(1000);
+             	Main.pc.pointDown(1000);
                 
              }
 
@@ -212,15 +205,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(2).getGlovePer()).toString();
-            if (PointMinus.resultcoin<1500) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(2).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<1500) {
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-             }else if (PointMinus.resultcoin>=1500) {
+             }else if (PointController.p.getResultcoin()>=1500) {
             	affArea.remove(null);
-              	affArea.setText(RoundOpen.glist.get(2).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+              	affArea.setText(Main.oc.ro.getGlist().get(2).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
               	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
               	affArea.setFont(font);
-                pm.pointMinus(1500);
+              	Main.pc.pointDown(1500);
                 
              }
 		}
@@ -230,15 +223,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(3).getGlovePer()).toString();
-            if (PointMinus.resultcoin<2000) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(3).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<2000) {
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-             }else if (PointMinus.resultcoin>=2000) {
+             }else if (PointController.p.getResultcoin()>=2000) {
             	affArea.remove(null);
-              	affArea.setText(RoundOpen.glist.get(3).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+              	affArea.setText(Main.oc.ro.getGlist().get(3).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
               	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
               	affArea.setFont(font);
-                pm.pointMinus(2000);
+              	Main.pc.pointDown(2000);
                 
              }
 
@@ -249,15 +242,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(4).getGlovePer()).toString();
-            if (PointMinus.resultcoin<2500) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(4).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<2500) {
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-             }else if (PointMinus.resultcoin>=2500) {
+             }else if (PointController.p.getResultcoin()>=2500) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(4).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+               	affArea.setText(Main.oc.ro.getGlist().get(4).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
                	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
                	affArea.setFont(font);
-                pm.pointMinus(2500);
+               	Main.pc.pointDown(2500);
                 
              }
 			
@@ -268,15 +261,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(5).getGlovePer()).toString();
-            if (PointMinus.resultcoin<3000) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(5).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<3000) {
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-             }else if (PointMinus.resultcoin>=3000) {
+             }else if (PointController.p.getResultcoin()>=3000) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(5).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+               	affArea.setText(Main.oc.ro.getGlist().get(5).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
                	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
                	affArea.setFont(font);
-                pm.pointMinus(3000);
+               	Main.pc.pointDown(3000);
                 
              }
 			
@@ -287,15 +280,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(6).getGlovePer()).toString();
-            if (PointMinus.resultcoin<3500) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(6).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<3500) {
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-             }else if (PointMinus.resultcoin>=3500) {
+             }else if (PointController.p.getResultcoin()>=3500) {
             	affArea.remove(null);
-               	affArea.setText(RoundOpen.glist.get(6).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+               	affArea.setText(Main.oc.ro.getGlist().get(6).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
                	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
                	affArea.setFont(font);
-                pm.pointMinus(3500);
+               	Main.pc.pointDown(3500);
                 
              }
 		}
@@ -305,15 +298,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(7).getGlovePer()).toString();
-            if (PointMinus.resultcoin<4000) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(7).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<4000) {
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-            }else if (PointMinus.resultcoin>=4000) {
+            }else if (PointController.p.getResultcoin()>=4000) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(7).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+            	affArea.setText(Main.oc.ro.getGlist().get(7).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
             	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
             	affArea.setFont(font);
-            	pm.pointMinus(4000);
+            	Main.pc.pointDown(4000);
 
              }
 
@@ -324,15 +317,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(8).getGlovePer()).toString();
-			if (PointMinus.resultcoin<4500) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(8).getGlovePer()).toString();
+			if (PointController.p.getResultcoin()<4500) {
 				ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-			}else if (PointMinus.resultcoin>=4500) {
+			}else if (PointController.p.getResultcoin()>=4500) {
 				affArea.remove(null);
-				affArea.setText(RoundOpen.glist.get(8).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+				affArea.setText(Main.oc.ro.getGlist().get(8).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
 				Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
 				affArea.setFont(font);
-				pm.pointMinus(4500);
+				Main.pc.pointDown(4500);
 
              }
 
@@ -343,15 +336,15 @@ public class AffOk extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			String lovePer = Integer.valueOf(RoundOpen.glist.get(9).getGlovePer()).toString();
-            if (PointMinus.resultcoin<5000) {
+			String lovePer = Integer.valueOf(Main.oc.ro.getGlist().get(9).getGlovePer()).toString();
+            if (PointController.p.getResultcoin()<5000) {
                 ChangePanel.ChangePanel(start, affOk,new CoinShop(start));
-            }else if (PointMinus.resultcoin>=5000) {
+            }else if (PointController.p.getResultcoin()>=5000) {
             	affArea.remove(null);
-            	affArea.setText(RoundOpen.glist.get(9).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
+            	affArea.setText(Main.oc.ro.getGlist().get(9).getName() + "�쓽 �븷�젙�룄�뒗 " + lovePer + "�엯�땲�떎");
             	Font font =new Font("�쑕癒쇳렪吏�泥�", Font.BOLD, 15);
             	affArea.setFont(font);
-            	pm.pointMinus(5000);
+            	Main.pc.pointDown(5000);
 
             }
 

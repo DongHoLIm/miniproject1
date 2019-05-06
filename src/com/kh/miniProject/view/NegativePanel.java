@@ -21,11 +21,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import com.kh.miniProject.model.dao.GirlImages;
-import com.kh.miniProject.model.vo.CharmPer;
 import com.kh.miniProject.model.vo.Exper;
-import com.kh.miniProject.model.vo.GirllovePer;
-import com.kh.miniProject.model.vo.GrilNumber;
-import com.kh.miniProject.model.vo.MylovePer;
 
 public class NegativePanel extends JPanel{
 	private JFrame start;
@@ -34,11 +30,6 @@ public class NegativePanel extends JPanel{
 	private JTextArea tf;
 	private Clip clip;
 
-	Exper ex = new Exper();
-	MylovePer mlp = new MylovePer();
-	GirllovePer glp = new GirllovePer();
-
-	CharmPer cp = new CharmPer();
 
 	public NegativePanel(JFrame start) {	      
 		negativePanel = new JPanel();
@@ -62,11 +53,8 @@ public class NegativePanel extends JPanel{
 		tf = new JTextArea(negativeMent);
 		tf.setBounds(150,450, 600,150);
 		tf.setBorder(BorderFactory.createLineBorder(Color.black,1));
-		//tf.addKeyListener(this);
 		tf.setCaretColor(Color.cyan);
 		tf.setFont(getFont().deriveFont(15.0f));
-
-		//File file = new File("sound/NegativePanel.wav");
 
 		try {
 			AudioInputStream stream = AudioSystem.getAudioInputStream(new File("sound/negativePanel.wav"));
@@ -76,7 +64,7 @@ public class NegativePanel extends JPanel{
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		ex.plusExper(2);
+		Main.ic.experUp(2);
 
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
 		JButton exit = new JButton(new ImageIcon(img6));
@@ -102,26 +90,19 @@ public class NegativePanel extends JPanel{
 			}
 
 		});
-		int girlnum = GrilNumber.grilnumber;
+		int girlnum = Main.gc.girlnum.getGirlnumber();
 
-
-
-
-
-		
-
-		mlp.plusMylove(girlnum, 2);
-
-		glp.ninusGirllove(girlnum);
+		Main.lc.plusMylove(girlnum, 2);
+		Main.lc.ninusGirllove(girlnum);
 
 		int cha = (int)(Math.random()*5)+1;
-		cp.ninusCharm(cha);
+		Main.ic.charmdown(cha);
 
 
 
 		JLabel icon1 = new JLabel(new ImageIcon(img));
 		icon1.setBounds(0, 0, 960, 720);
-		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage3[GrilNumber.grilnumber]));
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage3[Main.gc.girlnum.getGirlnumber()]));
 		girl.setBounds(110, 5, 700, 550);
 		negativePanel.add(tf);
 		negativePanel.add(girl);

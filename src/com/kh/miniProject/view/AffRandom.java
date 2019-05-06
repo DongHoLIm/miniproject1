@@ -12,8 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import com.kh.miniProject.model.vo.GirllovePer;
-import com.kh.miniProject.model.vo.PointMinus;
+import com.kh.miniProject.controller.PointController;
+import com.kh.miniProject.model.vo.Point;
 import com.kh.miniProject.model.vo.RoundOpen;
 
 
@@ -26,7 +26,6 @@ public class AffRandom extends JPanel{
 	private int butY2 = 180;
 	private int j;
 	private int i = 0;
-	PointMinus pm = new PointMinus();
 	private TextField affArea = new TextField();
 	
 	public AffRandom(JFrame start) {
@@ -37,12 +36,12 @@ public class AffRandom extends JPanel{
 		affArea.setBounds(50, 500, 800, 50);
 		this.add(affArea);
 		
-		affBnt = new JButton[PlayerInfo.lev];
+		affBnt = new JButton[Main.ic.getExper().getLev()];
 		if(affBnt.length < 5) {
 	         for(int i = 0; i < affBnt.length; i++) {
 	        	 j = i;
 	            System.out.println("쩔횒�횑횄횪째짧" + butY);
-	            affBnt[i] = new JButton(RoundOpen.glist.get(i).getName());
+	            affBnt[i] = new JButton(Main.oc.ro.getGlist().get(i).getName());
 	            affBnt[i].setBounds(50, butY, 80, 80);
 	            butY += 100;
 	            this.add(affBnt[i]);
@@ -52,14 +51,14 @@ public class AffRandom extends JPanel{
 	         for(int i = 0; i < affBnt.length; i++) {
 	            if(i < 5) {
 	            	j = i;
-	               affBnt[i] = new JButton(RoundOpen.glist.get(i).getName());
+	               affBnt[i] = new JButton(Main.oc.ro.getGlist().get(i).getName());
 	               affBnt[i].setBounds(50, butY, 80, 80);
 	               butY += 100;
 	               this.add(affBnt[i]);
 	               this.repaint();
 	            }else {
 	            	j = i;
-	               affBnt[i] = new JButton(RoundOpen.glist.get(i).getName());
+	               affBnt[i] = new JButton(Main.oc.ro.getGlist().get(i).getName());
 	               affBnt[i].setBounds(450, butY2, 80, 80);
 	               butY2 += 100;
 	               this.add(affBnt[i]);
@@ -159,11 +158,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(0);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(0);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -173,11 +172,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(1);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(1);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -187,11 +186,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(2);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(2);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -201,11 +200,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(3);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(3);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -215,11 +214,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(4);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(4);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -229,11 +228,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(5);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(5);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -243,11 +242,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(6);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(6);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -257,11 +256,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(7);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(7);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -271,11 +270,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(8);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(8);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}
@@ -285,11 +284,11 @@ public class AffRandom extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new GirllovePer().random(9);
-			if(PointMinus.resultcoin>=1500) {
-				affArea.setText(GirllovePer.str);
-			pm.pointMinus(1500);
-			}else if (PointMinus.resultcoin<1499) {
+			Main.lc.random(9);
+			if(PointController.p.getResultcoin()>=1500) {
+				affArea.setText(Main.lc.getStrlove());
+				Main.pc.pointDown(1500);
+			}else if (PointController.p.getResultcoin()<1499) {
 				ChangePanel.ChangePanel(start, aff,new CoinShop(start));
 			}
 		}

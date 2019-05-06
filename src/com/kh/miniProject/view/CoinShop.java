@@ -201,31 +201,8 @@ public class CoinShop extends JPanel{
 		this.add(aff);
 	    this.add(coinIn);
 	    this.add(icon1);
-//	    main.add(this);
-//	    main.repaint();
+
 	}
-	
-//	class Change implements ActionListener{
-//
-//
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			ChangePanel.ChangePanel(main, coin, new PlusCoin(main));			
-//		}
-//
-//		
-//	}
-	
-//	class Delete implements ActionListener{
-//
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			DeletePanel.DeletePanel(main, coin);
-//			
-////		}
-//	
-//			
-//		}
 	
 	class Change implements ActionListener{
 
@@ -283,7 +260,7 @@ public class CoinShop extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			if(Main.totalDay == 11) {
+			if(Main.dc.getDate().getTotalDay() == 11) {
 				ChangePanel.ChangePanel(start, coin, new Ending(start));
 			}else {
 				ChangePanel.ChangePanel(start, coin,new MiniMap(start));

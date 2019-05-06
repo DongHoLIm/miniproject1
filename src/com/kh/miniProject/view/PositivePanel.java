@@ -19,26 +19,17 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.kh.miniProject.controller.PointController;
 import com.kh.miniProject.model.dao.GirlImages;
-import com.kh.miniProject.model.vo.CharmPer;
 import com.kh.miniProject.model.vo.Exper;
-import com.kh.miniProject.model.vo.GirllovePer;
-import com.kh.miniProject.model.vo.GrilNumber;
-import com.kh.miniProject.model.vo.MylovePer;
-import com.kh.miniProject.model.vo.PointMinus;
 
 public class PositivePanel extends JPanel{
 
 	private Image img;
 	private JTextArea tf;
+	private Clip clip;
 	JFrame start = new JFrame();
 	JPanel positivePanel;
-	private Clip clip;
-
-	MylovePer mlp = new MylovePer();
-	GirllovePer glp = new GirllovePer();
-	CharmPer cp = new CharmPer();
-	PointMinus pm = new PointMinus();
 
 
 	public PositivePanel(JFrame start) {
@@ -64,9 +55,9 @@ public class PositivePanel extends JPanel{
 			e.printStackTrace();
 		}
 		Exper ex = new Exper();
-		ex.plusExper(1);
-		
-		int girlnum = GrilNumber.grilnumber;
+		Main.ic.experUp(1);
+
+		int girlnum = Main.gc.girlnum.getGirlnumber();
 		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
 		JButton exit = new JButton(new ImageIcon(img6));
 		exit.setLocation(850, 50);
@@ -110,17 +101,16 @@ public class PositivePanel extends JPanel{
 		
 		
 
-
-		mlp.plusMylove(girlnum, 1);
-
-		glp.plusGirllove(girlnum);
+		Main.lc.plusMylove(girlnum, 1);
+		
+		Main.lc.plusGirllove(girlnum);
 
 		int cha = (int)(Math.random()*5)+1;
-		cp.plusCharm(cha);
+		Main.ic.charmUp(cha);
 		
-		pm.pointPlus(300);
+		Main.pc.pointUp(300);
 
-		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage2[GrilNumber.grilnumber]));
+		JLabel girl = new JLabel(new ImageIcon(GirlImages.girlImage2[Main.gc.girlnum.getGirlnumber()]));
 		girl.setBounds(110, 5, 700, 550);
 		positivePanel.add(tf);
 		positivePanel.add(girl);

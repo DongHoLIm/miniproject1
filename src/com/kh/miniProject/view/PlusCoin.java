@@ -122,15 +122,6 @@ public class PlusCoin extends JPanel{
 	    this.add(icon1);
 	}
 	
-//	class Delete implements ActionListener{
-//
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			DeletePanel.DeletePanel(main, plus);
-//			
-//		}
-//		
-//	}
 	class Change implements ActionListener{
 
 

@@ -15,10 +15,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import com.kh.miniProject.model.vo.PointMinus;
+import com.kh.miniProject.controller.PointController;
 
 public class Card extends JPanel{
 	
@@ -355,7 +354,7 @@ public class Card extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new PointMinus().pointPlus(plusCoin);
+			Main.pc.pointUp(plusCoin);
 			ChangePanel.ChangePanel(start, card, new Main(start));
 			
 		}

@@ -23,8 +23,8 @@ import com.kh.miniProject.model.vo.RoundOpen;
 
 public class Start extends JFrame {
    
+	public static JPanel startmain;
     private JFrame start;
-    public static JPanel startmain;
     private Image  img;
     private Clip clip;
     
@@ -172,8 +172,7 @@ public class Start extends JFrame {
         	
         });
         
-        RoundOpen ro = new RoundOpen();
-		ro.roundUp1();
+        Main.oc.roundUp1();
 		
 		
 		
